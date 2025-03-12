@@ -7,7 +7,8 @@ import Pump from "./components/Pump";
 import Reck from "./components/Reck";
 
 import IntersectionPipe from "./components/IntersectionPipe";
-import Top from "./components/Top/Top";
+import TopLevel from "./components/Top/TopLevel";
+import TanksLevel from "./components/Middle/TanksLevel";
 
 function App() {
   const { from, to, activeElements, addActiveElement } = parkStore();
@@ -28,7 +29,8 @@ function App() {
       <p>To {to}</p>
       <p>Active elements: {activeElements}</p>
 
-      <Top />
+      <TopLevel />
+      <TanksLevel />
     </div>
   );
 }

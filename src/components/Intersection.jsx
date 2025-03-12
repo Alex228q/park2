@@ -8,7 +8,7 @@ const Intersection = ({ top = 0, left = 0, title = "" }) => {
     position: "absolute",
     top: top,
     left: left,
-    width: "29px",
+    width: "23px",
     height: "15px",
     borderTopLeftRadius: "110px",
     borderTopRightRadius: "110px",

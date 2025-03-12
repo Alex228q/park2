@@ -35,7 +35,7 @@ const Pipe = ({
         left,
         top,
         zIndex: z,
-        color: "white",
+        color: "black",
       }}
     >
       {title}
