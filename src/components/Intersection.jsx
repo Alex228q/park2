@@ -1,6 +1,6 @@
 import parkStore from "../store/parkStore";
 
-const Intersection = ({ top = 0, left = 0, title = "" }) => {
+const Intersection = ({ top = 0, left = 0, title = "", isBig = false }) => {
   const { activeElements } = parkStore();
   let color = activeElements.includes(title) ? "green" : "gray";
   let z = activeElements.includes(title) ? 30 : 1;
@@ -8,7 +8,7 @@ const Intersection = ({ top = 0, left = 0, title = "" }) => {
     position: "absolute",
     top: top,
     left: left,
-    width: "23px",
+    width: isBig ? "35px" : "23px",
     height: "15px",
     borderTopLeftRadius: "110px",
     borderTopRightRadius: "110px",
@@ -24,7 +24,7 @@ const Intersection = ({ top = 0, left = 0, title = "" }) => {
     zIndex: z,
   };
 
-  return <div style={halfCircleStyle}></div>;
+  return <div style={halfCircleStyle}>{/* {title} */}</div>;
 };
 
 export default Intersection;

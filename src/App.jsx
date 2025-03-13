@@ -6,7 +6,6 @@ import Pipe from "./components/Pipe";
 import Pump from "./components/Pump";
 import Reck from "./components/Reck";
 
-import IntersectionPipe from "./components/IntersectionPipe";
 import TopLevel from "./components/Top/TopLevel";
 import TanksLevel from "./components/Middle/TanksLevel";
 

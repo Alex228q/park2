@@ -1,5 +1,11 @@
 import parkStore from "../store/parkStore";
-const Valve = ({ top = 0, left = 0, isUp = false, title = "" }) => {
+const Valve = ({
+  top = 0,
+  left = 0,
+  isUp = false,
+  title = "",
+  isLeft = false,
+}) => {
   const { activeElements } = parkStore();
   const color = activeElements.includes(title) ? "green" : "#B62222";
 
@@ -48,8 +54,8 @@ const Valve = ({ top = 0, left = 0, isUp = false, title = "" }) => {
           display: "flex",
 
           position: "absolute",
-          top: top - 8,
-          left: left + 17,
+          top: isLeft ? top - 8 : top - 8,
+          left: isLeft ? left - 33 : left + 17,
           fontFamily: "monospace",
           fontSize: "14px",
           fontWeight: "bold",
