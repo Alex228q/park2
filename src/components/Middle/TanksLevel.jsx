@@ -27,7 +27,7 @@ const TanksLevel = () => {
       <Pipe isHorizontal top={669} left={669} length={92} title="p73" />
       <Valve isUp top={659} left={761} title="ЗМ-1" />
       <Pipe isHorizontal top={669} left={780} length={265} title="p74" />
-      <Pipe isHorizontal top={669} left={1085} length={81} title="p75" />
+      <Pipe isHorizontal top={669} left={1080} length={86} title="p75" />
       <Pipe isHorizontal top={669} left={1304} length={115} title="p76" />
       <Pipe isHorizontal top={669} left={1764} length={196} title="p77" />
       <Pipe isHorizontal top={669} left={2306} length={168} title="p78" />
@@ -48,13 +48,14 @@ const TanksLevel = () => {
 
       <Pipe isHorizontal top={704} left={669} length={92} title="p81" />
       <Valve isUp top={694} left={761} title="ЗМ-3" />
-      <Pipe isHorizontal top={704} left={780} length={346} title="p82" />
+      <Pipe isHorizontal top={704} left={780} length={353} title="p82" />
       <Pipe isHorizontal top={704} left={3422} length={196} title="p83" />
 
       {/* ******************************************************** */}
       <Pipe isHorizontal top={732} left={657} length={104} title="p84" />
       <Valve isUp top={722} left={761} title="ЗМ-2" />
-      <Pipe isHorizontal top={732} left={780} length={503} title="p85" />
+      <Pipe isHorizontal top={732} left={780} length={323} title="p85" />
+      <Pipe isHorizontal top={732} left={1096} length={187} title="p85/2" />
       <Pipe isHorizontal top={715} left={1290} length={69} title="p86" />
       <Pipe isHorizontal top={732} left={1788} length={231} title="p87" />
       <Pipe isHorizontal top={732} left={2366} length={185} title="p88" />

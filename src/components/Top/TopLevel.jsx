@@ -125,6 +125,7 @@ const TopLevel = () => {
 
       <Pipe isHorizontal top={485} left={1355} length={33} title="p115" />
       <Pipe isHorizontal top={214} left={2811} length={25} title="p116" />
+      <Pipe isHorizontal top={629} left={1149} length={35} title="p116/2" />
 
       {/* *************************************** */}
       <Pipe top={57} left={1827} length={23} title="v1" />
@@ -266,7 +267,7 @@ const TopLevel = () => {
       <Pipe top={80} left={818} length={33} title="v79" />
 
       <Intersection top={111} left={814} title="i19" />
-      <Pipe top={124} left={818} length={7} title="v80" />
+      <Pipe top={124} left={818} length={8} title="v80" />
       <Pipe top={150} left={818} length={7} title="v80/1" />
       <Valve top={129} left={814} title="129" />
 
@@ -338,8 +339,36 @@ const TopLevel = () => {
       <Pipe top={415} left={1216} length={46} title="v116" />
       <Pipe top={480} left={1216} length={247} title="v116/2" />
       <Valve top={459} left={1212} title="82" />
-
       <Intersection top={728} left={1212} title="i36" />
+      <Pipe top={577} left={1096} length={36} title="v117" />
+      <Valve top={611} left={1092} title="ЗМ-7" isRotate />
+      <Pipe top={632} left={1096} length={32} title="v118" />
+      <Intersection top={665} left={1092} title="i37" />
+      <Pipe top={678} left={1096} length={20} title="v119" />
+      <Pipe top={713} left={1096} length={26} title="v120" />
+      <Intersection top={700} left={1092} title="i38" />
+
+      <Pipe top={577} left={1073} length={36} title="v121" />
+      <Valve top={611} left={1069} title="ЗМ-5" isRotate />
+      <Pipe top={632} left={1073} length={44} title="v122" />
+
+      <Pipe top={577} left={1126} length={36} title="v123" />
+      <Valve top={611} left={1122} title="ЗМ-6" isRotate />
+      <Valve top={761} left={1122} title="107" />
+      <Pipe top={632} left={1126} length={31} title="v124" />
+      <Intersection top={665} left={1122} title="i39" />
+      <Pipe top={679} left={1126} length={32} title="v125" />
+
+      <Intersection top={728} left={1122} title="i40" />
+      <Pipe top={704} left={1126} length={25} title="v126" />
+      <Pipe top={741} left={1126} length={22} title="v127" />
+      <Pipe top={782} left={1126} length={9} title="v128" />
+      <Intersection top={792} left={1122} title="i41" />
+      <Pipe top={525} left={1177} length={46} title="v129" />
+      <Valve top={569} left={1173} title="ЗМ-4" isRotate />
+      <Pipe top={590} left={1177} length={46} title="v130" />
+
+      <Pipe top={577} left={1149} length={59} title="v131" />
     </>
   );
 };

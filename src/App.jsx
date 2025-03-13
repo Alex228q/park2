@@ -1,10 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import parkStore from "./store/parkStore";
-import Tank from "./components/Tank";
-import Valve from "./components/Valve";
-import Pipe from "./components/Pipe";
-import Pump from "./components/Pump";
-import Reck from "./components/Reck";
 
 import TopLevel from "./components/Top/TopLevel";
 import TanksLevel from "./components/Middle/TanksLevel";

@@ -5,9 +5,52 @@ const Valve = ({
   isUp = false,
   title = "",
   isLeft = false,
+  isRotate = false,
 }) => {
   const { activeElements } = parkStore();
   const color = activeElements.includes(title) ? "green" : "#B62222";
+  if (isRotate) {
+    return (
+      <div>
+        <p
+          style={{
+            width: "42px",
+            display: "flex",
+            rotate: "270deg",
+            position: "absolute",
+            top: top - 22,
+            left: left-3,
+            fontFamily: "monospace",
+            fontSize: "14px",
+            fontWeight: "bold",
+            color,
+          }}
+        >
+          {title}
+        </p>
+        <div
+          style={{
+            position: "absolute",
+            top,
+            left,
+            overflow: "hidden",
+            rotate: "90deg",
+          }}
+        >
+          <img
+            style={{
+              filter: `drop-shadow(0px 1000px 0 ${color})`,
+              transform: "translateY(-1000px)",
+            }}
+            src="./valve.png"
+            alt="valve"
+            width={19}
+            height={19}
+          />
+        </div>
+      </div>
+    );
+  }
 
   return isUp ? (
     <div>
@@ -52,7 +95,7 @@ const Valve = ({
         style={{
           width: "42px",
           display: "flex",
-
+          rotate: isRotate ? "270deg" : "0deg",
           position: "absolute",
           top: isLeft ? top - 8 : top - 8,
           left: isLeft ? left - 33 : left + 17,
