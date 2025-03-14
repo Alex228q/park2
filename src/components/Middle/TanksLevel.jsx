@@ -50,7 +50,7 @@ const TanksLevel = () => {
       <Pipe isHorizontal top={704} left={669} length={92} title="p81" />
       <Valve isUp top={694} left={761} title="ЗМ-3" />
       <Pipe isHorizontal top={704} left={780} length={353} title="p82" />
-      <Pipe isHorizontal top={704} left={3422} length={196} title="p83" />
+      <Pipe isHorizontal top={704} left={3418} length={196} title="p83" />
 
       {/* ******************************************************** */}
       <Pipe isHorizontal top={732} left={642} length={119} title="p84" />
@@ -59,8 +59,8 @@ const TanksLevel = () => {
       <Pipe isHorizontal top={732} left={1096} length={187} title="p85/2" />
       <Pipe isHorizontal top={715} left={1290} length={69} title="p86" />
       <Pipe isHorizontal top={732} left={1788} length={231} title="p87" />
-      <Pipe isHorizontal top={732} left={2366} length={185} title="p88" />
-      <Pipe isHorizontal top={732} left={2873} length={219} title="p89" />
+      <Pipe isHorizontal top={732} left={2366} length={163} title="p88" />
+      <Pipe isHorizontal top={732} left={2873} length={216} title="p89" />
       <Pipe isHorizontal top={744} left={1304} length={55} title="p90" />
       <Pipe isHorizontal top={756} left={1360} length={115} title="p91" />
       <Pipe isHorizontal top={756} left={1045} length={59} title="p92" />
@@ -86,14 +86,14 @@ const TanksLevel = () => {
       <Pipe isHorizontal top={877} left={1216} length={37} title="p101" />
       {/* ******************************************************** */}
       <Pipe isHorizontal top={958} left={1304} length={17} title="p102" />
-      <Pipe isHorizontal top={958} left={1321} length={103} title="p103" />
+      <Pipe isHorizontal top={958} left={1321} length={102} title="p103" />
       <Pipe isHorizontal top={958} left={1764} length={196} title="p104" />
       <Pipe isHorizontal top={958} left={2306} length={175} title="p105" />
       <Pipe isHorizontal top={980} left={3032} length={337} title="p106" />
       <Pipe isHorizontal top={980} left={3369} length={200} title="p107" />
       <Pipe isHorizontal top={981} left={1360} length={115} title="p108" />
       <Pipe isHorizontal top={1004} left={1788} length={231} title="p109" />
-      <Pipe isHorizontal top={1004} left={2366} length={185} title="p110" />
+      <Pipe isHorizontal top={1004} left={2366} length={163} title="p110" />
       <Pipe isHorizontal top={1004} left={3081} length={207} title="p111" />
       <Pipe isHorizontal top={1004} left={3288} length={127} title="p112" />
       <Pipe isHorizontal top={1004} left={3415} length={196} title="p113" />
@@ -112,8 +112,68 @@ const TanksLevel = () => {
       <Pipe top={763} left={1097} length={29} title="v138" />
       <Intersection top={792} left={1093} title="i44" />
       <Pipe top={854} left={706} length={30} title="v139" />
-      <Pipe top={854} left={1068} length={30} title="v140" />
-      <Pipe top={884} left={1038} length={173} title="v141" />
+      <Pipe top={854} left={1068} length={198} title="v140" />
+      <Pipe top={1068} left={1068} length={24} title="v140/2" />
+      <Pipe top={884} left={1038} length={179} title="v141" />
+
+      <Pipe top={627} left={1468} length={15} title="v142" />
+      <Valve top={640} left={1464} title="325Б" />
+      <Pipe top={661} left={1468} length={102} title="v143" />
+      <Pipe top={636} left={1177} length={92} title="v144" />
+      <Intersection top={728} left={1173} title="i45" />
+      <Pipe top={741} left={1177} length={51} title="v145" />
+      <Intersection top={792} left={1173} title="i46" />
+
+      <Pipe top={909} left={1468} length={15} title="v146" />
+      <Valve top={922} left={1464} title="326Б" />
+      <Pipe top={943} left={1468} length={38} title="v147" />
+      <Pipe top={756} left={1360} length={196} title="v148" />
+      <Intersection top={954} left={1356} title="i47" />
+      <Pipe top={969} left={1360} length={19} title="v149" />
+      <Pipe top={988} left={1360} length={75} title="v150" />
+
+      <Pipe top={628} left={2012} length={15} title="v151" />
+      <Valve top={641} left={2008} title="327Б" />
+      <Pipe top={662} left={2012} length={70} title="v152" />
+
+      <Pipe top={910} left={2012} length={15} title="v153" />
+      <Valve top={923} left={2008} title="328Б" />
+      <Pipe top={944} left={2012} length={60} title="v154" />
+
+      <Pipe top={628} left={2522} length={15} title="v155" />
+      <Valve top={641} left={2518} title="329Б" />
+      <Pipe top={662} left={2522} length={70} title="v156" />
+
+      <Pipe top={910} left={2522} length={15} title="v157" />
+      <Valve top={923} left={2518} title="330Б" />
+      <Pipe top={944} left={2522} length={60} title="v158" />
+
+      <Pipe top={628} left={3082} length={15} title="v159" />
+      <Valve top={641} left={3078} title="331Б" />
+      <Pipe top={662} left={3082} length={70} title="v160" />
+
+      <Pipe top={910} left={3081} length={15} title="v161" />
+      <Valve top={923} left={3077} title="332Б" />
+      <Pipe top={944} left={3081} length={32} title="v162" />
+
+      <Intersection top={976} left={3077} title="i48" />
+      <Pipe top={993} left={3081} length={12} title="v163" />
+
+      <Pipe top={627} left={3611} length={15} title="v164" />
+      <Valve top={640} left={3607} title="333Б"  />
+      <Pipe top={661} left={3611} length={50} title="v165" />
+
+      <Pipe top={910} left={3611} length={15} title="v166" />
+      <Valve top={923} left={3607} title="334Б"  />
+      <Pipe top={944} left={3611} length={67} title="v167" />
+      <Pipe top={704} left={3411} length={272} title="v168" />
+      <Intersection top={976} left={3407} title="i49" />
+      <Pipe top={989} left={3411} length={22} title="v169" />
+      <Intersection top={1052} left={1064} title="i50" />
+      <Pipe top={1056} left={1323} length={36} title="v170" />
+
+  
+
 
     </>
   );

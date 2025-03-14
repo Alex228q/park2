@@ -3,6 +3,7 @@ import parkStore from "./store/parkStore";
 
 import TopLevel from "./components/Top/TopLevel";
 import TanksLevel from "./components/Middle/TanksLevel";
+import InterparkCommunication from "./components/Middle/InterparkCommunication";
 
 function App() {
   const { from, to, activeElements, addActiveElement } = parkStore();
@@ -25,6 +26,7 @@ function App() {
 
       <TopLevel />
       <TanksLevel />
+      <InterparkCommunication />
     </div>
   );
 }
