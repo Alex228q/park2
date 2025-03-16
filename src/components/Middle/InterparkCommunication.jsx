@@ -37,6 +37,35 @@ const InterparkCommunication = () => {
       <Pipe isHorizontal top={1327} left={3183} length={59} title="p141" />
       <Valve isUp top={1317} left={3242} title="108" isLeft />
       <Pipe isHorizontal top={1327} left={3261} length={23} title="p142" />
+      <Pipe isHorizontal top={1362} left={1223} length={35} title="p143" />
+      <Valve isUp top={1352} left={1258} title="79" />
+      <Pipe isHorizontal top={1362} left={1277} length={680} title="p144" />
+      <Valve isUp top={1352} left={1957} title="101" />
+      <Pipe isHorizontal top={1362} left={1976} length={20} title="p145" />
+      <Pipe isHorizontal top={1407} left={1361} length={52} title="p146" />
+      <Pipe isHorizontal top={1407} left={1413} length={52} title="p147" />
+      <Valve isUp top={1397} left={1465} title="73" />
+      <Pipe isHorizontal top={1407} left={1484} length={635} title="p148" />
+      <Pipe isHorizontal top={1407} left={2119} length={697} title="p149" />
+      <Valve isUp top={1397} left={2816} title="27" />
+      <Pipe isHorizontal top={1407} left={2835} length={40} title="p150" />
+      <Pipe isHorizontal top={1407} left={2875} length={79} title="p151" />
+
+      <Valve isUp top={1397} left={2954} title="34" />
+      <Pipe isHorizontal top={1407} left={2973} length={11} title="p152" />
+      <Pipe isHorizontal top={1407} left={2984} length={115} title="p153" />
+      <Pipe isHorizontal top={1448} left={1413} length={52} title="p154" />
+
+      <Valve isUp top={1438} left={1465} title="74" />
+      <Pipe isHorizontal top={1448} left={1484} length={1085} title="p155" />
+      <Pipe isHorizontal top={1535} left={415} length={1534} title="p156" />
+      <Pipe isHorizontal top={1535} left={1949} length={8} title="p157" />
+      <Pipe isHorizontal top={1535} left={1976} length={23} title="p158" />
+
+      <Pipe isHorizontal top={1535} left={1999} length={1038} title="p159" />
+      <Pipe isHorizontal top={1535} left={3037} length={334} title="p160" />
+
+      <Valve isUp top={1525} left={1957} title="102" />
     </div>
   );
 };
