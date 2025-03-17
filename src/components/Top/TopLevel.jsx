@@ -119,7 +119,7 @@ const TopLevel = () => {
       <Valve isUp top={451} left={1868} title="56" />
       <Pipe isHorizontal top={461} left={1887} length={46} title="p58" />
       <Pipe isHorizontal top={461} left={2326} length={57} title="p59" />
-      <Pipe isHorizontal top={461} left={2675} length={37} title="p60" />
+      <Pipe isHorizontal top={461} left={2673} length={39} title="p60" />
       <Valve isUp top={451} left={2712} title="59" />
       <Pipe isHorizontal top={461} left={2731} length={23} title="p61" />
 

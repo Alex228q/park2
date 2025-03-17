@@ -21,7 +21,7 @@ const Valve = ({
             top: top - 22,
             left: left - 3,
             fontFamily: "monospace",
-            fontSize: "14px",
+            fontSize: "12px",
             fontWeight: "bold",
             color,
           }}
@@ -63,7 +63,7 @@ const Valve = ({
           top: isLeft ? top - 5 : top - 6,
           left: isLeft ? left - 34 : left + 16,
           fontFamily: "monospace",
-          fontSize: "14px",
+          fontSize: "12px",
           fontWeight: "bold",
           color,
         }}
@@ -99,9 +99,9 @@ const Valve = ({
           rotate: isRotate ? "270deg" : "0deg",
           position: "absolute",
           top: isLeft ? top - 8 : top - 9,
-          left: isLeft ? left - 33 : left + 17,
+          left: isLeft ? left - 33 : left + 16,
           fontFamily: "monospace",
-          fontSize: "14px",
+          fontSize: "12px",
           fontWeight: "bold",
           color,
         }}
