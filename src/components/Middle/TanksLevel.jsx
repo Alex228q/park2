@@ -170,7 +170,7 @@ const TanksLevel = () => {
       <Intersection top={976} left={3407} title="i49" />
       <Pipe top={989} left={3411} length={22} title="v169" />
       <Intersection top={1052} left={1064} title="i50" />
-      <Pipe top={1056} left={1323} length={36} title="v170" />
+      <Pipe top={1056} left={1338} length={36} title="v170" />
 
   
 
