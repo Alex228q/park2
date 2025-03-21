@@ -26,7 +26,7 @@ const InterparkCommunication = () => {
       <Pipe isHorizontal top={1252} left={3105} length={57} title="p131" />
       <Valve isUp top={1242} left={3162} title="ЗМ-48" />
       <Pipe isHorizontal top={1252} left={3181} length={57} title="p132" />
-      <Pipe isHorizontal top={1269} left={1731} length={1211} title="p133" />
+      <Pipe isHorizontal top={1269} left={1730} length={1212} title="p133" />
       <Pipe isHorizontal top={1298} left={1788} length={161} title="p134" />
       <Pipe isHorizontal top={1298} left={1949} length={184} title="p135" />
       <Pipe isHorizontal top={1298} left={2216} length={912} title="p136" />
