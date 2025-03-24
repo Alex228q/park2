@@ -160,20 +160,42 @@ const TanksLevel = () => {
       <Pipe top={993} left={3081} length={12} title="v163" />
 
       <Pipe top={627} left={3611} length={15} title="v164" />
-      <Valve top={640} left={3607} title="333Б"  />
+      <Valve top={640} left={3607} title="333Б" />
       <Pipe top={661} left={3611} length={50} title="v165" />
 
       <Pipe top={910} left={3611} length={15} title="v166" />
-      <Valve top={923} left={3607} title="334Б"  />
+      <Valve top={923} left={3607} title="334Б" />
       <Pipe top={944} left={3611} length={67} title="v167" />
       <Pipe top={704} left={3411} length={272} title="v168" />
       <Intersection top={976} left={3407} title="i49" />
       <Pipe top={989} left={3411} length={22} title="v169" />
       <Intersection top={1052} left={1064} title="i50" />
       <Pipe top={1056} left={1338} length={36} title="v170" />
+      <Pipe top={732} left={1788} length={221} title="v207" />
 
-  
+      <Intersection top={954} left={1784} title="i77" />
+      <Pipe top={968} left={1788} length={43} title="v208" />
+      <Pipe top={1004} left={1788} length={180} title="v209" />
+      <Pipe top={1177} left={1788} length={53} title="v210" />
+      <Intersection top={1231} left={1784} title="i78" />
+      <Pipe top={1245} left={1788} length={20} title="v211" />
 
+      <Intersection top={1265} left={1784} title="i79" />
+      <Pipe top={1279} left={1788} length={26} title="v212" />
+      <Pipe top={1298} left={2119} length={25} title="v213" />
+      <Intersection top={1323} left={2115} title="i80" />
+      <Pipe top={1337} left={2119} length={77} title="v214" />
+      <Pipe top={732} left={2366} length={223} title="v215" />
+      <Intersection top={954} left={2362} title="i81" />
+      <Pipe top={968} left={2366} length={43} title="v216" />
+      <Pipe top={1004} left={2366} length={111} title="v217" />
+      <Pipe top={1108} left={2446} length={30} title="v218" />
+      <Valve top={1136} left={2442} title="ЗМ-47" />
+      <Pipe top={1157} left={2446} length={27} title="v219" />
+      <Pipe top={732} left={2873} length={320} title="v220" />
+      <Intersection top={1052} left={2869} title="i82" />
+      <Pipe top={1066} left={2873} length={26} title="v221" />
+    
 
     </>
   );
