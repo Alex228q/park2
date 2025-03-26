@@ -94,7 +94,9 @@ const Valve = ({
         style={{
           width: "42px",
           display: "flex",
+          justifyContent: isLeft ? "center" : null,
           rotate: isRotate ? "270deg" : "0deg",
+
           position: "absolute",
           top: isLeft ? top - 8 : top - 7,
           left: isLeft ? left - 33 : left + 16,

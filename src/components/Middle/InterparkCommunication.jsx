@@ -87,6 +87,14 @@ const InterparkCommunication = () => {
       <Pipe isHorizontal top={1650} left={2465} length={58} title="p174" />
       <Pipe isHorizontal top={1650} left={3519} length={58} title="p175" />
 
+      <Valve isUp top={1767} left={2504} title="ЗМ-74" isLeft/>
+      <Pipe isHorizontal top={1777} left={2523} length={12} title="p232" />
+      <Pipe isHorizontal top={1777} left={2535} length={762} title="p233" />
+
+      <Valve isUp top={1802} left={2527} title="ЗМ-75" isLeft/>
+      <Pipe isHorizontal top={1812} left={2546} length={12} title="p234" />
+      <Pipe isHorizontal top={1812} left={2558} length={808} title="p235" />
+
       <Pipe top={805} left={1097} length={246} title="v171" />
 
       <Intersection top={1052} left={1093} title="i51" />
@@ -192,9 +200,6 @@ const InterparkCommunication = () => {
       <Pipe top={356} left={2834} length={56} title="v235" />
       <Intersection top={411} left={2830} title="i90" />
       <Pipe top={425} left={2834} length={638} title="v236" />
-
-
-
     </div>
   );
 };
