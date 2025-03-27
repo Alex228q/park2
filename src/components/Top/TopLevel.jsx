@@ -292,7 +292,7 @@ const TopLevel = () => {
       <Intersection top={111} left={814} title="i19" />
       <Pipe top={124} left={818} length={8} title="v80" />
       <Pipe top={150} left={818} length={7} title="v80/1" />
-      <Valve top={129} left={814} title="129" />
+      <Valve top={129} left={814} title="129" isLeft/>
 
       <Pipe top={128} left={2804} length={17} title="v81" />
       <Intersection top={111} left={2800} title="i20" />
@@ -300,8 +300,8 @@ const TopLevel = () => {
       <Intersection top={169} left={2800} title="i21" />
       <Pipe top={138} left={2804} length={33} title="v83" />
       <Pipe top={182} left={2804} length={10} title="v84" />
-      <Valve top={190} left={2800} title="75" />
-      <Valve top={190} left={2830} title="76" />
+      <Valve top={190} left={2800} title="75" isLeft/>
+      <Valve top={190} left={2830} title="76" isLeft/>
       <Pipe top={211} left={2804} length={10} title="v85" />
       <Pipe top={211} left={2834} length={10} title="v86" />
 
