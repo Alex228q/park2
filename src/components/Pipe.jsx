@@ -18,7 +18,7 @@ const Pipe = ({
   title = "",
 }) => {
   const { activeElements } = parkStore();
-  let color = activeElements.includes(title) ? "green" : getRandomColor();
+  let color = activeElements.includes(title) ? "green" : "#E1E7EC";
   let z = activeElements.includes(title) ? 30 : 1;
   return (
     <div
@@ -38,7 +38,7 @@ const Pipe = ({
         color: "black",
       }}
     >
-      {title}
+      {/* {title} */}
     </div>
   );
 };

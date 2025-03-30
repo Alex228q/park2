@@ -2,7 +2,7 @@ import parkStore from "../store/parkStore";
 
 const Intersection = ({ top = 0, left = 0, title = "", isBig = false }) => {
   const { activeElements } = parkStore();
-  let color = activeElements.includes(title) ? "green" : "gray";
+  let color = activeElements.includes(title) ? "green" : "#E1E7EC";
   let z = activeElements.includes(title) ? 30 : 1;
   const halfCircleStyle = {
     position: "absolute",
@@ -25,7 +25,7 @@ const Intersection = ({ top = 0, left = 0, title = "", isBig = false }) => {
   };
 
   return <div style={halfCircleStyle}>
-    
+    {/* {title} */}
   </div>;
 };
 

@@ -3,7 +3,20 @@ import { create } from "zustand";
 const parkStore = create((set) => ({
   from: null,
   to: null,
-  activeElements: [],
+  activeElements: [
+    "v151",
+    "v152",
+    "p87",
+    "327Б",
+    "v207",
+    "v208",
+    "v209",
+    "p125",
+    "ЗМ-46",
+    "p126",
+    "p127",
+    "i77",
+  ],
 
   setFrom: (title) =>
     set((state) => {
