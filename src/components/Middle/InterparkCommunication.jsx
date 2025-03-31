@@ -94,6 +94,7 @@ const InterparkCommunication = () => {
       <Valve isUp top={1802} left={2527} title="ЗМ-75" isLeft/>
       <Pipe isHorizontal top={1812} left={2546} length={12} title="p234" />
       <Pipe isHorizontal top={1812} left={2558} length={808} title="p235" />
+      <Pipe isHorizontal top={1741} left={3064} length={205} title="p236" />
 
       <Pipe top={805} left={1097} length={246} title="v171" />
 
