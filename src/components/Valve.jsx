@@ -101,7 +101,7 @@ const Valve = ({
 
           position: "absolute",
           top: isLeft ? top - 8 : top - 7,
-          left: isLeft ? left - 29 : left + 12,
+          left: isLeft ? left - 34 : left + 14,
           fontSize: "12px",
           fontWeight: "bold",
           color,
