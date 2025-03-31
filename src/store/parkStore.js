@@ -29,6 +29,12 @@ const parkStore = create((set) => ({
     set(() => ({
       activeElements: [...titles],
     })),
+
+  // Добавляем новый метод для управления активными насосами
+  setActivePump: (newActivePump) =>
+    set(() => ({
+      activePump: newActivePump,
+    })),
 }));
 
 export default parkStore;
