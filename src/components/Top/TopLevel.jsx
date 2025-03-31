@@ -301,7 +301,7 @@ const TopLevel = () => {
       <Pipe top={138} left={2804} length={33} title="v83" />
       <Pipe top={182} left={2804} length={10} title="v84" />
       <Valve top={190} left={2800} title="75" isLeft/>
-      <Valve top={190} left={2830} title="76" isLeft/>
+      <Valve top={190} left={2830} title="76" />
       <Pipe top={211} left={2804} length={10} title="v85" />
       <Pipe top={211} left={2834} length={10} title="v86" />
 

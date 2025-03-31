@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import parkStore from "./store/parkStore";
 
 import TopLevel from "./components/Top/TopLevel";
@@ -7,8 +7,18 @@ import InterparkCommunication from "./components/Middle/InterparkCommunication";
 import Station91035 from "./components/Bottom/Station91035";
 
 function App() {
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
   const { from, to, activeElements, addActiveElement, activePump } =
     parkStore();
+
+  const containerRef = useRef(null);
+  const isDragging = useRef(false);
+  const startPos = useRef({ x: 0, y: 0 });
+  const scrollLeft = useRef(0);
+  const scrollTop = useRef(0);
 
   useEffect(() => {
     if (from === "E-322") {
@@ -114,8 +124,84 @@ function App() {
     }
   }, [from, to, activePump, addActiveElement]);
 
+  // Обработчики для drag-scroll
+  const handleMouseDown = (e) => {
+    if (e.button !== 0) return; // Проверяем, что нажата левая кнопка мыши
+
+    isDragging.current = true;
+    startPos.current = {
+      x: e.pageX - containerRef.current.offsetLeft,
+      y: e.pageY - containerRef.current.offsetTop,
+    };
+    scrollLeft.current = containerRef.current.scrollLeft;
+    scrollTop.current = containerRef.current.scrollTop;
+
+    // Изменяем курсор
+    containerRef.current.style.cursor = "grabbing";
+    containerRef.current.style.userSelect = "none";
+  };
+
+  const handleMouseLeave = () => {
+    isDragging.current = false;
+    resetCursor();
+  };
+
+  const handleMouseUp = () => {
+    isDragging.current = false;
+    resetCursor();
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging.current) return;
+
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const y = e.pageY - containerRef.current.offsetTop;
+    const walkX = (x - startPos.current.x) * 1.5; // Умножаем на 2 для более быстрого скролла
+    const walkY = (y - startPos.current.y) * 1.5;
+
+    containerRef.current.scrollLeft = scrollLeft.current - walkX;
+    containerRef.current.scrollTop = scrollTop.current - walkY;
+  };
+
+  const resetCursor = () => {
+    if (containerRef.current) {
+      containerRef.current.style.cursor = "grab";
+      containerRef.current.style.removeProperty("user-select");
+    }
+  };
+
+  if (!isMobile) {
+    return (
+      <div
+        ref={containerRef}
+        style={{
+          position: "relative",
+          overflow: "auto",
+          width: "100vw",
+          height: "100vh",
+          cursor: "grab",
+        }}
+        onMouseDown={handleMouseDown}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+      >
+        <p>From {from}</p>
+        <p>To {to}</p>
+        <p>Active elements: {activeElements.join(", ")}</p>
+        <p>Active pumps: {activePump.join(", ")}</p>
+
+        <TopLevel />
+        <TanksLevel />
+        <InterparkCommunication />
+        <Station91035 />
+      </div>
+    );
+  }
+
   return (
-    <div style={{ position: "relative" }}>
+    <>
       <p>From {from}</p>
       <p>To {to}</p>
       <p>Active elements: {activeElements.join(", ")}</p>
@@ -125,7 +211,7 @@ function App() {
       <TanksLevel />
       <InterparkCommunication />
       <Station91035 />
-    </div>
+    </>
   );
 }
 
