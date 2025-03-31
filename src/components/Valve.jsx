@@ -1,5 +1,7 @@
 import parkStore from "../store/parkStore";
 const Valve = ({
+  textTop = 0,
+  textLeft = 0,
   top = 0,
   left = 0,
   isUp = false,
@@ -59,8 +61,8 @@ const Valve = ({
           display: "flex",
           justifyContent: title.length < 4 && isLeft ? "center" : "",
           position: "absolute",
-          top: isLeft ? top - 5 : top - 6,
-          left: isLeft ? left - 34 : left + 16,
+          top: textTop ? textTop : isLeft ? top - 5 : top - 6,
+          left: textLeft ? textLeft : isLeft ? left - 34 : left + 16,
           fontSize: "12px",
           fontWeight: "bold",
           color,

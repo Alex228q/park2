@@ -10,14 +10,14 @@ const Station91035 = () => {
       <Pipe isHorizontal top={1985} left={2608} length={381} title="p176" />
       <Pipe isHorizontal top={2008} left={3105} length={57} title="p177" />
       <Pipe isHorizontal top={2025} left={2711} length={185} title="p178" />
-      <Valve title="105" top={2015} left={2896} isUp isLeft />
+      <Valve title="105" top={2015} left={2896} isUp isLeft textTop={2003} textLeft={2884}/>
       <Pipe isHorizontal top={2025} left={2915} length={10} title="p179" />
       <Pipe isHorizontal top={2025} left={2925} length={23} title="p180" />
       <Pipe isHorizontal top={2042} left={2504} length={69} title="p181" />
       <Pipe isHorizontal top={2060} left={2747} length={46} title="p182" />
       <Valve title="19" top={2050} left={2793} isUp />
-      <Pipe isHorizontal top={2060} left={2812} length={57} title="p183" />
-      <Pipe isHorizontal top={2060} left={2869} length={21} title="p184" />
+      <Pipe isHorizontal top={2060} left={2812} length={70} title="p183" />
+      <Pipe isHorizontal top={2060} left={2875} length={15} title="p184" />
 
       <Valve title="20" top={2050} left={2890} isUp />
       <Pipe isHorizontal top={2060} left={2909} length={23} title="p185" />
@@ -301,6 +301,17 @@ const Station91035 = () => {
       <Pipe top={2070} left={3035} length={20} title="v358" />
       <Valve top={2088} left={3031} title="25" />
       <Pipe top={2109} left={3035} length={44} title="v359" />
+      <Pipe top={1407} left={2875} length={124} title="v360" />
+      <Intersection top={1531} left={2871} title="i161" />
+      <Pipe top={1545} left={2875} length={229} title="v361" />
+      <Intersection top={1773} left={2871} title="i162" />
+      <Pipe top={1787} left={2875} length={20} title="v362" />
+      <Intersection top={1808} left={2871} title="i163" />
+      <Pipe top={1822} left={2875} length={161} title="v363" />
+      <Intersection top={1981} left={2871} title="i164" />
+      <Pipe top={1995} left={2875} length={27} title="v364" />
+      <Intersection top={2021} left={2871} title="i165" />
+      <Pipe top={2035} left={2875} length={32} title="v365" />
 
 
 
