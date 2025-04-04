@@ -31,7 +31,7 @@ const Pump = ({ top = 0, left = 0, title = "" }) => {
         fontFamily: "monospace",
         backgroundColor: isActive ? "white" : "white", // Фон для неактивного состояния
         background: isActive
-          ? "linear-gradient(90deg, green,green,green, orange,orange,orange)"
+          ? "linear-gradient(90deg, green,green,green, #1e22e0,#1e22e0,#1e22e0)"
           : "white",
         color: isActive ? "white" : "black", // Цвет текста
 

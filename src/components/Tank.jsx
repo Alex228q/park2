@@ -20,7 +20,7 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
 
   let color = isFromSelected ? "green" : "white";
   if (isToSelected) {
-    color = "orange";
+    color = "#1e22e0";
   }
 
   return (

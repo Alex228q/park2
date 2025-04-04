@@ -17,9 +17,17 @@ const Pipe = ({
   top = 0,
   title = "",
 }) => {
-  const { activeElements } = parkStore();
+  const { activeElements, activeElementsAfterPump } = parkStore();
   let color = activeElements.includes(title) ? "green" : "#E1E7EC";
-  let z = activeElements.includes(title) ? 30 : 1;
+  let z =
+    activeElements.includes(title) || activeElementsAfterPump.includes(title)
+      ? 30
+      : 1;
+
+  if (activeElementsAfterPump.includes(title)) {
+    color = "#1e22e0";
+  }
+
   return (
     <div
       style={{
@@ -38,7 +46,7 @@ const Pipe = ({
         color: "black",
       }}
     >
-      {title}
+      {/* {title} */}
     </div>
   );
 };

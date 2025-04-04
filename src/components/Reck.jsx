@@ -14,9 +14,11 @@ const Reck = ({ top = 0, left = 0, title = "" }) => {
     }
   };
 
+  let fontColor = isToSelected ? "white" : "black";
+
   let color = isFromSelected ? "green" : "white";
   if (isToSelected) {
-    color = "orange";
+    color = "#1e22e0";
   }
 
   return (
@@ -35,6 +37,7 @@ const Reck = ({ top = 0, left = 0, title = "" }) => {
         fontWeight: "bold",
         fontSize: "36px",
         fontFamily: "monospace",
+        color: fontColor,
         backgroundColor: color,
         zIndex: 1000,
       }}

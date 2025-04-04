@@ -12,8 +12,15 @@ function App() {
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
     );
-  const { from, to, activeElements, addActiveElement, activePump } =
-    parkStore();
+  const {
+    from,
+    to,
+    activeElements,
+    addActiveElement,
+    addActiveElementAfterPump,
+    activePump,
+    setActivePump,
+  } = parkStore();
 
   const containerRef = useRef(null);
   const isDragging = useRef(false);
@@ -234,6 +241,138 @@ function App() {
     }
   }, [from, to, activePump, addActiveElement]);
 
+  useEffect(() => {
+    if (to === "910-40(1)") {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [
+          ...newElements,
+          "v252",
+          "i96",
+          "i95",
+          "v251",
+          "v250",
+          "p189",
+          "p188",
+          "v246",
+          "1",
+          "v247",
+          "p212",
+          "p213",
+          "p214",
+          "67",
+          "p215",
+          "p216",
+          "p217",
+          "63",
+          "p218",
+          "v366",
+        ];
+      }
+      if (activePump.includes("H-2")) {
+        newElements = [
+          ...newElements,
+          "v290",
+          "i124",
+          "v289",
+          "v287",
+          "i123",
+          "i122",
+          "v286",
+          "37",
+          "v285",
+          "p192",
+          "v283",
+          "31",
+          "v283/2",
+          "i121",
+          "v284",
+          "p213",
+          "p214",
+          "67",
+          "p215",
+          "p216",
+          "p217",
+          "63",
+          "p218",
+          "v366",
+        ];
+      }
+
+      if (activePump.includes("H-3")) {
+        newElements = [
+          ...newElements,
+          "v305",
+          "v304",
+          "i131",
+          "i130",
+          "v303",
+          "35",
+          "v302",
+          "p197",
+          "v300",
+          "24",
+          "v301",
+          "p205",
+          "p204",
+          "v292",
+          "22",
+          "v291",
+          "p193",
+          "p192",
+          "v283",
+          "31",
+          "v283/2",
+          "i121",
+          "v284",
+          "p213",
+          "p214",
+          "67",
+          "p215",
+          "p216",
+          "p217",
+          "63",
+          "p218",
+          "v366",
+        ];
+      }
+
+      if (activePump.includes("H-4")) {
+        newElements = [
+          ...newElements,
+          "v339",
+          "i150",
+          "i149",
+          "v338",
+          "p207",
+          "v341",
+          "28",
+          "v340",
+          "p202",
+          "v342",
+          "i151",
+          "v343",
+          "p214",
+          "67",
+          "p215",
+          "p216",
+          "p217",
+          "63",
+          "p218",
+          "v366",
+        ];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElementAfterPump(uniqueElements);
+    }
+  }, [from, to, activePump, addActiveElementAfterPump]);
+
+  useEffect(() => {
+    if (from === "E-322" && to === "910-40(1)") {
+      setActivePump(["H-2", "H-3"]);
+    }
+  }, [from, to]);
+
   // Обработчики для drag-scroll
   const handleMouseDown = (e) => {
     if (e.button !== 0) return; // Проверяем, что нажата левая кнопка мыши
@@ -297,10 +436,10 @@ function App() {
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
       >
-        <p>From {from}</p>
+        {/* <p>From {from}</p>
         <p>To {to}</p>
         <p>Active elements: {activeElements.join(", ")}</p>
-        <p>Active pumps: {activePump.join(", ")}</p>
+        <p>Active pumps: {activePump.join(", ")}</p> */}
 
         <TopLevel />
         <TanksLevel />
@@ -314,10 +453,10 @@ function App() {
 
   return (
     <>
-      <p>From {from}</p>
+      {/* <p>From {from}</p>
       <p>To {to}</p>
       <p>Active elements: {activeElements.join(", ")}</p>
-      <p>Active pumps: {activePump.join(", ")}</p>
+      <p>Active pumps: {activePump.join(", ")}</p> */}
 
       <TopLevel />
       <TanksLevel />
