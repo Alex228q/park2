@@ -75,6 +75,8 @@ const Station91035 = () => {
       <Pipe isHorizontal top={2362} left={2747} length={35} title="p229" />
       <Pipe isHorizontal top={2362} left={2932} length={35} title="p230" />
       <Pipe isHorizontal top={2362} left={3105} length={45} title="p231" />
+      <Pipe isHorizontal top={2574} left={4131} length={50} title="p237" />
+      <Pipe isHorizontal top={2610} left={4131} length={107} title="p238" />
 
       {/* *************************************************** */}
       <Pipe top={1448} left={2569} length={83} title="v237" />
@@ -312,6 +314,14 @@ const Station91035 = () => {
       <Pipe top={1995} left={2875} length={27} title="v364" />
       <Intersection top={2021} left={2871} title="i165" />
       <Pipe top={2035} left={2875} length={32} title="v365" />
+      <Pipe top={2273} left={3735} length={58} title="v366" />
+      <Pipe top={2308} left={3701} length={23} title="v367" />
+      <Pipe top={2117} left={3393} length={152} title="v368" />
+      <Intersection top={2269} left={3389} title="i166" />
+      <Pipe top={2282} left={3393} length={33} title="v369" />
+      <Pipe top={2146} left={3428} length={134} title="v370" />
+      <Pipe top={2146} left={4174} length={435} title="v371" />
+      <Pipe top={2117} left={4231} length={500} title="v372" />
 
 
 

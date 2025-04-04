@@ -20,7 +20,7 @@ const Intersection = ({ top = 0, left = 0, title = "", isBig = false }) => {
     borderLeftColor: color,
     borderBottomWidth: "0",
     borderBottomStyle: "solid",
-    rotate: "315deg",
+    rotate: "344deg",
     zIndex: z,
   };
 

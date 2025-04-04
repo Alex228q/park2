@@ -5,6 +5,7 @@ import TopLevel from "./components/Top/TopLevel";
 import TanksLevel from "./components/Middle/TanksLevel";
 import InterparkCommunication from "./components/Middle/InterparkCommunication";
 import Station91035 from "./components/Bottom/Station91035";
+import Reck from "./components/Reck";
 
 function App() {
   const isMobile =
@@ -119,6 +120,115 @@ function App() {
         ];
       }
 
+      if (activePump.includes("H-3")) {
+        newElements = [
+          ...newElements,
+          "p96",
+          "322Б",
+          "p97",
+          "p97/2",
+          "ЗМ-8",
+          "p98",
+          "v140",
+          "v140/2",
+          "i50",
+          "p120",
+          "p120/2",
+          "v170",
+          "p119",
+          "v204",
+          "i76",
+          "p96",
+          "v205",
+          "p146",
+          "p147",
+          "73",
+          "p148",
+          "p149",
+          "27",
+          "p150",
+          "v360",
+          "i161",
+          "v361",
+          "i162",
+          "v362",
+          "i163",
+          "v363",
+          "i164",
+          "v364",
+          "i165",
+          "v365",
+          "p184",
+          "20",
+          "p185",
+          "v293",
+          "36",
+          "v294",
+          "i125",
+          "i126",
+          "i127",
+          "v295",
+          "i128",
+          "v296",
+          "p230",
+        ];
+      }
+
+      if (activePump.includes("H-4")) {
+        newElements = [
+          ...newElements,
+          "p96",
+          "322Б",
+          "p97",
+          "p97/2",
+          "ЗМ-8",
+          "p98",
+          "v140",
+          "v140/2",
+          "i50",
+          "p120",
+          "p120/2",
+          "v170",
+          "p119",
+          "v204",
+          "i76",
+          "p96",
+          "v205",
+          "p146",
+          "p147",
+          "73",
+          "p148",
+          "p149",
+          "27",
+          "p150",
+          "v360",
+          "i161",
+          "v361",
+          "i162",
+          "v362",
+          "i163",
+          "v363",
+          "i164",
+          "v364",
+          "i165",
+          "v365",
+          "p184",
+          "20",
+          "p185",
+          "p186",
+          "v307",
+          "v308",
+          "29",
+          "v309",
+          "p206",
+          "v310",
+          "i132",
+          "i133",
+          "v311",
+          "p231",
+        ];
+      }
+
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
@@ -196,6 +306,8 @@ function App() {
         <TanksLevel />
         <InterparkCommunication />
         <Station91035 />
+        <Reck title="910-40(1)" top={2331} left={3658} />
+        <Reck title="910-10(2)" top={2550} left={3658} />
       </div>
     );
   }
@@ -211,6 +323,8 @@ function App() {
       <TanksLevel />
       <InterparkCommunication />
       <Station91035 />
+      <Reck title="910-40(1)" top={2331} left={3658} />
+      <Reck title="910-10(2)" top={2550} left={3658} />
     </>
   );
 }
