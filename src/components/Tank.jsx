@@ -19,8 +19,10 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
   };
 
   let color = isFromSelected ? "green" : "white";
+  let textColor = isFromSelected ? "white" : "black";
   if (isToSelected) {
     color = "#1e22e0";
+    textColor = "white";
   }
 
   return (
@@ -42,6 +44,7 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
         fontFamily: "monospace",
         backgroundColor: color,
         zIndex: 1000,
+        color: textColor,
       }}
     >
       {title}
