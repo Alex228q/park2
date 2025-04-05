@@ -72,7 +72,6 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
         backgroundColor: color,
         zIndex: 1000,
         color: textColor,
-        cursor: "pointer",
       }}
       onClick={handleTankClick}
     >
@@ -81,16 +80,16 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
         <div
           ref={popupRef}
           style={{
-            width: "130px",
+            width: "180px",
             position: "absolute",
-            top: "-85px",
-            left: "130%",
+            top: "-115px",
+            left: "160%",
             transform: "translateX(-50%)",
             backgroundColor: "white",
             color: "black",
             padding: "10px",
             borderRadius: "8px",
-            fontSize: "16px",
+            fontSize: "26px",
             boxShadow: "0 2px 10px rgba(0, 0, 0, 0.2)",
             zIndex: 1001,
             display: "flex",
