@@ -18,6 +18,8 @@ const PST_TANK = [
   "E-334",
 ];
 
+const ZGP_TANK = ["E-327", "E-328", "E-329", "E-330", "E-331"];
+
 function App() {
   const isMobile =
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -1125,6 +1127,215 @@ function App() {
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
+
+    if (from === "E-327") {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [
+          ...newElements,
+          "v151",
+          "327Б",
+          "v152",
+          "p87",
+          "v207",
+          "i77",
+          "v208",
+          "v209",
+          "p125",
+          "ЗМ-46",
+          "p126",
+          "p127",
+          "v219",
+          "ЗМ-47",
+          "v218",
+          "p124",
+          "v222",
+          "v223",
+          "i83",
+          "v224",
+          "p153",
+          "v325",
+          "i140",
+          "v326",
+          "i141",
+          "v327",
+          "i142",
+          "v328",
+          "p176",
+          "v253",
+          "i97",
+          "v254",
+          "4",
+          "v254/2",
+          "p203",
+          "v242",
+          "i93",
+          "i94",
+          "v243",
+          "p228",
+        ];
+      }
+
+      if (activePump.includes("H-2")) {
+        newElements = [
+          ...newElements,
+          "v151",
+          "327Б",
+          "v152",
+          "p87",
+          "v207",
+          "i77",
+          "v208",
+          "v209",
+          "p125",
+          "ЗМ-46",
+          "p126",
+          "p127",
+          "v219",
+          "ЗМ-47",
+          "v218",
+          "p124",
+          "v222",
+          "v223",
+          "i83",
+          "v224",
+          "v225",
+          "i84",
+          "v312",
+          "i133/2",
+          "i134",
+          "v313",
+          "i135",
+          "v314",
+          "v315",
+          "i136",
+          "v316",
+          "30",
+          "v317",
+          "p206",
+          "v309",
+          "29",
+          "v308",
+          "v307",
+          "p186",
+          "p185",
+          "20",
+          "p184",
+          "p183",
+          "19",
+          "p182",
+          "v256",
+          "38",
+          "v257",
+          "i98",
+          "i99",
+          "v258",
+          "p229",
+        ];
+      }
+
+      if (activePump.includes("H-3")) {
+        newElements = [
+          ...newElements,
+          "v151",
+          "327Б",
+          "v152",
+          "p87",
+          "v207",
+          "i77",
+          "v208",
+          "v209",
+          "p125",
+          "ЗМ-46",
+          "p126",
+          "p127",
+          "v219",
+          "ЗМ-47",
+          "v218",
+          "p124",
+          "v222",
+          "v223",
+          "i83",
+          "v224",
+          "v225",
+          "i84",
+          "v312",
+          "i133/2",
+          "i134",
+          "v313",
+          "i135",
+          "v314",
+          "v315",
+          "i136",
+          "v316",
+          "30",
+          "v317",
+          "p206",
+          "v309",
+          "29",
+          "v308",
+          "v307",
+          "p186",
+          "v293",
+          "36",
+          "v294",
+          "i125",
+          "i126",
+          "i127",
+          "v295",
+          "i128",
+          "v296",
+          "p230",
+        ];
+      }
+
+      if (activePump.includes("H-4")) {
+        newElements = [
+          ...newElements,
+          "v151",
+          "327Б",
+          "v152",
+          "p87",
+          "v207",
+          "i77",
+          "v208",
+          "v209",
+          "p125",
+          "ЗМ-46",
+          "p126",
+          "p127",
+          "v219",
+          "ЗМ-47",
+          "v218",
+          "p124",
+          "v222",
+          "v223",
+          "i83",
+          "v224",
+          "v225",
+          "i84",
+          "v312",
+          "i133/2",
+          "i134",
+          "v313",
+          "i135",
+          "v314",
+          "v315",
+          "i136",
+          "v316",
+          "30",
+          "v317",
+          "v310",
+          "i132",
+          "i133",
+          "v311",
+          "p231",
+        ];
+      }
+
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
   }, [from, to, activePump, addActiveElement]);
 
   useEffect(() => {
@@ -1251,11 +1462,430 @@ function App() {
       const uniqueElements = [...new Set(newElements)];
       addActiveElementAfterPump(uniqueElements);
     }
+
+    if (to === "910-10(2)" && PST_TANK.includes(from)) {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [
+          ...newElements,
+          "v252",
+          "i96",
+          "i95",
+          "v251",
+          "v250",
+          "p189",
+          "p188",
+          "v246",
+          "1",
+          "v247",
+          "p212",
+          "p213",
+          "p214",
+          "67",
+          "p215",
+          "p216",
+
+          "v370",
+          "p200",
+          "62",
+          "p201",
+          "v371",
+          "p237",
+        ];
+      }
+      if (activePump.includes("H-2")) {
+        newElements = [
+          ...newElements,
+          "v290",
+          "i124",
+          "v289",
+          "v287",
+          "i123",
+          "i122",
+          "v286",
+          "37",
+          "v285",
+          "p192",
+          "v283",
+          "31",
+          "v283/2",
+          "i121",
+          "v284",
+          "p213",
+          "p214",
+          "67",
+          "p215",
+          "p216",
+          "v370",
+          "p200",
+          "62",
+          "p201",
+          "v371",
+          "p237",
+        ];
+      }
+
+      if (activePump.includes("H-3")) {
+        newElements = [
+          ...newElements,
+          "v305",
+          "v304",
+          "i131",
+          "i130",
+          "v303",
+          "35",
+          "v302",
+          "p197",
+          "v300",
+          "24",
+          "v301",
+          "p205",
+          "p204",
+          "v292",
+          "22",
+          "v291",
+          "p193",
+          "p192",
+          "v283",
+          "31",
+          "v283/2",
+          "i121",
+          "v284",
+          "p213",
+          "p214",
+          "67",
+          "p215",
+          "p216",
+          "v370",
+          "p200",
+          "62",
+          "p201",
+          "v371",
+          "p237",
+        ];
+      }
+
+      if (activePump.includes("H-4")) {
+        newElements = [
+          ...newElements,
+          "v339",
+          "i150",
+          "i149",
+          "v338",
+          "p207",
+          "v341",
+          "28",
+          "v340",
+          "p202",
+          "v342",
+          "i151",
+          "v343",
+          "p214",
+          "67",
+          "p215",
+          "p216",
+          "v370",
+          "p200",
+          "62",
+          "p201",
+          "v371",
+          "p237",
+        ];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElementAfterPump(uniqueElements);
+    }
+
+    if (to === "910-40(1)" && ZGP_TANK.includes(from)) {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [
+          ...newElements,
+          "v252",
+          "i96",
+          "i95",
+          "v251",
+          "v250",
+          "p189",
+          "v244",
+          "2",
+          "v245",
+          "p208",
+          "p209",
+          "p210",
+          "v353",
+          "i157",
+          "v354",
+          "p221",
+          "66",
+          "p222",
+          "p223",
+          "p224",
+          "64",
+          "p225",
+          "v367",
+        ];
+      }
+      if (activePump.includes("H-2")) {
+        newElements = [
+          ...newElements,
+          "v290",
+          "i124",
+          "v289",
+          "v287",
+          "i123",
+          "i122",
+          "v286",
+          "37",
+          "v285",
+          "p193",
+          "v291",
+          "22",
+          "v292",
+          "p204",
+          "p205",
+          "v301",
+          "24",
+          "v300",
+          "p197",
+          "p198",
+          "v306",
+          "26",
+          "p209",
+          "p210",
+          "v353",
+          "i157",
+          "v354",
+          "p221",
+          "66",
+          "p222",
+          "p223",
+          "p224",
+          "64",
+          "p225",
+          "v367",
+        ];
+      }
+
+      if (activePump.includes("H-3")) {
+        newElements = [
+          ...newElements,
+          "v305",
+          "v304",
+          "i131",
+          "i130",
+          "v303",
+          "35",
+          "v302",
+          "p198",
+          "v306",
+          "26",
+          "p209",
+          "p210",
+          "v353",
+          "i157",
+          "v354",
+          "p221",
+          "66",
+          "p222",
+          "p223",
+          "p224",
+          "64",
+          "p225",
+          "v367",
+        ];
+      }
+
+      if (activePump.includes("H-4")) {
+        newElements = [
+          ...newElements,
+          "v339",
+          "i150",
+          "i149",
+          "v338",
+          "v337",
+          "32",
+          "v336",
+          "p199",
+          "v344",
+          "p210",
+          "v353",
+          "i157",
+          "v354",
+          "p221",
+          "66",
+          "p222",
+          "p223",
+          "p224",
+          "64",
+          "p225",
+          "v367",
+        ];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElementAfterPump(uniqueElements);
+    }
+
+    if (to === "910-10(2)" && ZGP_TANK.includes(from)) {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [
+          ...newElements,
+          "v252",
+          "i96",
+          "i95",
+          "v251",
+          "v250",
+          "p189",
+          "v244",
+          "2",
+          "v245",
+          "p208",
+          "p209",
+          "p210",
+          "v353",
+          "i157",
+          "v354",
+          "p221",
+          "66",
+          "p222",
+          "p223",
+          "v369",
+          "i166",
+          "v368",
+          "p194",
+          "61",
+          "p195",
+          "v372",
+          "p238",
+        ];
+      }
+      if (activePump.includes("H-2")) {
+        newElements = [
+          ...newElements,
+          "v290",
+          "i124",
+          "v289",
+          "v287",
+          "i123",
+          "i122",
+          "v286",
+          "37",
+          "v285",
+          "p193",
+          "v291",
+          "22",
+          "v292",
+          "p204",
+          "p205",
+          "v301",
+          "24",
+          "v300",
+          "p197",
+          "p198",
+          "v306",
+          "26",
+          "p209",
+          "p210",
+          "v353",
+          "i157",
+          "v354",
+          "p221",
+          "66",
+          "p222",
+          "p223",
+          "v369",
+          "i166",
+          "v368",
+          "p194",
+          "61",
+          "p195",
+          "v372",
+          "p238",
+        ];
+      }
+
+      if (activePump.includes("H-3")) {
+        newElements = [
+          ...newElements,
+          "v305",
+          "v304",
+          "i131",
+          "i130",
+          "v303",
+          "35",
+          "v302",
+          "p198",
+          "v306",
+          "26",
+          "p209",
+          "p210",
+          "v353",
+          "i157",
+          "v354",
+          "p221",
+          "66",
+          "p222",
+          "p223",
+          "v369",
+          "i166",
+          "v368",
+          "p194",
+          "61",
+          "p195",
+          "v372",
+          "p238",
+        ];
+      }
+
+      if (activePump.includes("H-4")) {
+        newElements = [
+          ...newElements,
+          "v339",
+          "i150",
+          "i149",
+          "v338",
+          "v337",
+          "32",
+          "v336",
+          "p199",
+          "v344",
+          "p210",
+          "v353",
+          "i157",
+          "v354",
+          "p221",
+          "66",
+          "p222",
+          "p223",
+          "v369",
+          "i166",
+          "v368",
+          "p194",
+          "61",
+          "p195",
+          "v372",
+          "p238",
+        ];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElementAfterPump(uniqueElements);
+    }
   }, [from, to, activePump, addActiveElementAfterPump]);
 
   useEffect(() => {
     if (PST_TANK.includes(from) && to === "910-40(1)") {
       setActivePump(["H-2", "H-3"]);
+    }
+    if (PST_TANK.includes(from) && to === "910-10(2)") {
+      setActivePump(["H-2", "H-3"]);
+    }
+
+    if (ZGP_TANK.includes(from) && to === "910-40(1)") {
+      setActivePump(["H-1", "H-4"]);
+    }
+    if (ZGP_TANK.includes(from) && to === "910-10(2)") {
+      setActivePump(["H-1", "H-4"]);
     }
   }, [from, to]);
 
