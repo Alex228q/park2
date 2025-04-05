@@ -1,21 +1,49 @@
+import { useState, useEffect, useRef } from "react";
 import parkStore from "../store/parkStore";
 
 const Tank = ({ top = 0, left = 0, title = "" }) => {
   const { from, to, setFrom, setTo } = parkStore();
+  const [showPopup, setShowPopup] = useState(false);
+  const popupRef = useRef(null);
 
   const isFromSelected = from === title;
   const isToSelected = to === title;
 
-  const handleClick = () => {
+  // Закрытие попапа при клике вне его
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (popupRef.current && !popupRef.current.contains(e.target)) {
+        setShowPopup(false);
+      }
+    };
+
+    if (showPopup) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showPopup]);
+
+  const handleTankClick = () => {
     if (from === null) {
       setFrom(title);
+      setShowPopup(true); // Показываем попап при выборе from
     } else if (from === title) {
-      setFrom(title);
+      setFrom(null);
     } else if (to === null || to === title) {
       setTo(title);
     } else {
       setTo(title);
     }
+  };
+
+  const handleOptionClick = (option) => {
+    setTo(option);
+    setShowPopup(false);
   };
 
   let color = isFromSelected ? "green" : "white";
@@ -27,7 +55,6 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
 
   return (
     <div
-      onClick={handleClick}
       style={{
         position: "absolute",
         top,
@@ -45,9 +72,54 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
         backgroundColor: color,
         zIndex: 1000,
         color: textColor,
+        cursor: "pointer",
       }}
+      onClick={handleTankClick}
     >
       {title}
+      {showPopup && (
+        <div
+          ref={popupRef}
+          style={{
+            width: "130px",
+            position: "absolute",
+            top: "-85px",
+            left: "130%",
+            transform: "translateX(-50%)",
+            backgroundColor: "white",
+            color: "black",
+            padding: "10px",
+            borderRadius: "8px",
+            fontSize: "16px",
+            boxShadow: "0 2px 10px rgba(0, 0, 0, 0.2)",
+            zIndex: 1001,
+            display: "flex",
+            flexDirection: "column",
+            gap: "8px",
+            border: "1px solid #ccc",
+          }}
+        >
+          {["910-40(1)", "910-10(2)", "910-100(3)"].map((option) => (
+            <div
+              key={option}
+              onClick={(e) => {
+                e.stopPropagation(); // Предотвращаем всплытие клика
+                handleOptionClick(option);
+              }}
+              style={{
+                padding: "6px 12px",
+                borderRadius: "4px",
+                cursor: "pointer",
+                "&:hover": {
+                  backgroundColor: "#f0f0f0",
+                },
+              }}
+            >
+              {option}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
