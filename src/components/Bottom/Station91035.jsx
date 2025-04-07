@@ -40,7 +40,7 @@ const Station91035 = () => {
       <Pipe isHorizontal top={2117} left={3393} length={47} title="p194" />
       <Valve title="61" top={2107} left={3440} isUp />
       <Pipe isHorizontal top={2117} left={3459} length={772} title="p195" />
-      <Pipe isHorizontal top={2117} left={4231} length={12} title="p196" />
+      {/* <Pipe isHorizontal top={2117} left={4231} length={20} title="p196" /> */}
       <Pipe isHorizontal top={2146} left={2989} length={23} title="p197" />
       <Pipe isHorizontal top={2146} left={3012} length={23} title="p198" />
       <Pipe isHorizontal top={2146} left={3185} length={64} title="p199" />
@@ -83,8 +83,8 @@ const Station91035 = () => {
       <Pipe isHorizontal top={2362} left={2747} length={35} title="p229" />
       <Pipe isHorizontal top={2362} left={2932} length={35} title="p230" />
       <Pipe isHorizontal top={2362} left={3105} length={45} title="p231" />
-      <Pipe isHorizontal top={2574} left={4131} length={50} title="p237" />
-      <Pipe isHorizontal top={2610} left={4131} length={107} title="p238" />
+      <Pipe isHorizontal top={2684} left={4080} length={96} title="p237" />
+      <Pipe isHorizontal top={2704} left={4044} length={193} title="p238" />
 
       {/* *************************************************** */}
       <Pipe top={1448} left={2569} length={83} title="v237" />
@@ -340,8 +340,10 @@ const Station91035 = () => {
       <Intersection top={2269} left={3389} title="i166" />
       <Pipe top={2282} left={3393} length={33} title="v369" />
       <Pipe top={2146} left={3428} length={134} title="v370" />
-      <Pipe top={2146} left={4174} length={435} title="v371" />
-      <Pipe top={2117} left={4231} length={500} title="v372" />
+      <Pipe top={2146} left={4174} length={545} title="v371" />
+      <Pipe top={2650} left={4080} length={41} title="v371" />
+      <Pipe top={2117} left={4231} length={594} title="v372" />
+      <Pipe top={2650} left={4040} length={61} title="v372" />
 
       <Pump title="H-1" top={2343} left={2596} />
       <Pump title="H-2" top={2343} left={2781} />

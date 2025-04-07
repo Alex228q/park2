@@ -195,6 +195,14 @@ const TanksLevel = () => {
       <Pipe top={732} left={2873} length={320} title="v220" />
       <Intersection top={1052} left={2869} title="i82" />
       <Pipe top={1066} left={2873} length={26} title="v221" />
+
+      <Pipe top={461} left={2319} length={203} title="v373" />
+      <Intersection top={665} left={2315} title="i167" />
+      <Pipe top={679} left={2319} length={275} title="v373" />
+      <Intersection top={954} left={2315} title="i167" />
+      <Pipe top={968} left={2319} length={205} title="v373" />
+      <Intersection top={1173} left={2315} title="i167" />
+      <Pipe top={1187} left={2319} length={20} title="v373" />
     </>
   );
 };

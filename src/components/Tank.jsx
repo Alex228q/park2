@@ -99,22 +99,24 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
           }}
         >
           {["910-40(1)", "910-10(2)", "910-100(3)"].map((option) => (
-            <div
-              key={option}
-              onClick={(e) => {
-                e.stopPropagation(); // Предотвращаем всплытие клика
-                handleOptionClick(option);
-              }}
-              style={{
-                padding: "6px 12px",
-                borderRadius: "4px",
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: "#f0f0f0",
-                },
-              }}
-            >
-              {option}
+            <div key={option}>
+              <div
+                onClick={(e) => {
+                  e.stopPropagation(); // Предотвращаем всплытие клика
+                  handleOptionClick(option);
+                }}
+                style={{
+                  padding: "6px 12px",
+                  borderRadius: "4px",
+                  cursor: "pointer",
+                  "&:hover": {
+                    backgroundColor: "#f0f0f0",
+                  },
+                }}
+              >
+                {option}
+              </div>
+              <hr />
             </div>
           ))}
         </div>

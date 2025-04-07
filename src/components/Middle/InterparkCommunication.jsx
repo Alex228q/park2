@@ -41,9 +41,9 @@ const InterparkCommunication = () => {
       <Pipe isHorizontal top={1327} left={3261} length={25} title="p142" />
       <Pipe isHorizontal top={1362} left={1223} length={35} title="p143" />
       <Valve isUp top={1352} left={1258} title="79" />
-      <Pipe isHorizontal top={1362} left={1277} length={680} title="p144" />
-      <Valve isUp top={1352} left={1957} title="101" />
-      <Pipe isHorizontal top={1362} left={1976} length={20} title="p145" />
+      <Pipe isHorizontal top={1362} left={1277} length={685} title="p144" />
+      <Valve isUp top={1352} left={1962} title="101" />
+      <Pipe isHorizontal top={1362} left={1981} length={20} title="p145" />
       <Pipe isHorizontal top={1407} left={1361} length={52} title="p146" />
       <Pipe isHorizontal top={1407} left={1413} length={52} title="p147" />
       <Valve isUp top={1397} left={1465} title="73" />
@@ -87,14 +87,22 @@ const InterparkCommunication = () => {
       <Pipe isHorizontal top={1650} left={2465} length={58} title="p174" />
       <Pipe isHorizontal top={1650} left={3519} length={58} title="p175" />
 
-      <Valve isUp top={1767} left={2504} title="ЗМ-74" isLeft/>
+      <Valve isUp top={1767} left={2504} title="ЗМ-74" isLeft />
       <Pipe isHorizontal top={1777} left={2523} length={12} title="p232" />
       <Pipe isHorizontal top={1777} left={2535} length={762} title="p233" />
 
-      <Valve isUp top={1802} left={2527} title="ЗМ-75" isLeft/>
+      <Valve isUp top={1802} left={2527} title="ЗМ-75" isLeft />
       <Pipe isHorizontal top={1812} left={2546} length={12} title="p234" />
       <Pipe isHorizontal top={1812} left={2558} length={808} title="p235" />
       <Pipe isHorizontal top={1741} left={3064} length={205} title="p236" />
+      <Pipe isHorizontal top={1852} left={4231} length={46} title="p239" />
+      <Pipe isHorizontal top={2736} left={4000} length={277} title="p240" />
+      <Pipe isHorizontal top={2736} left={3980} length={20} title="p241" />
+      <Pipe isHorizontal top={2769} left={3950} length={411} title="p242" />
+      <Pipe isHorizontal top={2802} left={3993} length={30} title="p243" />
+      <Valve isUp top={2792} left={4023} title="62"  />
+      <Pipe isHorizontal top={2802} left={4042} length={30} title="p243" />
+
 
       <Pipe top={805} left={1097} length={246} title="v171" />
 
@@ -201,6 +209,53 @@ const InterparkCommunication = () => {
       <Pipe top={356} left={2834} length={56} title="v235" />
       <Intersection top={411} left={2830} title="i90" />
       <Pipe top={425} left={2834} length={638} title="v236" />
+      <Pipe top={1298} left={1943} length={25} title="v374" />
+      <Intersection top={1323} left={1939} title="i168" />
+      <Pipe top={1337} left={1943} length={20} title="v374" />
+      <Intersection top={1358} left={1939} title="i168" />
+      <Pipe top={1372} left={1943} length={31} title="v374" />
+      <Intersection top={1403} left={1939} title="i168" />
+      <Pipe top={1417} left={1943} length={27} title="v374" />
+      <Intersection top={1444} left={1939} title="i168" />
+      <Pipe top={1458} left={1943} length={84} title="v374" />
+      <Pipe top={1235} left={1999} length={31} title="v375" />
+      <Intersection top={1265} left={1995} title="i169" />
+      <Pipe top={1279} left={1999} length={16} title="v375" />
+      <Intersection top={1294} left={1995} title="i169" />
+      <Pipe top={1308} left={1999} length={16} title="v375" />
+      <Intersection top={1323} left={1995} title="i169" />
+      <Pipe top={1337} left={1999} length={32} title="v375" />
+      <Pipe top={1362} left={1999} length={41} title="v375" />
+      <Intersection top={1403} left={1995} title="i169" />
+      <Pipe top={1417} left={1999} length={28} title="v375" />
+      <Intersection top={1444} left={1995} title="i169" />
+      <Pipe top={1458} left={1999} length={84} title="v375" />
+      <Pipe top={1298} left={2216} length={25} title="v376" />
+      <Intersection top={1323} left={2212} title="i170" />
+      <Pipe top={1337} left={2216} length={66} title="v376" />
+      <Intersection top={1403} left={2212} title="i170" />
+      <Pipe top={1417} left={2216} length={26} title="v376" />
+      <Intersection top={1444} left={2212} title="i170" />
+      <Pipe top={1458} left={2216} length={72} title="v376" />
+      <Intersection top={1531} left={2212} title="i170" />
+      <Pipe top={1545} left={2216} length={65} title="v376" />
+      <Intersection top={1611} left={2212} title="i170" />
+      <Pipe top={1625} left={2216} length={22} title="v376" />
+      <Intersection top={1646} left={2212} title="i170" />
+      <Pipe top={1056} left={4231} length={796} title="v377" />
+      <Pipe top={1852} left={4231} length={69} title="v377/1" />
+      <Valve top={1919} left={4227} title="60" />
+      <Pipe top={1940} left={4231} length={184} title="v377/2" />
+      <Pipe top={1852} left={4270} length={69} title="v377/3" />
+      <Valve top={1919} left={4266} title="60A" />
+      <Pipe top={1940} left={4270} length={796} title="v377/3" />
+      <Pipe top={2653} left={3980} length={90} title="v378" />
+      <Pipe top={2736} left={3993} length={27} title="v379" />
+      <Pipe top={1027} left={4354} length={1742} title="v380" />
+      <Pipe top={2653} left={3950} length={123} title="v381" />
+      <Intersection top={2765} left={3989} title="i171" />
+      <Pipe top={2779} left={3993} length={30} title="v382" />
+
     </div>
   );
 };
