@@ -6,6 +6,7 @@ import TanksLevel from "./components/Middle/TanksLevel";
 import InterparkCommunication from "./components/Middle/InterparkCommunication";
 import Station91035 from "./components/Bottom/Station91035";
 import Reck from "./components/Reck";
+import Station910115 from "./components/Bottom/Station910115";
 
 const PST_TANK = [
   "E-322",
@@ -3313,6 +3314,7 @@ function App() {
         <TanksLevel />
         <InterparkCommunication />
         <Station91035 />
+        <Station910115 />
         <Reck title="910-40(1)" top={2331} left={3658} />
         <Reck title="910-10(2)" top={2550} left={3658} />
       </div>
@@ -3330,6 +3332,7 @@ function App() {
       <TanksLevel />
       <InterparkCommunication />
       <Station91035 />
+      <Station910115 />
       <Reck title="910-40(1)" top={2331} left={3658} />
       <Reck title="910-10(2)" top={2550} left={3658} />
     </>

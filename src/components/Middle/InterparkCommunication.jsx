@@ -100,9 +100,8 @@ const InterparkCommunication = () => {
       <Pipe isHorizontal top={2736} left={3980} length={20} title="p241" />
       <Pipe isHorizontal top={2769} left={3950} length={411} title="p242" />
       <Pipe isHorizontal top={2802} left={3993} length={30} title="p243" />
-      <Valve isUp top={2792} left={4023} title="62"  />
+      <Valve isUp top={2792} left={4023} title="62" />
       <Pipe isHorizontal top={2802} left={4042} length={30} title="p243" />
-
 
       <Pipe top={805} left={1097} length={246} title="v171" />
 
@@ -116,7 +115,7 @@ const InterparkCommunication = () => {
       <Pipe top={1546} left={1097} length={41} title="v174" />
 
       <Intersection top={1588} left={1093} title="i54" />
-      <Pipe top={1602} left={1097} length={41} title="v175" />
+      <Pipe top={1602} left={1097} length={109} title="v175" />
 
       <Pipe top={805} left={1126} length={246} title="v176" />
 
@@ -156,6 +155,7 @@ const InterparkCommunication = () => {
 
       <Intersection top={1646} left={1173} title="i66" />
       <Pipe top={1602} left={1177} length={42} title="v190" />
+      <Pipe top={1660} left={1177} length={25} title="v190" />
       <Pipe top={877} left={1216} length={173} title="v191" />
       <Intersection top={1052} left={1212} title="i67" />
       <Pipe top={1066} left={1216} length={16} title="v192" />
@@ -169,7 +169,7 @@ const InterparkCommunication = () => {
       <Intersection top={1531} left={1034} title="i70" />
       <Pipe top={1546} left={1038} length={41} title="v197" />
       <Intersection top={1588} left={1034} title="i71" />
-      <Pipe top={1602} left={1038} length={41} title="v198 " />
+      <Pipe top={1602} left={1038} length={141} title="v198 " />
       <Pipe top={958} left={1314} length={93} title="v199 " />
       <Intersection top={1052} left={1310} title="i72" />
       <Intersection top={1081} left={1310} title="i73" />
@@ -255,7 +255,6 @@ const InterparkCommunication = () => {
       <Pipe top={2653} left={3950} length={123} title="v381" />
       <Intersection top={2765} left={3989} title="i171" />
       <Pipe top={2779} left={3993} length={30} title="v382" />
-
     </div>
   );
 };
