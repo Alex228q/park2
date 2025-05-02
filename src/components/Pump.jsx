@@ -3,6 +3,12 @@ import parkStore from "../store/parkStore";
 const Pump = ({ top = 0, left = 0, title = "" }) => {
   const { activePump, setActivePump } = parkStore();
   const isActive = activePump.includes(title);
+  let colorActivePump =
+    "linear-gradient(90deg, green,green,green, #1e22e0,#1e22e0,#1e22e0)";
+  if (title[0] === "Н") {
+    colorActivePump =
+      "linear-gradient(90deg, #1e22e0,#1e22e0,#1e22e0, green, green, green)";
+  }
 
   const handleClick = () => {
     if (isActive) {
@@ -30,9 +36,7 @@ const Pump = ({ top = 0, left = 0, title = "" }) => {
         fontSize: "18px",
         fontFamily: "monospace",
         backgroundColor: isActive ? "white" : "white", // Фон для неактивного состояния
-        background: isActive
-          ? "linear-gradient(90deg, green,green,green, #1e22e0,#1e22e0,#1e22e0)"
-          : "white",
+        background: isActive ? colorActivePump : "white",
         color: isActive ? "white" : "black", // Цвет текста
 
         zIndex: 1000,
