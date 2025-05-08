@@ -3,10 +3,18 @@ import Pump from "../Pump";
 import Pipe from "../Pipe";
 import Valve from "../Valve";
 import Intersection from "../Intersection";
+import SimpleText from "../SimpleText";
 
 const Station91035 = () => {
   return (
     <>
+      <SimpleText
+        title="Насосная 910-35"
+        top={2400}
+        left={2700}
+        fontSize={50}
+        width={500}
+      />
       <Pipe isHorizontal top={1985} left={2608} length={381} title="p176" />
       <Pipe isHorizontal top={2008} left={3105} length={57} title="p177" />
       <Pipe isHorizontal top={2025} left={2711} length={185} title="p178" />

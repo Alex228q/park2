@@ -4,10 +4,18 @@ import Pipe from "../Pipe";
 import Valve from "../Valve";
 import Intersection from "../Intersection";
 import Filter from "../Filter";
+import SimpleText from "../SimpleText";
 
 const Station910115 = () => {
   return (
     <>
+      <SimpleText
+        title="Насосная 910-115"
+        top={2352}
+        left={1670}
+        fontSize={50}
+        width={500}
+      />
       <Pipe isHorizontal top={1679} left={1177} length={294} title="p244" />
       <Pipe isHorizontal top={1679} left={1471} length={219} title="p245" />
       <Pipe isHorizontal top={1679} left={1690} length={219} title="p246" />
@@ -20,28 +28,28 @@ const Station910115 = () => {
       <Pipe isHorizontal top={1711} left={1651} length={219} title="p252" />
       <Pipe isHorizontal top={1711} left={1870} length={173} title="p253" />
       <Pipe isHorizontal top={1711} left={2043} length={46} title="p254" />
-      <Pipe isHorizontal top={1711} left={2089} length={219} title="p255" />
+      <Pipe isHorizontal top={1711} left={2089} length={259} title="p255" />
 
       <Pipe isHorizontal top={1743} left={1038} length={358} title="p256" />
       <Pipe isHorizontal top={1743} left={1396} length={219} title="p257" />
       <Pipe isHorizontal top={1743} left={1615} length={219} title="p258" />
       <Pipe isHorizontal top={1743} left={1834} length={219} title="p259" />
-      <Pipe isHorizontal top={1743} left={2053} length={219} title="p260" />
+      <Pipe isHorizontal top={1743} left={2053} length={269} title="p260" />
 
       <Pipe isHorizontal top={1777} left={1165} length={210} title="p261" />
       <Pipe isHorizontal top={1777} left={1375} length={218} title="p262" />
       <Pipe isHorizontal top={1777} left={1593} length={219} title="p263" />
       <Pipe isHorizontal top={1777} left={1812} length={209} title="p264" />
-      <Pipe isHorizontal top={1777} left={2021} length={216} title="p265" />
-      <Pipe isHorizontal top={1777} left={2237} length={253} title="p266" />
+      <Pipe isHorizontal top={1777} left={2021} length={206} title="p265" />
+      <Pipe isHorizontal top={1777} left={2227} length={263} title="p266" />
       <Pipe isHorizontal top={1777} left={2490} length={14} title="p267" />
 
       <Pipe isHorizontal top={1812} left={1200} length={150} title="p268" />
       <Pipe isHorizontal top={1812} left={1350} length={219} title="p269" />
       <Pipe isHorizontal top={1812} left={1569} length={219} title="p270" />
       <Pipe isHorizontal top={1812} left={1788} length={209} title="p271" />
-      <Pipe isHorizontal top={1812} left={1997} length={218} title="p272" />
-      <Pipe isHorizontal top={1812} left={2215} length={230} title="p273" />
+      <Pipe isHorizontal top={1812} left={1997} length={208} title="p272" />
+      <Pipe isHorizontal top={1812} left={2205} length={240} title="p273" />
       <Pipe isHorizontal top={1812} left={2445} length={82} title="p274" />
 
       <Pipe isHorizontal top={1846} left={1223} length={81} title="p275" />
@@ -85,6 +93,14 @@ const Station910115 = () => {
       <Pipe isHorizontal top={1964} left={2089} length={46} title="p314" />
       <Pipe isHorizontal top={2315} left={2021} length={58} title="p315" />
       <Pipe isHorizontal top={2315} left={2119} length={16} title="p316" />
+      <Pipe isHorizontal top={1964} left={2180} length={32} title="p317" />
+      <Pipe isHorizontal top={1964} left={2205} length={29} title="p318" />
+      <Pipe isHorizontal top={1964} left={2227} length={30} title="p319" />
+      <Pipe isHorizontal top={1964} left={2250} length={30} title="p320" />
+      <Pipe isHorizontal top={1964} left={2322} length={30} title="p321" />
+      <Pipe isHorizontal top={1964} left={2345} length={29} title="p322" />
+      <Pipe isHorizontal top={2315} left={2250} length={38} title="p323" />
+      <Pipe isHorizontal top={2315} left={2327} length={47} title="p324" />
 
       <Pipe isHorizontal top={1964} left={1396} length={43} title="p283" />
       <Pipe isHorizontal top={1964} left={1432} length={46} title="p284" />
@@ -408,6 +424,122 @@ const Station910115 = () => {
       <Pipe top={2000} left={2021} length={190} title="v410" />
       <Intersection top={2188} left={2017} title="i202" />
       <Pipe top={2202} left={2021} length={120} title="v410" />
+
+      <Pipe top={1679} left={2367} length={29} title="v411" />
+      <Intersection top={1707} left={2363} title="i203" />
+      <Pipe top={1721} left={2367} length={20} title="v411" />
+      <Intersection top={1739} left={2363} title="i203" />
+      <Pipe top={1753} left={2367} length={20} title="v411" />
+      <Intersection top={1773} left={2363} title="i203" />
+      <Pipe top={1787} left={2367} length={22} title="v411" />
+      <Intersection top={1808} left={2363} title="i203" />
+      <Pipe top={1822} left={2367} length={22} title="v411" />
+      <Intersection top={1842} left={2363} title="i203" />
+      <Pipe top={1856} left={2367} length={15} title="v411" />
+      <Intersection top={1870} left={2363} title="i203" />
+      <Pipe top={1884} left={2367} length={48} title="v411" />
+      <Valve top={1930} left={2363} title="ЗМ-37" isRotate />
+      <Pipe top={1951} left={2367} length={20} title="v411" />
+
+      <Pipe top={1711} left={2345} length={25} title="v412" />
+      <Intersection top={1739} left={2341} title="i204" />
+      <Pipe top={1753} left={2345} length={20} title="v412" />
+      <Intersection top={1773} left={2341} title="i204" />
+      <Pipe top={1787} left={2345} length={22} title="v412" />
+      <Intersection top={1808} left={2341} title="i204" />
+      <Pipe top={1822} left={2345} length={22} title="v412" />
+      <Intersection top={1842} left={2341} title="i204" />
+      <Pipe top={1856} left={2345} length={15} title="v412" />
+      <Intersection top={1870} left={2341} title="i204" />
+      <Pipe top={1884} left={2345} length={48} title="v412" />
+      <Valve top={1930} left={2341} title="ЗМ-36" isRotate />
+      <Pipe top={1951} left={2345} length={20} title="v412" />
+
+      <Pipe top={1743} left={2322} length={28} title="v413" />
+      <Intersection top={1773} left={2318} title="i205" />
+      <Pipe top={1787} left={2322} length={22} title="v413" />
+      <Intersection top={1808} left={2318} title="i205" />
+      <Pipe top={1822} left={2322} length={22} title="v413" />
+      <Intersection top={1842} left={2318} title="i205" />
+      <Pipe top={1856} left={2322} length={15} title="v413" />
+      <Intersection top={1870} left={2318} title="i205" />
+      <Pipe top={1884} left={2322} length={48} title="v413" />
+      <Valve top={1930} left={2318} title="ЗМ-35" isRotate />
+      <Pipe top={1951} left={2322} length={20} title="v413" />
+
+      <Pipe top={1951} left={2227} length={20} title="v414" />
+      <Valve top={1930} left={2223} title="ЗМ-40" isRotate />
+      <Pipe top={1777} left={2227} length={33} title="v414" />
+      <Intersection top={1808} left={2223} title="i206" />
+      <Pipe top={1822} left={2227} length={21} title="v414" />
+      <Intersection top={1842} left={2223} title="i206" />
+      <Pipe top={1856} left={2227} length={15} title="v414" />
+      <Intersection top={1870} left={2223} title="i206" />
+      <Pipe top={1884} left={2227} length={48} title="v414" />
+
+      <Pipe top={1812} left={2205} length={32} title="v415" />
+      <Intersection top={1842} left={2201} title="i207" />
+      <Pipe top={1856} left={2205} length={15} title="v415" />
+      <Intersection top={1870} left={2201} title="i207" />
+      <Pipe top={1884} left={2205} length={48} title="v415" />
+      <Valve top={1930} left={2201} title="ЗМ-39" isRotate />
+      <Pipe top={1951} left={2205} length={20} title="v415" />
+
+      <Pipe top={1846} left={2180} length={24} title="v416" />
+      <Intersection top={1870} left={2176} title="i208" />
+      <Pipe top={1884} left={2180} length={48} title="v416" />
+      <Valve top={1930} left={2176} title="ЗМ-38" isRotate />
+      <Pipe top={1951} left={2180} length={20} title="v416" />
+
+      <Pipe top={1964} left={2367} length={67} title="vf5" />
+      <Filter top={2030} left={2358} title="Ф5" />
+      <Pipe top={2054} left={2367} length={135} title="vf5" />
+      <Intersection top={2188} left={2363} title="i209" />
+      <Pipe top={2202} left={2367} length={120} title="vf5" />
+
+      <Pipe top={1615} left={2250} length={30} title="v417" />
+      <Intersection top={1646} left={2246} title="i210" />
+      <Pipe top={1660} left={2250} length={15} title="v417" />
+      <Intersection top={1675} left={2246} title="i210" />
+      <Pipe top={1689} left={2250} length={19} title="v417" />
+      <Intersection top={1707} left={2246} title="i210" />
+      <Pipe top={1722} left={2250} length={18} title="v417" />
+      <Intersection top={1739} left={2246} title="i210" />
+      <Pipe top={1753} left={2250} length={22} title="v417" />
+      <Intersection top={1773} left={2246} title="i210" />
+      <Pipe top={1787} left={2250} length={22} title="v417" />
+      <Intersection top={1808} left={2246} title="i210" />
+      <Pipe top={1822} left={2250} length={22} title="v417" />
+      <Intersection top={1842} left={2246} title="i210" />
+      <Pipe top={1856} left={2250} length={15} title="v417" />
+      <Intersection top={1870} left={2246} title="i210" />
+      <Pipe top={1884} left={2250} length={48} title="v417" />
+      <Valve top={1930} left={2246} title="ЗМ-70" isRotate />
+      <Pipe top={1951} left={2250} length={20} title="v417" />
+
+      <Pipe top={1650} left={2273} length={23} title="v418" />
+      <Intersection top={1675} left={2269} title="i211" />
+      <Pipe top={1689} left={2273} length={19} title="v418" />
+      <Intersection top={1707} left={2269} title="i211" />
+      <Pipe top={1722} left={2273} length={18} title="v418" />
+      <Intersection top={1739} left={2269} title="i211" />
+      <Pipe top={1753} left={2273} length={22} title="v418" />
+      <Intersection top={1773} left={2269} title="i211" />
+      <Pipe top={1787} left={2273} length={22} title="v418" />
+      <Intersection top={1808} left={2269} title="i211" />
+      <Pipe top={1822} left={2273} length={22} title="v418" />
+      <Intersection top={1842} left={2269} title="i211" />
+      <Pipe top={1856} left={2273} length={15} title="v418" />
+      <Intersection top={1870} left={2269} title="i211" />
+      <Pipe top={1884} left={2273} length={48} title="v418" />
+      <Valve top={1930} left={2269} title="ЗМ-71" isRotate />
+      <Pipe top={1951} left={2273} length={20} title="v418" />
+
+      <Pipe top={1964} left={2250} length={20} title="v419" />
+      <Intersection top={1986} left={2246} title="i212" />
+      <Pipe top={2000} left={2250} length={190} title="v419" />
+      <Intersection top={2188} left={2246} title="i212" />
+      <Pipe top={2202} left={2250} length={120} title="v419" />
 
       <Pump title="Н-1" top={2296} left={1419} />
       <Pump title="Н-2" top={2296} left={1638} />
