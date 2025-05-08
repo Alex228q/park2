@@ -27,9 +27,7 @@ const Intersection = ({ top = 0, left = 0, title = "", isBig = false }) => {
     zIndex: z,
   };
 
-  return <div style={halfCircleStyle}>
-    {/* {title} */}
-    </div>;
+  return <div style={halfCircleStyle}>{/* {title} */}</div>;
 };
 
 export default Intersection;
