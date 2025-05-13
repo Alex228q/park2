@@ -26,8 +26,8 @@ const Station910115 = () => {
       <Pipe isHorizontal top={1711} left={1097} length={335} title="p250" />
       <Pipe isHorizontal top={1711} left={1432} length={219} title="p251" />
       <Pipe isHorizontal top={1711} left={1651} length={219} title="p252" />
-      <Pipe isHorizontal top={1711} left={1870} length={173} title="p253" />
-      <Pipe isHorizontal top={1711} left={2043} length={46} title="p254" />
+      <Pipe isHorizontal top={1711} left={1870} length={179} title="p253" />
+      <Pipe isHorizontal top={1711} left={2049} length={46} title="p254" />
       <Pipe isHorizontal top={1711} left={2089} length={259} title="p255" />
 
       <Pipe isHorizontal top={1743} left={1038} length={358} title="p256" />
@@ -570,6 +570,28 @@ const Station910115 = () => {
       <Pipe top={2000} left={1235} length={188} title="v422" />
       <Intersection top={2188} left={1231} title="i215" />
       <Pipe top={2202} left={1235} length={348} title="v422" />
+
+      <Pipe top={1177} left={2049} length={55} title="v423" />
+      <Intersection top={1231} left={2045} title="i216" />
+      <Pipe top={1245} left={2049} length={21} title="v423" />
+      <Intersection top={1265} left={2045} title="i216" />
+      <Pipe top={1279} left={2049} length={16} title="v423" />
+      <Intersection top={1294} left={2045} title="i216" />
+      <Pipe top={1308} left={2049} length={16} title="v423" />
+      <Intersection top={1323} left={2045} title="i216" />
+      <Pipe top={1337} left={2049} length={68} title="v423" />
+      <Intersection top={1403} left={2045} title="i216" />
+      <Pipe top={1417} left={2049} length={28} title="v423" />
+      <Intersection top={1444} left={2045} title="i216" />
+      <Pipe top={1460} left={2049} length={72} title="v423" />
+      <Intersection top={1531} left={2045} title="i216" />
+      <Pipe top={1545} left={2049} length={67} title="v423" />
+      <Intersection top={1611} left={2045} title="i216" />
+      <Pipe top={1625} left={2049} length={22} title="v423" />
+      <Intersection top={1646} left={2045} title="i216" />
+      <Pipe top={1660} left={2049} length={17} title="v423" />
+      <Intersection top={1675} left={2045} title="i216" />
+      <Pipe top={1690} left={2049} length={28} title="v423" />
 
       <Pump title="Н-1" top={2296} left={1399} />
       <Pump title="Н-2" top={2296} left={1624} />
