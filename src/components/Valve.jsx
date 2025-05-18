@@ -1,4 +1,5 @@
 import parkStore from "../store/parkStore";
+import valveImage from "../assets/images/valve.png";
 const Valve = ({
   textTop = 0,
   textLeft = 0,
@@ -46,7 +47,7 @@ const Valve = ({
               filter: `drop-shadow(0px 1000px 0 ${color})`,
               transform: "translateY(-1000px)",
             }}
-            src="./valve.png"
+            src={valveImage}
             alt="valve"
             width={19}
             height={19}
@@ -86,7 +87,7 @@ const Valve = ({
             filter: `drop-shadow(0px 1000px 0 ${color})`,
             transform: "translateY(-1000px)",
           }}
-          src="./valve.png"
+          src={valveImage}
           alt="valve"
           width={19}
           height={19}
@@ -101,7 +102,6 @@ const Valve = ({
           display: "flex",
           justifyContent: isLeft ? "center" : null,
           rotate: isRotate ? "270deg" : "0deg",
-
           position: "absolute",
           top: isLeft ? top - 8 : top - 7,
           left: isLeft ? left - 34 : left + 14,
@@ -126,7 +126,7 @@ const Valve = ({
             filter: `drop-shadow(0px 1000px 0 ${color})`,
             transform: "translateY(-1000px)",
           }}
-          src="./valve.png"
+          src={valveImage}
           alt="valve"
           width={19}
           height={19}
