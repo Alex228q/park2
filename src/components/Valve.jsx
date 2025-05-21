@@ -11,7 +11,7 @@ const Valve = ({
   isRotate = false,
 }) => {
   const { activeElements, activeElementsAfterPump } = parkStore();
-  let color = activeElements.includes(title) ? "green" : "gray";
+  let color = activeElements.includes(title) ? "green" : "#474747";
   if (activeElementsAfterPump.includes(title)) {
     color = "#1e22e0";
   }
