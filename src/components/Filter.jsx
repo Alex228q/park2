@@ -19,7 +19,7 @@ const Filter = ({ top = 0, left = 0, title = "" }) => {
         border: `2px solid ${isActive ? "green" : "gray"}`,
         borderRadius: "100%",
         fontWeight: "500",
-        color: isActive ? "green" : "gray",
+        color: isActive ? "green" : "#474747",
         fontFamily: "monospace",
         zIndex: 1000,
       }}
