@@ -23,16 +23,11 @@ const Intersection = ({ top = 0, left = 0, title = "", isBig = false }) => {
     borderLeftColor: color,
     borderBottomWidth: "0",
     borderBottomStyle: "solid",
-    rotate: "90deg",
+    rotate: "331deg",
     zIndex: z,
   };
 
-  return <div style={halfCircleStyle}>
-
-    {/* {title} */}
-    
-    
-    </div>;
+  return <div style={halfCircleStyle}>{title}</div>;
 };
 
 export default Intersection;
