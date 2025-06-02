@@ -6375,8 +6375,60 @@ function App() {
         "135",
         "136",
         "C-1",
-        
-
+        "p27",
+        "v14",
+        "v15",
+        "137",
+        "v16",
+        "p44",
+        "p45",
+        "v27",
+        "i10",
+        "v28",
+        "p59",
+        "v29",
+        "p52",
+        "p53",
+        "57",
+        "58",
+        "p54",
+        "p55",
+        "p56",
+        "v35",
+        "v34",
+        "p78",
+        "p79",
+        "329A",
+        "327A",
+        "328A",
+        "330A",
+        "331A",
+        "v37",
+        "v36",
+        "v38",
+        "p105",
+        "v40",
+        "v45",
+        "v46",
+        "v39",
+        "p43",
+        "p42",
+        "53",
+        "v17/2",
+        "p35",
+        "55",
+        "p36",
+        "v23",
+        "i9",
+        "v24",
+        "v24/2",
+        "v24/3",
+        "p77",
+        "p104",
+        "v43",
+        "v44",
+        "v41",
+        "v42",
       ]);
     } else {
       addElementsTransferGpn([]);
@@ -6446,8 +6498,8 @@ function App() {
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
       >
-        <Switcher top={50} left={2426} />
-        <SimpleText left={2426} top={74} title="МАЗУТ С КГПН" />
+        <Switcher top={72} left={2426} />
+        <SimpleText left={2470} top={74} title="МАЗУТ С КГПН" />
         <TopLevel />
         <TanksLevel />
         <InterparkCommunication />
@@ -6462,8 +6514,8 @@ function App() {
 
   return (
     <>
-      <Switcher top={50} left={2426} />
-      <SimpleText left={2426} top={74} title="Мазут с КГПН" />
+      <Switcher top={72} left={2426} />
+      <SimpleText left={2470} top={74} title="МАЗУТ С КГПН" />
 
       <TopLevel />
       <TanksLevel />
