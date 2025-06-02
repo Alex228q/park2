@@ -6637,10 +6637,10 @@ function App() {
 
   return (
     <>
-      <Switcher top={47} left={3045} title="pst" activeColor="#efa215" />
+      <Switcher top={47} left={3045} title="pst" activeColor="#6F4B07" />
       <SimpleText left={3087} top={49} title="МАЗУТ С ПСТ" />
 
-      <Switcher top={53} left={2426} title="gpn" activeColor="#BB34E0" />
+      <Switcher top={53} left={2426} title="gpn" activeColor="#7D0F9B" />
       <SimpleText left={2470} top={74} title="МАЗУТ С КГПН" />
 
       <TopLevel />
