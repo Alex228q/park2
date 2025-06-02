@@ -5,3 +5,6 @@
   user-select: none;
   font-family: Arial, Helvetica, sans-serif;
 }
+body {
+  overscroll-behavior-y: contain;
+}
