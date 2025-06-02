@@ -1,11 +1,29 @@
 import { create } from "zustand";
 
 const parkStore = create((set) => ({
+  isMazutTransferVisibleKgpn: false,
+  isMazutTransferVisiblePst: false,
   from: null,
   to: null,
   activeElements: [],
+  activeElementsGpn: [],
   activeElementsAfterPump: [],
   activePump: [],
+
+  toggleMazutTransferVisibilityKgpn: () =>
+    set((state) => ({
+      isMazutTransferVisibleKgpn: !state.isMazutTransferVisibleKgpn,
+    })),
+
+  toggleMazutTransferVisibilityPst: () =>
+    set((state) => ({
+      isMazutTransferVisiblePst: !state.isMazutTransferVisiblePst,
+    })),
+
+  addElementsTransferGpn: (titles) =>
+    set(() => ({
+      activeElementsGpn: [...titles],
+    })),
 
   setFrom: (title) =>
     set((state) => {

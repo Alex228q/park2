@@ -7,6 +7,8 @@ import InterparkCommunication from "./components/Middle/InterparkCommunication";
 import Station91035 from "./components/Bottom/Station91035";
 import Reck from "./components/Reck";
 import Station910115 from "./components/Bottom/Station910115";
+import Switcher from "./components/Switcher";
+import SimpleText from "./components/SimpleText";
 
 const PST_TANK = [
   "E-322",
@@ -29,11 +31,13 @@ function App() {
   const {
     from,
     to,
-    activeElements,
     addActiveElement,
     addActiveElementAfterPump,
     activePump,
     setActivePump,
+    addElementsTransferGpn,
+    isMazutTransferVisibleKgpn,
+    activeElementsGpn,
   } = parkStore();
 
   const containerRef = useRef(null);
@@ -6140,7 +6144,7 @@ function App() {
       if (activePump.includes("Н-2")) {
         newElements = [
           ...newElements,
-            "p302",
+          "p302",
           "v396",
           "i186",
           "p304",
@@ -6177,7 +6181,7 @@ function App() {
       if (activePump.includes("Н-4")) {
         newElements = [
           ...newElements,
-           "p315",
+          "p315",
           "v410",
           "i202",
           "p312",
@@ -6195,8 +6199,8 @@ function App() {
       }
 
       if (activePump.includes("Н-5")) {
-        newElements = [...newElements
-          ,
+        newElements = [
+          ...newElements,
           "p323",
           "v419",
           "i212",
@@ -6219,8 +6223,6 @@ function App() {
       const uniqueElements = [...new Set(newElements)];
       addActiveElementAfterPump(uniqueElements);
     }
-
-
 
     if (to === "910-100(3)" && PST_TANK.includes(from)) {
       let newElements = [];
@@ -6302,8 +6304,8 @@ function App() {
       }
 
       if (activePump.includes("Н-5")) {
-        newElements = [...newElements
-          ,
+        newElements = [
+          ...newElements,
           "p323",
           "v419",
           "i212",
@@ -6348,6 +6350,38 @@ function App() {
       setActivePump(["Н-1", "Н-3", "Н-5"]);
     }
   }, [from, to]);
+
+  useEffect(() => {
+    if (isMazutTransferVisibleKgpn) {
+      addElementsTransferGpn([
+        "p6",
+        "p5",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "p37",
+        "p38",
+        "135",
+        "136",
+        "C-1",
+        
+
+      ]);
+    } else {
+      addElementsTransferGpn([]);
+    }
+  }, [isMazutTransferVisibleKgpn]);
 
   // Обработчики для drag-scroll
   const handleMouseDown = (e) => {
@@ -6412,11 +6446,8 @@ function App() {
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
       >
-        {/* <p>From {from}</p>
-        <p>To {to}</p>
-        <p>Active elements: {activeElements.join(", ")}</p>
-        <p>Active pumps: {activePump.join(", ")}</p> */}
-
+        <Switcher top={50} left={2426} />
+        <SimpleText left={2426} top={74} title="МАЗУТ С КГПН" />
         <TopLevel />
         <TanksLevel />
         <InterparkCommunication />
@@ -6431,10 +6462,8 @@ function App() {
 
   return (
     <>
-      {/* <p>From {from}</p>
-      <p>To {to}</p>
-      <p>Active elements: {activeElements.join(", ")}</p>
-      <p>Active pumps: {activePump.join(", ")}</p> */}
+      <Switcher top={50} left={2426} />
+      <SimpleText left={2426} top={74} title="Мазут с КГПН" />
 
       <TopLevel />
       <TanksLevel />
