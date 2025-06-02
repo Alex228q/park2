@@ -1,7 +1,7 @@
 import parkStore from "../store/parkStore";
 
 const Switcher = ({
-  title = "gpn",
+  title = "",
   disabled = false,
   activeColor = "#4cd964",
   inactiveColor = "#ee4141",

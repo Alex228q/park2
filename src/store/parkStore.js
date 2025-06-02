@@ -7,6 +7,7 @@ const parkStore = create((set) => ({
   to: null,
   activeElements: [],
   activeElementsGpn: [],
+  activeElementsPst: [],
   activeElementsAfterPump: [],
   activePump: [],
 
@@ -23,6 +24,11 @@ const parkStore = create((set) => ({
   addElementsTransferGpn: (titles) =>
     set(() => ({
       activeElementsGpn: [...titles],
+    })),
+
+  addElementsTransferPst: (titles) =>
+    set(() => ({
+      activeElementsPst: [...titles],
     })),
 
   setFrom: (title) =>

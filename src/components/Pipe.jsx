@@ -17,8 +17,12 @@ const Pipe = ({
   top = 0,
   title = "",
 }) => {
-  const { activeElements, activeElementsAfterPump, activeElementsGpn } =
-    parkStore();
+  const {
+    activeElements,
+    activeElementsAfterPump,
+    activeElementsGpn,
+    activeElementsPst,
+  } = parkStore();
   let color = activeElements.includes(title) ? "green" : "#E1E7EC";
   let z =
     activeElements.includes(title) || activeElementsAfterPump.includes(title)
@@ -30,7 +34,12 @@ const Pipe = ({
   }
 
   if (activeElementsGpn.includes(title)) {
-    color = "#BB34E0";
+    color = "#7D0F9B";
+    z = 30;
+  }
+
+  if (activeElementsPst.includes(title)) {
+    color = "#6F4B07";
     z = 30;
   }
 

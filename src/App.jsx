@@ -36,8 +36,9 @@ function App() {
     activePump,
     setActivePump,
     addElementsTransferGpn,
+    addElementsTransferPst,
     isMazutTransferVisibleKgpn,
-    activeElementsGpn,
+    isMazutTransferVisiblePst,
   } = parkStore();
 
   const containerRef = useRef(null);
@@ -6435,6 +6436,125 @@ function App() {
     }
   }, [isMazutTransferVisibleKgpn]);
 
+  useEffect(() => {
+    if (isMazutTransferVisiblePst) {
+      addElementsTransferPst([
+        "v105",
+        "i29",
+        "v105/2",
+        "p6/2",
+        "p6/1",
+        "p116",
+        "v88",
+        "i22",
+        "i21",
+        "v87",
+        "76",
+        "75",
+        "v86",
+        "v85",
+        "v84",
+        "v83",
+        "p10",
+        "ЗМ-44",
+        "p9",
+        "i30",
+        "i31",
+        "i32",
+        "i33",
+        "i34",
+        "v107",
+        "v108",
+        "v109",
+        "v110",
+        "v111",
+        "v112",
+        "p95",
+        "ЗМ-10",
+        "322A",
+        "p94",
+        "p93",
+        "v95",
+        "p11/4",
+        "17",
+        "p11/5",
+        "v94",
+        "p24",
+        "100",
+        "p25",
+        "v47",
+        "p80",
+        "v52",
+        "v53",
+        "333A",
+        "332A",
+        "334A",
+        "v47/6",
+        "p106",
+        "p107",
+        "v49",
+        "v48",
+        "v50",
+        "v51",
+        "p23",
+        "p22",
+        "p21",
+        "51A",
+        "v22",
+        "p31",
+        "51",
+        "p30",
+        "v60",
+        "i13",
+        "v59",
+        "p115",
+        "v58/2",
+        "80",
+        "v57",
+        "p72",
+        "v56",
+        "p76",
+        "v54",
+        "v55",
+        "325A",
+        "326A",
+        "323A",
+        "324A",
+        "i14",
+        "v61",
+        "v62",
+        "v65",
+        "p102",
+        "p103",
+        "v66",
+        "v67",
+        "v63",
+        "p90",
+        "p86",
+        "p68",
+        "p69",
+        "p70",
+        "v64",
+        "p85/2",
+        "v117",
+        "v118",
+        "v119",
+        "v120",
+        "i37",
+        "i38",
+        "p85",
+        "ЗМ-2",
+        "ЗМ-7",
+        "p84",
+        "v132",
+        "p67",
+        "p66",
+      ]);
+    } else {
+      addElementsTransferPst([]);
+    }
+  }, [isMazutTransferVisiblePst]);
+
   // Обработчики для drag-scroll
   const handleMouseDown = (e) => {
     if (e.button !== 0) return; // Проверяем, что нажата левая кнопка мыши
@@ -6498,7 +6618,10 @@ function App() {
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
       >
-        <Switcher top={72} left={2426} />
+        <Switcher top={47} left={3045} title="pst" activeColor="#6F4B07" />
+        <SimpleText left={3087} top={49} title="МАЗУТ С ПСТ" />
+
+        <Switcher top={53} left={2426} title="gpn" activeColor="#7D0F9B" />
         <SimpleText left={2470} top={74} title="МАЗУТ С КГПН" />
         <TopLevel />
         <TanksLevel />
@@ -6514,7 +6637,10 @@ function App() {
 
   return (
     <>
-      <Switcher top={72} left={2426} />
+      <Switcher top={47} left={3045} title="pst" activeColor="#efa215" />
+      <SimpleText left={3087} top={49} title="МАЗУТ С ПСТ" />
+
+      <Switcher top={53} left={2426} title="gpn" activeColor="#BB34E0" />
       <SimpleText left={2470} top={74} title="МАЗУТ С КГПН" />
 
       <TopLevel />

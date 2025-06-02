@@ -10,15 +10,23 @@ const Valve = ({
   isLeft = false,
   isRotate = false,
 }) => {
-  const { activeElements, activeElementsAfterPump, activeElementsGpn } =
-    parkStore();
+  const {
+    activeElements,
+    activeElementsAfterPump,
+    activeElementsGpn,
+    activeElementsPst,
+  } = parkStore();
   let color = activeElements.includes(title) ? "green" : "#474747";
   if (activeElementsAfterPump.includes(title)) {
     color = "#1e22e0";
   }
 
   if (activeElementsGpn.includes(title)) {
-    color = "#BB34E0";
+    color = "#7D0F9B";
+  }
+
+  if (activeElementsPst.includes(title)) {
+    color = "#6F4B07";
   }
 
   if (isRotate) {
