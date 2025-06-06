@@ -39,7 +39,7 @@ const Switcher = ({
     position: "relative",
     top,
     left,
-    zIndex: 1,
+    zIndex: 100,
     WebkitTapHighlightColor: "transparent",
   };
 

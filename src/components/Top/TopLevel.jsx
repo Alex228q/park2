@@ -12,7 +12,7 @@ const TopLevel = () => {
       <Valve isUp title="133" top={70} left={2227} />
       <Pipe isHorizontal top={80} left={2246} length={34} title="p4" />
       <Pipe isHorizontal top={80} left={2280} length={80} title="p5" />
-      <Pipe isHorizontal top={80} left={2360} length={58} title="p6" />
+      <Pipe isHorizontal top={80} left={2360} length={69} title="p6" />
       <Pipe isHorizontal top={127} left={2841} length={147} title="p6/1" />
       <Pipe isHorizontal top={127} left={2988} length={69} title="p6/2" />
       <Pipe isHorizontal top={144} left={3138} length={46} title="p6/3" />
@@ -343,7 +343,7 @@ const TopLevel = () => {
       <Intersection top={111} left={3127} title="i28" />
       <Pipe top={75} left={3131} length={37} title="v104" />
       <Intersection top={111} left={3053} title="i29" />
-      <Pipe top={75} left={3057} length={37} title="v105" />
+      <Pipe top={64} left={3057} length={45} title="v105" />
       <Pipe top={124} left={3057} length={10} title="v105/2" />
       <Pipe top={95} left={2704} length={27} title="v106" />
       <Valve top={74} left={2700} title="153" />

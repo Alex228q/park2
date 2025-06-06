@@ -593,6 +593,12 @@ const Station910115 = () => {
       <Intersection top={1675} left={2045} title="i216" />
       <Pipe top={1690} left={2049} length={28} title="v423" />
 
+      <Pipe top={1650} left={2528} length={134} title="v426" />
+      <Pipe top={1615} left={2551} length={159} title="v427" />
+      <Intersection top={1773} left={2547} title="i218" />
+      <Pipe top={1787} left={2551} length={32} title="v427" />
+
+
       <Pump title="Н-1" top={2296} left={1399} />
       <Pump title="Н-2" top={2296} left={1624} />
       <Pump title="Н-3" top={2296} left={1838} />

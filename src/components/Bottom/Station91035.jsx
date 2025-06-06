@@ -69,7 +69,7 @@ const Station91035 = () => {
       <Pipe isHorizontal top={2273} left={2792} length={446} title="p213" />
       <Pipe isHorizontal top={2273} left={3233} length={53} title="p214" />
       <Valve title="67" top={2263} left={3286} isUp />
-      <Pipe isHorizontal top={2273} left={3305} length={49} title="p215" />
+      <Pipe isHorizontal top={2273} left={3305} length={61} title="p215" />
       <Pipe isHorizontal top={2273} left={3354} length={74} title="p216" />
       <Pipe isHorizontal top={2273} left={3428} length={12} title="p217" />
       <Valve title="63" top={2263} left={3440} isUp />
@@ -79,7 +79,7 @@ const Station91035 = () => {
       <Pipe isHorizontal top={2308} left={2808} length={26} title="p220" />
       <Pipe isHorizontal top={2308} left={3276} length={10} title="p221" />
       <Valve title="66" top={2298} left={3286} isUp />
-      <Pipe isHorizontal top={2308} left={3305} length={10} title="p222" />
+      <Pipe isHorizontal top={2308} left={3305} length={15} title="p222" />
       <Pipe isHorizontal top={2308} left={3315} length={80} title="p223" />
       <Pipe isHorizontal top={2308} left={3395} length={45} title="p224" />
       <Valve title="64" top={2298} left={3440} isUp />
@@ -352,6 +352,17 @@ const Station91035 = () => {
       <Pipe top={2650} left={4080} length={41} title="v371" />
       <Pipe top={2117} left={4231} length={594} title="v372" />
       <Pipe top={2650} left={4040} length={61} title="v372" />
+
+      <Pipe top={1777} left={3318} length={32} title="v424" />
+      <Intersection top={1808} left={3314} title="i217" />
+      <Pipe top={1823} left={3318} length={392} title="v424" />
+      <Valve top={2213} left={3314} title="ЗМ-42" isRotate />
+      <Pipe top={2234} left={3318} length={35} title="v424" />
+      <Intersection top={2269} left={3314} title="i217" />
+      <Pipe top={2285} left={3318} length={30} title="v424" />
+      <Pipe top={1812} left={3359} length={380} title="v425" />
+      <Valve top={2190} left={3355} title="ЗМ-43" isRotate />
+      <Pipe top={2211} left={3359} length={69} title="v425" />
 
       <Pump title="H-1" top={2343} left={2596} />
       <Pump title="H-2" top={2343} left={2781} />

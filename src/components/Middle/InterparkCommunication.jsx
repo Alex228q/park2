@@ -80,16 +80,16 @@ const InterparkCommunication = () => {
       <Pipe isHorizontal top={1615} left={1321} length={929} title="p169" />
       <Pipe isHorizontal top={1615} left={2250} length={196} title="p170" />
       <Valve isUp top={1605} left={2446} title="ЗМ-73" />
-      <Pipe isHorizontal top={1615} left={2465} length={80} title="p171" />
+      <Pipe isHorizontal top={1615} left={2465} length={90} title="p171" />
       <Pipe isHorizontal top={1650} left={1166} length={1107} title="p172" />
       <Pipe isHorizontal top={1650} left={2273} length={173} title="p173" />
       <Valve isUp top={1640} left={2446} title="ЗМ-72" />
-      <Pipe isHorizontal top={1650} left={2465} length={58} title="p174" />
+      <Pipe isHorizontal top={1650} left={2465} length={63} title="p174" />
       <Pipe isHorizontal top={1650} left={3519} length={58} title="p175" />
 
       <Valve isUp top={1767} left={2504} title="ЗМ-74" isLeft />
       <Pipe isHorizontal top={1777} left={2523} length={12} title="p232" />
-      <Pipe isHorizontal top={1777} left={2535} length={762} title="p233" />
+      <Pipe isHorizontal top={1777} left={2535} length={790} title="p233" />
 
       <Valve isUp top={1802} left={2527} title="ЗМ-75" isLeft />
       <Pipe isHorizontal top={1812} left={2546} length={12} title="p234" />
