@@ -100,7 +100,7 @@ const InterparkCommunication = () => {
       <Pipe isHorizontal top={2736} left={3980} length={20} title="p241" />
       <Pipe isHorizontal top={2769} left={3950} length={411} title="p242" />
       <Pipe isHorizontal top={2802} left={3993} length={30} title="p243" />
-      <Valve isUp top={2792} left={4023} title="62" />
+      <Valve isUp top={2792} left={4023} title="62." />
       <Pipe isHorizontal top={2802} left={4042} length={30} title="p243" />
 
       <Pipe top={805} left={1097} length={246} title="v171" />
