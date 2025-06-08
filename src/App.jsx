@@ -39,6 +39,8 @@ function App() {
     addElementsTransferPst,
     isMazutTransferVisibleKgpn,
     isMazutTransferVisiblePst,
+    activePumpStation,
+    lineAorB,
   } = parkStore();
 
   const containerRef = useRef(null);
@@ -6618,6 +6620,9 @@ function App() {
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
       >
+        {to}
+        {activePumpStation}
+        {lineAorB}
         <Switcher top={47} left={3045} title="pst" activeColor="#6F4B07" />
         <SimpleText left={3087} top={49} title="МАЗУТ С ПСТ" />
 

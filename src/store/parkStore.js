@@ -10,6 +10,18 @@ const parkStore = create((set) => ({
   activeElementsPst: [],
   activeElementsAfterPump: [],
   activePump: [],
+  activePumpStation: [],
+  lineAorB: [],
+
+  setActivePumpStation: (newStation) =>
+    set(() => ({
+      activePumpStation: newStation,
+    })),
+
+  setLine: (newLine) =>
+    set(() => ({
+      lineAorB: newLine,
+    })),
 
   toggleMazutTransferVisibilityKgpn: () =>
     set((state) => ({
@@ -35,6 +47,8 @@ const parkStore = create((set) => ({
     set((state) => {
       const newFrom = state.from === title ? null : title;
       return {
+        lineAorB: [],
+        activePumpStation: [],
         from: newFrom,
         activePump: [],
         activeElements: [],
@@ -63,7 +77,6 @@ const parkStore = create((set) => ({
       activeElementsAfterPump: [...titles],
     })),
 
-  // Добавляем новый метод для управления активными насосами
   setActivePump: (newActivePump) =>
     set(() => ({
       activePump: newActivePump,
