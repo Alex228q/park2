@@ -62,6 +62,8 @@ const parkStore = create((set) => ({
       const newTo = state.to === title ? null : title;
       return {
         to: newTo,
+        lineAorB: [],
+
         activePump: [],
         activeElementsAfterPump: [],
         activeElements: newTo === null ? [] : state.activeElements,
