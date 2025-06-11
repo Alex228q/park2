@@ -8,10 +8,11 @@ const Intersection = ({ top = 0, left = 0, title = "", isBig = false }) => {
     activeElementsPst,
   } = parkStore();
   let color = activeElements.includes(title) ? "green" : "#E1E7EC";
+  let z = activeElements.includes(title) ? 50 : 1;
   if (activeElementsAfterPump.includes(title)) {
     color = "#1e22e0";
+    z = 30;
   }
-  let z = activeElements.includes(title) ? 50 : 1;
 
   if (activeElementsGpn.includes(title)) {
     color = "#7D0F9B";
@@ -43,9 +44,7 @@ const Intersection = ({ top = 0, left = 0, title = "", isBig = false }) => {
     zIndex: z,
   };
 
-  return <div style={halfCircleStyle}>
-    {/* {title} */}
-    </div>;
+  return <div style={halfCircleStyle}>{title}</div>;
 };
 
 export default Intersection;

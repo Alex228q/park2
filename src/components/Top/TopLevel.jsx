@@ -262,7 +262,7 @@ const TopLevel = () => {
       <Pipe top={317} left={1388} length={95} title="v60" />
       <Pipe top={676} left={1304} length={35} title="v61" />
       <Intersection top={711} left={1300} title="i14" />
-      <Pipe top={724} left={1304} length={20} title="v62" />
+      <Pipe top={724} left={1304} length={27} title="v62" />
       <Pipe top={722} left={1352} length={22} title="v63" />
       <Pipe top={715} left={1283} length={24} title="v64" />
       <Pipe top={751} left={1304} length={207} title="v65" />
