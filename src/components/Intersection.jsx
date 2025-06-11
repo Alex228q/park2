@@ -1,6 +1,12 @@
 import parkStore from "../store/parkStore";
 
-const Intersection = ({ top = 0, left = 0, title = "", isBig = false }) => {
+const Intersection = ({
+  top = 0,
+  left = 0,
+  title = "",
+  isBig = false,
+  width = 23,
+}) => {
   const {
     activeElements,
     activeElementsAfterPump,
@@ -28,7 +34,7 @@ const Intersection = ({ top = 0, left = 0, title = "", isBig = false }) => {
     position: "absolute",
     top: top,
     left: left,
-    width: isBig ? "35px" : "23px",
+    width: isBig ? "35px" : width,
     height: "15px",
     borderTopLeftRadius: "110px",
     borderTopRightRadius: "110px",
