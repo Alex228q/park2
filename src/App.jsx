@@ -22,6 +22,116 @@ import {
   MAZUT_TRANSFER_GPN,
   MAZUT_TRANSFER_PST,
 } from "./data/transferElements322";
+import {
+  FROM_323_TO_115_H1,
+  FROM_323_TO_115_H2,
+  FROM_323_TO_115_H3,
+  FROM_323_TO_115_H4,
+  FROM_323_TO_115_H5,
+  FROM_323_TO_35_H1,
+  FROM_323_TO_35_H2,
+  FROM_323_TO_35_H3,
+  FROM_323_TO_35_H4,
+} from "./data/transferElements323";
+import {
+  FROM_324_TO_115_H1,
+  FROM_324_TO_115_H2,
+  FROM_324_TO_115_H3,
+  FROM_324_TO_115_H4,
+  FROM_324_TO_115_H5,
+  FROM_324_TO_35_H1,
+  FROM_324_TO_35_H2,
+  FROM_324_TO_35_H3,
+  FROM_324_TO_35_H4,
+} from "./data/transferElements324";
+import {
+  FROM_325_TO_115_H1,
+  FROM_325_TO_115_H2,
+  FROM_325_TO_115_H3,
+  FROM_325_TO_115_H4,
+  FROM_325_TO_115_H5,
+  FROM_325_TO_35_H1,
+  FROM_325_TO_35_H2,
+  FROM_325_TO_35_H3,
+  FROM_325_TO_35_H4,
+} from "./data/transferElements325";
+import {
+  FROM_326_TO_115_H1,
+  FROM_326_TO_115_H2,
+  FROM_326_TO_115_H3,
+  FROM_326_TO_115_H4,
+  FROM_326_TO_115_H5,
+  FROM_326_TO_35_H1,
+  FROM_326_TO_35_H2,
+  FROM_326_TO_35_H3,
+  FROM_326_TO_35_H4,
+} from "./data/transferElements326";
+import {
+  FROM_327_TO_115_H1,
+  FROM_327_TO_115_H2,
+  FROM_327_TO_115_H3,
+  FROM_327_TO_115_H4,
+  FROM_327_TO_115_H5,
+  FROM_327_TO_35_H1,
+  FROM_327_TO_35_H2,
+  FROM_327_TO_35_H3,
+  FROM_327_TO_35_H4,
+} from "./data/transferElements327";
+import {
+  FROM_328_TO_115_H1,
+  FROM_328_TO_115_H2,
+  FROM_328_TO_115_H3,
+  FROM_328_TO_115_H4,
+  FROM_328_TO_115_H5,
+  FROM_328_TO_35_H1,
+  FROM_328_TO_35_H2,
+  FROM_328_TO_35_H3,
+  FROM_328_TO_35_H4,
+} from "./data/transferElements328";
+import {
+  FROM_329_TO_115_H1,
+  FROM_329_TO_115_H2,
+  FROM_329_TO_115_H3,
+  FROM_329_TO_115_H4,
+  FROM_329_TO_115_H5,
+  FROM_329_TO_35_H1,
+  FROM_329_TO_35_H2,
+  FROM_329_TO_35_H3,
+  FROM_329_TO_35_H4,
+} from "./data/transferElements329";
+import {
+  FROM_330_TO_115_H1,
+  FROM_330_TO_115_H2,
+  FROM_330_TO_115_H3,
+  FROM_330_TO_115_H4,
+  FROM_330_TO_115_H5,
+  FROM_330_TO_35_H1,
+  FROM_330_TO_35_H2,
+  FROM_330_TO_35_H3,
+  FROM_330_TO_35_H4,
+} from "./data/transferElements330";
+import {
+  FROM_331_TO_115_H1,
+  FROM_331_TO_115_H2,
+  FROM_331_TO_115_H3,
+  FROM_331_TO_115_H4,
+  FROM_331_TO_115_H5,
+  FROM_331_TO_35_H1,
+  FROM_331_TO_35_H2,
+  FROM_331_TO_35_H3,
+  FROM_331_TO_35_H4,
+} from "./data/transferElements331";
+import {
+  FROM_332_TO_115_H1,
+  FROM_332_TO_115_H2,
+  FROM_332_TO_115_H3,
+  FROM_332_TO_115_H4,
+  FROM_332_TO_115_H5,
+  FROM_332_TO_35_H1,
+  FROM_332_TO_35_H2,
+  FROM_332_TO_35_H3,
+  FROM_332_TO_35_H4,
+} from "./data/transferElements332";
 
 const PST_TANK = [
   "E-322",
@@ -65,62 +175,52 @@ function App() {
   useEffect(() => {
     if (from === "E-322") {
       let newElements = [];
-      if (activePump.includes("H-1")) {
+      if (activePump.includes("H-1"))
         newElements = [...newElements, ...FROM_322_TO_35_H1];
-      }
-      if (activePump.includes("H-2")) {
+      if (activePump.includes("H-2"))
         newElements = [...newElements, ...FROM_322_TO_35_H2];
-      }
-      if (activePump.includes("H-3")) {
+      if (activePump.includes("H-3"))
         newElements = [...newElements, ...FROM_322_TO_35_H3];
-      }
-      if (activePump.includes("H-4")) {
+      if (activePump.includes("H-4"))
         newElements = [...newElements, ...FROM_322_TO_35_H4];
-      }
-      if (activePump.includes("Н-1")) {
+
+      if (activePump.includes("Н-1"))
         newElements = [...newElements, ...FROM_322_TO_115_H1];
-      }
-      if (activePump.includes("Н-2")) {
+      if (activePump.includes("Н-2"))
         newElements = [...newElements, ...FROM_322_TO_115_H2];
-      }
-      if (activePump.includes("Н-3")) {
+      if (activePump.includes("Н-3"))
         newElements = [...newElements, ...FROM_322_TO_115_H3];
-      }
-      if (activePump.includes("Н-4")) {
+      if (activePump.includes("Н-4"))
         newElements = [...newElements, ...FROM_322_TO_115_H4];
-      }
-      if (activePump.includes("Н-5")) {
+      if (activePump.includes("Н-5"))
         newElements = [...newElements, ...FROM_322_TO_115_H5];
-      }
+
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
 
     if (from === "E-323") {
       let newElements = [];
-      // prettier-ignore
-      if (activePump.includes("H-1")) newElements = [...newElements, "p62","323Б","p63","v133","v134","p81","ЗМ-3","p82","v126","i40","v127","107","v128","i41","v176","i55","v178","p120/2","v170","p119","v204","i76","v205","p146","v206","p154","74","p155","v237","i91","v238","i100","v259","i101","v260","v239","i92","v240","3","v241","v242","i93","i94","v243","p228"];
-      // prettier-ignore
-      if (activePump.includes("H-2")) newElements = [...newElements, "p62","323Б","p63","v133","v134","p81","ЗМ-3","p82","v126","i40","v127","107","v128","i41","v176","i55","v178","p120/2","v170","p119","v204","i76","v205","p146","p147","73","p148","p149","27","p150","v360","i161","v361","i162","v362","i163","v363","i164","v364","i165","v365","p183","19","p182","v256","38","v257","i98","i99","v258","p229"];
-      // prettier-ignore
-      if (activePump.includes("H-3")) newElements = [...newElements, "p62","323Б","p63","v133","v134","p81","ЗМ-3","p82","v126","i40","v127","107","v128","i41","v176","i55","v178","p120/2","v170","p119","v204","i76","v205","p146","p147","73","p148","p149","27","p150","v360","i161","v361","i162","v362","i163","v363","i164","v364","i165","v365","p184","20","p185","v293","36","v294","i125","i126","i127","v295","i128","v296","p230"];
-      // prettier-ignore
-      if (activePump.includes("H-4")) newElements = [...newElements, "p62","323Б","p63","v133","v134","p81","ЗМ-3","p82","v126","i40","v127","107","v128","i41","v176","i55","v178","p120/2","v170","p119","v204","i76","v205","p146","p147","73","p148","p149","27","p150","v360","i161","v361","i162","v362","i163","v363","i164","v364","i165","v365","p184","20","p185","p186","v307","v308","29","v309","p206","v310","i132","i133","v311","p231"];
 
-      // prettier-ignore
-      if (activePump.includes("Н-1")) newElements = [...newElements, "p62","323Б","p63","v133","v134","p81","ЗМ-3","ЗМ-45","p82","v126","i40","v127","107","v128","i41","v176","i55","v178","p120/2","v170","p117","p118","v196","i70","v197","i71","v198","p256","v385","ЗМ-11","i174","p283","p284","vf1","i175","Ф1","p295"];
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...FROM_323_TO_35_H1];
+      if (activePump.includes("H-2"))
+        newElements = [...newElements, ...FROM_323_TO_35_H2];
+      if (activePump.includes("H-3"))
+        newElements = [...newElements, ...FROM_323_TO_35_H3];
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...FROM_323_TO_35_H4];
 
-      // prettier-ignore
-      if (activePump.includes("Н-2")) newElements = [...newElements, "p62","323Б","p63","v133","v134","p81","ЗМ-3","ЗМ-45","p82","v126","i40","v127","107","v128","i41","v176","i55","v178","p120/2","v170","p117","p118","v196","i70","v197","i71","v198","p256","p257","v392","i182","ЗМ-17","p299","p300","vf2","Ф2","i182/2","p301"];
-
-      // prettier-ignore
-      if (activePump.includes("Н-3")) newElements = [...newElements, "p62","323Б","p63","v133","v134","p81","ЗМ-3","ЗМ-45","p82","v126","i40","v127","107","v128","i41","v176","i55","v178","p120/2","v170","p117","p118","v196","i70","v197","i71","v198","p256","p257","p258","v399","i189","ЗМ-23","p307","p308","vf3","i193","Ф3","p309"];
-
-      // prettier-ignore
-      if (activePump.includes("Н-4")) newElements = [...newElements, "p62","323Б","p63","v133","v134","p81","ЗМ-3","ЗМ-45","p82","v126","i40","v127","107","v128","i41","v176","i55","v178","p120/2","v170","p117","p118","v196","i70","v197","i71","v198","p256","p257","p258","p259","v406","i197","i201","ЗМ-29","p313","p314","vf4","Ф4","p316"];
-
-      // prettier-ignore
-      if (activePump.includes("Н-5")) newElements = [...newElements, "p62","323Б","p63","v133","v134","p81","ЗМ-3","ЗМ-45","p82","v126","i40","v127","107","v128","i41","v176","i55","v178","p120/2","v170","p117","p118","v196","i70","v197","i71","v198","p256","p257","p258","p259","p260","v413","i205","i209","ЗМ-35","p321","p322","vf5","Ф5","p324"];
+      if (activePump.includes("Н-1"))
+        newElements = [...newElements, ...FROM_323_TO_115_H1];
+      if (activePump.includes("Н-2"))
+        newElements = [...newElements, ...FROM_323_TO_115_H2];
+      if (activePump.includes("Н-3"))
+        newElements = [...newElements, ...FROM_323_TO_115_H3];
+      if (activePump.includes("Н-4"))
+        newElements = [...newElements, ...FROM_323_TO_115_H4];
+      if (activePump.includes("Н-5"))
+        newElements = [...newElements, ...FROM_323_TO_115_H5];
 
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
@@ -129,50 +229,25 @@ function App() {
     if (from === "E-324") {
       let newElements = [];
 
-      if (activePump.includes("H-1")) {
-        // prettier-ignore
-        newElements = [...newElements, "p64", "324Б", "p65", "v129", "ЗМ-4", "v130", "p116/2", "v131", "p71", "v123", "ЗМ-6", "v124", "i39", "v125", "v126", "i40", "v127", "107", "v128", "i41", "v176", "i55", "v178", "p120/2", "v170", "p119", "v204", "i76", "v205", "p146", "v206", "p154", "74", "p155", "v237", "i91", "v238", "i100", "v259", "i101", "v260", "v239", "i92", "v240", "3", "v241", "v242", "i93", "i94", "v243", "p228"];
-      }
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...FROM_324_TO_35_H1];
+      if (activePump.includes("H-2"))
+        newElements = [...newElements, ...FROM_324_TO_35_H2];
+      if (activePump.includes("H-3"))
+        newElements = [...newElements, ...FROM_324_TO_35_H3];
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...FROM_324_TO_35_H4];
 
-      if (activePump.includes("H-2")) {
-        // prettier-ignore
-        newElements = [...newElements, "p64", "324Б", "p65", "v129", "ЗМ-4", "v130", "p116/2", "v131", "p71", "v123", "ЗМ-6", "v124", "i39", "v125", "v126", "i40", "v127", "107", "v128", "i41", "v176", "i55", "v178", "p120/2", "v170", "p119", "v204", "i76", "v205", "p146", "p147", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p183", "19", "p182", "v256", "38", "v257", "i98", "i99", "v258", "p229"];
-      }
-
-      if (activePump.includes("H-3")) {
-        // prettier-ignore
-        newElements = [...newElements, "p64", "324Б", "p65", "v129", "ЗМ-4", "v130", "p116/2", "v131", "p71", "v123", "ЗМ-6", "v124", "i39", "v125", "v126", "i40", "v127", "107", "v128", "i41", "v176", "i55", "v178", "p120/2", "v170", "p119", "v204", "i76", "v205", "p146", "p147", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p184", "20", "p185", "v293", "36", "v294", "i125", "i126", "i127", "v295", "i128", "v296", "p230"];
-      }
-
-      if (activePump.includes("H-4")) {
-        // prettier-ignore
-        newElements = [...newElements, "p64", "324Б", "p65", "v129", "ЗМ-4", "v130", "p116/2", "v131", "p71", "v123", "ЗМ-6", "v124", "i39", "v125", "v126", "i40", "v127", "107", "v128", "i41", "v176", "i55", "v178", "p120/2", "v170", "p119", "v204", "i76", "v205", "p146", "p147", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p184", "20", "p185", "p186", "v307", "v308", "29", "v309", "p206", "v310", "i132", "i133", "v311", "p231"];
-      }
-
-      if (activePump.includes("Н-1")) {
-        // prettier-ignore
-        newElements = [...newElements, "p64", "324Б", "p65", "v129", "ЗМ-4", "v130", "p116/2", "v131", "p71", "v123", "ЗМ-6", "v124", "i39", "v125", "v126", "i40", "v127", "107", "v128", "i41", "v176", "i55", "v178", "ЗМ-45", "p120/2", "v170", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "v385", "ЗМ-11", "i174", "p283", "p284", "vf1", "i175", "Ф1", "p295"];
-      }
-
-      if (activePump.includes("Н-2")) {
-        // prettier-ignore
-        newElements = [...newElements, "p64", "324Б", "p65", "v129", "ЗМ-4", "v130", "p116/2", "v131", "p71", "v123", "ЗМ-6", "v124", "i39", "v125", "v126", "i40", "v127", "107", "v128", "i41", "v176", "i55", "v178", "p120/2", "ЗМ-45", "v170", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "v392", "i182", "ЗМ-17", "p299", "p300", "vf2", "Ф2", "i182/2", "p301"];
-      }
-
-      if (activePump.includes("Н-3")) {
-        // prettier-ignore
-        newElements = [...newElements, "p64", "324Б", "p65", "v129", "ЗМ-4", "v130", "p116/2", "v131", "p71", "v123", "ЗМ-6", "v124", "i39", "v125", "v126", "i40", "v127", "107", "v128", "i41", "v176", "i55", "v178", "p120/2", "ЗМ-45", "v170", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "p258", "v399", "i189", "ЗМ-23", "p307", "p308", "vf3", "i193", "Ф3", "p309"];
-      }
-
-      if (activePump.includes("Н-4")) {
-        // prettier-ignore
-        newElements = [...newElements, "p64", "324Б", "p65", "v129", "ЗМ-4", "v130", "p116/2", "v131", "p71", "v123", "ЗМ-6", "v124", "i39", "v125", "v126", "i40", "v127", "107", "v128", "i41", "v176", "i55", "v178", "p120/2", "ЗМ-45", "v170", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "p258", "p259", "v406", "i197", "i201", "ЗМ-29", "p313", "p314", "vf4", "Ф4", "p316"];
-      }
-
-      if (activePump.includes("Н-5")) {
-        // prettier-ignore
-        newElements = [...newElements, "p64", "324Б", "p65", "v129", "ЗМ-4", "v130", "p116/2", "v131", "p71", "v123", "ЗМ-6", "v124", "i39", "v125", "v126", "i40", "v127", "107", "v128", "i41", "v176", "i55", "v178", "p120/2", "ЗМ-45", "v170", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "p258", "p259", "p260", "v413", "i205", "i209", "ЗМ-35", "p321", "p322", "vf5", "Ф5", "p324"];
-      }
+      if (activePump.includes("Н-1"))
+        newElements = [...newElements, ...FROM_324_TO_115_H1];
+      if (activePump.includes("Н-2"))
+        newElements = [...newElements, ...FROM_324_TO_115_H2];
+      if (activePump.includes("Н-3"))
+        newElements = [...newElements, ...FROM_324_TO_115_H3];
+      if (activePump.includes("Н-4"))
+        newElements = [...newElements, ...FROM_324_TO_115_H4];
+      if (activePump.includes("Н-5"))
+        newElements = [...newElements, ...FROM_324_TO_115_H5];
 
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
@@ -181,50 +256,32 @@ function App() {
     if (from === "E-325") {
       let newElements = [];
 
-      if (activePump.includes("H-1")) {
-        // prettier-ignore
-        newElements = [...newElements, "v142", "325Б", "v143", "p91", "v148", "i47", "v149", "v150", "v204", "i76", "v205", "p146", "v206", "p154", "74", "p155", "v237", "i91", "v238", "i100", "v259", "i101", "v260", "v239", "i92", "v240", "3", "v241", "v242", "i93", "i94", "v243", "p228"];
-      }
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...FROM_325_TO_35_H1];
 
-      if (activePump.includes("H-2")) {
-        // prettier-ignore
-        newElements = [...newElements, "v142", "325Б", "v143", "p91", "v148", "i47", "v149", "v150", "v204", "i76", "v205", "p146", "p147", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p183", "19", "p182", "v256", "38", "v257", "i98", "i99", "v258", "p229"];
-      }
+      if (activePump.includes("H-2"))
+        newElements = [...newElements, ...FROM_325_TO_35_H2];
 
-      if (activePump.includes("H-3")) {
-        // prettier-ignore
-        newElements = [...newElements, "v142", "325Б", "v143", "p91", "v148", "i47", "v149", "v150", "v204", "i76", "v205", "p146", "p147", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p184", "20", "p185", "v293", "36", "v294", "i125", "i126", "i127", "v295", "i128", "v296", "p230"];
-      }
+      if (activePump.includes("H-3"))
+        newElements = [...newElements, ...FROM_325_TO_35_H3];
 
-      if (activePump.includes("H-4")) {
-        // prettier-ignore
-        newElements = [...newElements, "v142", "325Б", "v143", "p91", "v148", "i47", "v149", "v150", "v204", "i76", "v205", "p146", "p147", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p184", "20", "p185", "p186", "v307", "v308", "29", "v309", "p206", "v310", "i132", "i133", "v311", "p231"];
-      }
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...FROM_325_TO_35_H4];
 
-      if (activePump.includes("Н-1")) {
-        // prettier-ignore
-        newElements = [...newElements, "v142", "325Б", "v143", "p91", "v148", "i47", "v149", "v150", "p119", "ЗМ-45", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "v385", "ЗМ-11", "i174", "p283", "p284", "vf1", "i175", "Ф1", "p295"];
-      }
+      if (activePump.includes("Н-1"))
+        newElements = [...newElements, ...FROM_325_TO_115_H1];
 
-      if (activePump.includes("Н-2")) {
-        // prettier-ignore
-        newElements = [...newElements, "v142", "325Б", "v143", "p91", "v148", "i47", "v149", "v150", "p119", "ЗМ-45", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "v392", "i182", "ЗМ-17", "p299", "p300", "vf2", "Ф2", "i182/2", "p301"];
-      }
+      if (activePump.includes("Н-2"))
+        newElements = [...newElements, ...FROM_325_TO_115_H2];
 
-      if (activePump.includes("Н-3")) {
-        // prettier-ignore
-        newElements = [...newElements, "v142", "325Б", "v143", "p91", "v148", "i47", "v149", "v150", "p119", "ЗМ-45", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "p258", "v399", "i189", "ЗМ-23", "p307", "p308", "vf3", "i193", "Ф3", "p309"];
-      }
+      if (activePump.includes("Н-3"))
+        newElements = [...newElements, ...FROM_325_TO_115_H3];
 
-      if (activePump.includes("Н-4")) {
-        // prettier-ignore
-        newElements = [...newElements, "v142", "325Б", "v143", "p91", "v148", "i47", "v149", "v150", "p119", "ЗМ-45", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "p258", "p259", "v406", "i197", "i201", "ЗМ-29", "p313", "p314", "vf4", "Ф4", "p316"];
-      }
+      if (activePump.includes("Н-4"))
+        newElements = [...newElements, ...FROM_325_TO_115_H4];
 
-      if (activePump.includes("Н-5")) {
-        // prettier-ignore
-        newElements = [...newElements, "v142", "325Б", "v143", "p91", "v148", "i47", "v149", "v150", "p119", "ЗМ-45", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "p258", "p259", "p260", "v413", "i205", "i209", "ЗМ-35", "p321", "p322", "vf5", "Ф5", "p324"];
-      }
+      if (activePump.includes("Н-5"))
+        newElements = [...newElements, ...FROM_325_TO_115_H5];
 
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
@@ -232,24 +289,26 @@ function App() {
 
     if (from === "E-326") {
       let newElements = [];
-      // prettier-ignore
-      if (activePump.includes("H-1")) newElements = [...newElements, "v146", "326Б", "v147", "p108", "v150", "v204", "i76", "v205", "p146", "v206", "p154", "74", "p155", "v237", "i91", "v238", "i100", "v259", "i101", "v260", "v239", "i92", "v240", "3", "v241", "v242", "i93", "i94", "v243", "p228"];
-      // prettier-ignore
-      if (activePump.includes("H-2")) newElements = [...newElements, "v146", "326Б", "v147", "p108", "v150", "v204", "i76", "v205", "p146", "p147", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p183", "19", "p182", "v256", "38", "v257", "i98", "i99", "v258", "p229"];
-      // prettier-ignore
-      if (activePump.includes("H-3")) newElements = [...newElements, "v146", "326Б", "v147", "p108", "v150", "v204", "i76", "v205", "p146", "p147", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p184", "20", "p185", "v293", "36", "v294", "i125", "i126", "i127", "v295", "i128", "v296", "p230"];
-      // prettier-ignore
-      if (activePump.includes("H-4")) newElements = [...newElements, "v146", "326Б", "v147", "p108", "v150", "v204", "i76", "v205", "p146", "p147", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p184", "20", "p185", "p186", "v307", "v308", "29", "v309", "p206", "v310", "i132", "i133", "v311", "p231"];
-      // prettier-ignore
-      if (activePump.includes("Н-1")) newElements = [...newElements, "v146", "326Б", "v147", "p108", "v150", "p119", "ЗМ-45", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "v385", "ЗМ-11", "i174", "p283", "p284", "vf1", "i175", "Ф1", "p295"];
-      // prettier-ignore
-      if (activePump.includes("Н-2")) newElements = [...newElements, "v146", "326Б", "v147", "p108", "v150", "p119", "ЗМ-45", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "v392", "i182", "ЗМ-17", "p299", "p300", "vf2", "Ф2", "i182/2", "p301"];
-      // prettier-ignore
-      if (activePump.includes("Н-3")) newElements = [...newElements, "v146", "326Б", "v147", "p108", "v150", "p119", "ЗМ-45", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "p258", "v399", "i189", "ЗМ-23", "p307", "p308", "vf3", "i193", "Ф3", "p309"];
-      // prettier-ignore
-      if (activePump.includes("Н-4")) newElements = [...newElements, "v146", "326Б", "v147", "p108", "v150", "p119", "ЗМ-45", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "p258", "p259", "v406", "i197", "i201", "ЗМ-29", "p313", "p314", "vf4", "Ф4", "p316"];
-      // prettier-ignore
-      if (activePump.includes("Н-5")) newElements = [...newElements, "v146", "326Б", "v147", "p108", "v150", "p119", "ЗМ-45", "p117", "p118", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "p258", "p259", "p260", "v413", "i205", "i209", "ЗМ-35", "p321", "p322", "vf5", "Ф5", "p324"];
+
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...FROM_326_TO_35_H1];
+      if (activePump.includes("H-2"))
+        newElements = [...newElements, ...FROM_326_TO_35_H2];
+      if (activePump.includes("H-3"))
+        newElements = [...newElements, ...FROM_326_TO_35_H3];
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...FROM_326_TO_35_H4];
+
+      if (activePump.includes("Н-1"))
+        newElements = [...newElements, ...FROM_326_TO_115_H1];
+      if (activePump.includes("Н-2"))
+        newElements = [...newElements, ...FROM_326_TO_115_H2];
+      if (activePump.includes("Н-3"))
+        newElements = [...newElements, ...FROM_326_TO_115_H3];
+      if (activePump.includes("Н-4"))
+        newElements = [...newElements, ...FROM_326_TO_115_H4];
+      if (activePump.includes("Н-5"))
+        newElements = [...newElements, ...FROM_326_TO_115_H5];
 
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
@@ -258,50 +317,25 @@ function App() {
     if (from === "E-327") {
       let newElements = [];
 
-      if (activePump.includes("H-1")) {
-        // prettier-ignore
-        newElements = [...newElements, "v151","327Б","v152","p87","v207","i77","v208","v209","p125","ЗМ-46","p126","p127","v219","ЗМ-47","v218","p124","v222","v223","i83","v224","p153","v325","i140","v326","i141","v327","i142","v328","p176","v253","i97","v254","4","v254/2","p203","v242","i93","i94","v243","p228"];
-      }
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...FROM_327_TO_35_H1];
+      if (activePump.includes("H-2"))
+        newElements = [...newElements, ...FROM_327_TO_35_H2];
+      if (activePump.includes("H-3"))
+        newElements = [...newElements, ...FROM_327_TO_35_H3];
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...FROM_327_TO_35_H4];
 
-      if (activePump.includes("H-2")) {
-        // prettier-ignore
-        newElements = [...newElements, "v151","327Б","v152","p87","v207","i77","v208","v209","p125","ЗМ-46","p126","p127","v219","ЗМ-47","v218","p124","v222","v223","i83","v224","v225","i84","v312","i133/2","i134","v313","i135","v314","v315","i136","v316","30","v317","p206","v309","29","v308","v307","p186","p185","20","p184","p183","19","p182","v256","38","v257","i98","i99","v258","p229"];
-      }
-
-      if (activePump.includes("H-3")) {
-        // prettier-ignore
-        newElements = [...newElements, "v151","327Б","v152","p87","v207","i77","v208","v209","p125","ЗМ-46","p126","p127","v219","ЗМ-47","v218","p124","v222","v223","i83","v224","v225","i84","v312","i133/2","i134","v313","i135","v314","v315","i136","v316","30","v317","p206","v309","29","v308","v307","p186","v293","36","v294","i125","i126","i127","v295","i128","v296","p230"];
-      }
-
-      if (activePump.includes("H-4")) {
-        // prettier-ignore
-        newElements = [...newElements, "v151","327Б","v152","p87","v207","i77","v208","v209","p125","ЗМ-46","p126","p127","v219","ЗМ-47","v218","p124","v222","v223","i83","v224","v225","i84","v312","i133/2","i134","v313","i135","v314","v315","i136","v316","30","v317","v310","i132","i133","v311","p231"];
-      }
-
-      if (activePump.includes("Н-1")) {
-        // prettier-ignore
-        newElements = [...newElements, "v151","327Б","v152","p87","v207","i77","v208","v209","p125","ЗМ-46","p126","v423","i216","p253","p252","p251","v384","i173","ЗМ-12","Ф1","p284","vf1","i175","p295"];
-      }
-
-      if (activePump.includes("Н-2")) {
-        // prettier-ignore
-        newElements = [...newElements, "v151","327Б","v152","p87","v207","i77","v208","v209","p125","ЗМ-46","p126","v423","i216","p253","p252","v391","i181","ЗМ-18","Ф2","p300","vf2","i182/2","p301"];
-      }
-
-      if (activePump.includes("Н-3")) {
-        // prettier-ignore
-        newElements = [...newElements, "v151","327Б","v152","p87","v207","i77","v208","v209","p125","ЗМ-46","p126","v423","i216","p253","v398","i188","ЗМ-24","Ф3","p308","vf3","i193","p309"];
-      }
-
-      if (activePump.includes("Н-4")) {
-        // prettier-ignore
-        newElements = [...newElements, "v151","327Б","v152","p87","v207","i77","v208","v209","p125","ЗМ-46","p126","v423","i216","p254","v405","i196","ЗМ-30","Ф4","p314","vf4","i201","p316"];
-      }
-
-      if (activePump.includes("Н-5")) {
-        // prettier-ignore
-        newElements = [...newElements, "v151","327Б","v152","p87","v207","i77","v208","v209","p125","ЗМ-46","p126","v423","i216","p254","p255","v412","i204","ЗМ-36","Ф5","p322","vf5","i209","p324"];
-      }
+      if (activePump.includes("Н-1"))
+        newElements = [...newElements, ...FROM_327_TO_115_H1];
+      if (activePump.includes("Н-2"))
+        newElements = [...newElements, ...FROM_327_TO_115_H2];
+      if (activePump.includes("Н-3"))
+        newElements = [...newElements, ...FROM_327_TO_115_H3];
+      if (activePump.includes("Н-4"))
+        newElements = [...newElements, ...FROM_327_TO_115_H4];
+      if (activePump.includes("Н-5"))
+        newElements = [...newElements, ...FROM_327_TO_115_H5];
 
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
@@ -310,50 +344,25 @@ function App() {
     if (from === "E-328") {
       let newElements = [];
 
-      if (activePump.includes("H-1")) {
-        // prettier-ignore
-        newElements = [...newElements, "v153","328Б","v154","p109","v209","p125","ЗМ-46","p126","p127","v219","ЗМ-47","v218","p124","v222","v223","i83","v224","p153","v325","i140","v326","i141","v327","i142","v328","p176","v253","i97","v254","4","v254/2","p203","v242","i93","i94","v243","p228"];
-      }
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...FROM_328_TO_35_H1];
+      if (activePump.includes("H-2"))
+        newElements = [...newElements, ...FROM_328_TO_35_H2];
+      if (activePump.includes("H-3"))
+        newElements = [...newElements, ...FROM_328_TO_35_H3];
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...FROM_328_TO_35_H4];
 
-      if (activePump.includes("H-2")) {
-        // prettier-ignore
-        newElements = [...newElements, "v153","328Б","v154","p109","v209","p125","ЗМ-46","p126","p127","v219","ЗМ-47","v218","p124","v222","v223","i83","v224","v225","i84","v312","i133/2","i134","v313","i135","v314","v315","i136","v316","30","v317","p206","v309","29","v308","v307","p186","p185","20","p184","p183","19","p182","v256","38","v257","i98","i99","v258","p229"];
-      }
-
-      if (activePump.includes("H-3")) {
-        // prettier-ignore
-        newElements = [...newElements, "v153","328Б","v154","p109","v209","p125","ЗМ-46","p126","p127","v219","ЗМ-47","v218","p124","v222","v223","i83","v224","v225","i84","v312","i133/2","i134","v313","i135","v314","v315","i136","v316","30","v317","p206","v309","29","v308","v307","p186","v293","36","v294","i125","i126","i127","v295","i128","v296","p230"];
-      }
-
-      if (activePump.includes("H-4")) {
-        // prettier-ignore
-        newElements = [...newElements, "v153","328Б","v154","p109","v209","p125","ЗМ-46","p126","p127","v219","ЗМ-47","v218","p124","v222","v223","i83","v224","v225","i84","v312","i133/2","i134","v313","i135","v314","v315","i136","v316","30","v317","v310","i132","i133","v311","p231"];
-      }
-
-      if (activePump.includes("Н-1")) {
-        // prettier-ignore
-        newElements = [...newElements, "v153","328Б","v154","p109","v209","p125","ЗМ-46","p126","v423","i216","p253","p252","p251","v384","i173","ЗМ-12","Ф1","p284","vf1","i175","p295"];
-      }
-
-      if (activePump.includes("Н-2")) {
-        // prettier-ignore
-        newElements = [...newElements, "v153","328Б","v154","p109","v209","p125","ЗМ-46","p126","v423","i216","p253","p252","v391","i181","ЗМ-18","Ф2","p300","vf2","i182/2","p301"];
-      }
-
-      if (activePump.includes("Н-3")) {
-        // prettier-ignore
-        newElements = [...newElements, "v153","328Б","v154","p109","v209","p125","ЗМ-46","p126","v423","i216","p253","v398","i188","ЗМ-24","Ф3","p308","vf3","i193","p309"];
-      }
-
-      if (activePump.includes("Н-4")) {
-        // prettier-ignore
-        newElements = [...newElements, "v153","328Б","v154","p109","v209","p125","ЗМ-46","p126","v423","i216","p254","v405","i196","ЗМ-30","Ф4","p314","vf4","i201","p316"];
-      }
-
-      if (activePump.includes("Н-5")) {
-        // prettier-ignore
-        newElements = [...newElements, "v153","328Б","v154","p109","v209","p125","ЗМ-46","p126","v423","i216","p254","p255","v412","i204","ЗМ-36","Ф5","p322","vf5","i209","p324"];
-      }
+      if (activePump.includes("Н-1"))
+        newElements = [...newElements, ...FROM_328_TO_115_H1];
+      if (activePump.includes("Н-2"))
+        newElements = [...newElements, ...FROM_328_TO_115_H2];
+      if (activePump.includes("Н-3"))
+        newElements = [...newElements, ...FROM_328_TO_115_H3];
+      if (activePump.includes("Н-4"))
+        newElements = [...newElements, ...FROM_328_TO_115_H4];
+      if (activePump.includes("Н-5"))
+        newElements = [...newElements, ...FROM_328_TO_115_H5];
 
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
@@ -361,134 +370,86 @@ function App() {
 
     if (from === "E-329") {
       let newElements = [];
-      if (activePump.includes("H-1")) {
-        // prettier-ignore
-        newElements = [...newElements, "v155", "329Б", "v156", "p88", "v215", "i81", "v216", "v217", "p123", "p124", "v222", "v223", "i83", "v224", "p153", "v325", "i140", "v326", "i141", "v327", "i142", "v328", "p176", "v253", "i97", "v254", "4", "v254/2", "p203", "v242", "i93", "i94", "v243", "p228"];
-      }
-      if (activePump.includes("H-2")) {
-        // prettier-ignore
-        newElements = [...newElements, "v155", "329Б", "v156", "p88", "v215", "i81", "v216", "v217", "p123", "p124", "v222", "v223", "i83", "v224", "v225", "i84", "v312", "i133/2", "i134", "v313", "i135", "v314", "v315", "i136", "v316", "30", "v317", "p206", "v309", "29", "v308", "v307", "p186", "p185", "20", "p184", "p183", "19", "p182", "v256", "38", "v257", "i98", "i99", "v258", "p229"];
-      }
-      if (activePump.includes("H-3")) {
-        // prettier-ignore
-        newElements = [...newElements, "v155", "329Б", "v156", "p88", "v215", "i81", "v216", "v217", "p123", "p124", "v222", "v223", "i83", "v224", "v225", "i84", "v312", "i133/2", "i134", "v313", "i135", "v314", "v315", "i136", "v316", "30", "v317", "p206", "v309", "29", "v308", "v307", "p186", "v293", "36", "v294", "i125", "i126", "i127", "v295", "i128", "v296", "p230"];
-      }
-      if (activePump.includes("H-4")) {
-        // prettier-ignore
-        newElements = [...newElements, "v155", "329Б", "v156", "p88", "v215", "i81", "v216", "v217", "p123", "p124", "v222", "v223", "i83", "v224", "v225", "i84", "v312", "i133/2", "i134", "v313", "i135", "v314", "v315", "i136", "v316", "30", "v317", "v310", "i132", "i133", "v311", "p231"];
-      }
-      if (activePump.includes("Н-1")) {
-        // prettier-ignore
-        newElements = [...newElements, "v155", "329Б", "v156", "p88", "v215", "i81", "v216", "v217", "p123", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p253", "p252", "p251", "v384", "i173", "ЗМ-12", "Ф1", "p284", "vf1", "i175", "p295"];
-      }
-      if (activePump.includes("Н-2")) {
-        // prettier-ignore
-        newElements = [...newElements, "v155", "329Б", "v156", "p88", "v215", "i81", "v216", "v217", "p123", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p253", "p252", "v391", "i181", "ЗМ-18", "Ф2", "p300", "vf2", "i182/2", "p301"];
-      }
-      if (activePump.includes("Н-3")) {
-        // prettier-ignore
-        newElements = [...newElements, "v155", "329Б", "v156", "p88", "v215", "i81", "v216", "v217", "p123", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p253", "v398", "i188", "ЗМ-24", "Ф3", "p308", "vf3", "i193", "p309"];
-      }
-      if (activePump.includes("Н-4")) {
-        // prettier-ignore
-        newElements = [...newElements, "v155", "329Б", "v156", "p88", "v215", "i81", "v216", "v217", "p123", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p254", "v405", "i196", "ЗМ-30", "Ф4", "p314", "vf4", "i201", "p316"];
-      }
-      if (activePump.includes("Н-5")) {
-        // prettier-ignore
-        newElements = [...newElements, "v155", "329Б", "v156", "p88", "v215", "i81", "v216", "v217", "p123", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p254", "p255", "v412", "i204", "ЗМ-36", "Ф5", "p322", "vf5", "i209", "p324"];
-      }
+
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...FROM_329_TO_35_H1];
+      if (activePump.includes("H-2"))
+        newElements = [...newElements, ...FROM_329_TO_35_H2];
+      if (activePump.includes("H-3"))
+        newElements = [...newElements, ...FROM_329_TO_35_H3];
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...FROM_329_TO_35_H4];
+
+      if (activePump.includes("Н-1"))
+        newElements = [...newElements, ...FROM_329_TO_115_H1];
+      if (activePump.includes("Н-2"))
+        newElements = [...newElements, ...FROM_329_TO_115_H2];
+      if (activePump.includes("Н-3"))
+        newElements = [...newElements, ...FROM_329_TO_115_H3];
+      if (activePump.includes("Н-4"))
+        newElements = [...newElements, ...FROM_329_TO_115_H4];
+      if (activePump.includes("Н-5"))
+        newElements = [...newElements, ...FROM_329_TO_115_H5];
+
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
 
     if (from === "E-330") {
       let newElements = [];
-      if (activePump.includes("H-1")) {
-        // prettier-ignore
-        newElements = [...newElements, "v157", "330Б", "v158", "p110", "v217", "p123", "p124", "v222", "v223", "i83", "v224", "p153", "v325", "i140", "v326", "i141", "v327", "i142", "v328", "p176", "v253", "i97", "v254", "4", "v254/2", "p203", "v242", "i93", "i94", "v243", "p228"];
-      }
-      if (activePump.includes("H-2")) {
-        // prettier-ignore
-        newElements = [...newElements, "v157", "330Б", "v158", "p110", "v217", "p123", "p124", "v222", "v223", "i83", "v224", "v225", "i84", "v312", "i133/2", "i134", "v313", "i135", "v314", "v315", "i136", "v316", "30", "v317", "p206", "v309", "29", "v308", "v307", "p186", "p185", "20", "p184", "p183", "19", "p182", "v256", "38", "v257", "i98", "i99", "v258", "p229"];
-      }
-      if (activePump.includes("H-3")) {
-        // prettier-ignore
-        newElements = [...newElements, "v157", "330Б", "v158", "p110", "v217", "p123", "p124", "v222", "v223", "i83", "v224", "v225", "i84", "v312", "i133/2", "i134", "v313", "i135", "v314", "v315", "i136", "v316", "30", "v317", "p206", "v309", "29", "v308", "v307", "p186", "v293", "36", "v294", "i125", "i126", "i127", "v295", "i128", "v296", "p230"];
-      }
-      if (activePump.includes("H-4")) {
-        // prettier-ignore
-        newElements = [...newElements, "v157", "330Б", "v158", "p110", "v217", "p123", "p124", "v222", "v223", "i83", "v224", "v225", "i84", "v312", "i133/2", "i134", "v313", "i135", "v314", "v315", "i136", "v316", "30", "v317", "v310", "i132", "i133", "v311", "p231"];
-      }
-      if (activePump.includes("Н-1")) {
-        // prettier-ignore
-        newElements = [...newElements, "v157", "330Б", "v158", "p110", "v217", "p123", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p253", "p252", "p251", "v384", "i173", "ЗМ-12", "Ф1", "p284", "vf1", "i175", "p295"];
-      }
-      if (activePump.includes("Н-2")) {
-        // prettier-ignore
-        newElements = [...newElements, "v157", "330Б", "v158", "p110", "v217", "p123", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p253", "p252", "v391", "i181", "ЗМ-18", "Ф2", "p300", "vf2", "i182/2", "p301"];
-      }
-      if (activePump.includes("Н-3")) {
-        // prettier-ignore
-        newElements = [...newElements, "v157", "330Б", "v158", "p110", "v217", "p123", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p253", "v398", "i188", "ЗМ-24", "Ф3", "p308", "vf3", "i193", "p309"];
-      }
-      if (activePump.includes("Н-4")) {
-        // prettier-ignore
-        newElements = [...newElements, "v157", "330Б", "v158", "p110", "v217", "p123", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p254", "v405", "i196", "ЗМ-30", "Ф4", "p314", "vf4", "i201", "p316"];
-      }
-      if (activePump.includes("Н-5")) {
-        // prettier-ignore
-        newElements = [...newElements, "v157", "330Б", "v158", "p110", "v217", "p123", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p254", "p255", "v412", "i204", "ЗМ-36", "Ф5", "p322", "vf5", "i209", "p324"];
-      }
+
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...FROM_330_TO_35_H1];
+      if (activePump.includes("H-2"))
+        newElements = [...newElements, ...FROM_330_TO_35_H2];
+      if (activePump.includes("H-3"))
+        newElements = [...newElements, ...FROM_330_TO_35_H3];
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...FROM_330_TO_35_H4];
+
+      if (activePump.includes("Н-1"))
+        newElements = [...newElements, ...FROM_330_TO_115_H1];
+      if (activePump.includes("Н-2"))
+        newElements = [...newElements, ...FROM_330_TO_115_H2];
+      if (activePump.includes("Н-3"))
+        newElements = [...newElements, ...FROM_330_TO_115_H3];
+      if (activePump.includes("Н-4"))
+        newElements = [...newElements, ...FROM_330_TO_115_H4];
+      if (activePump.includes("Н-5"))
+        newElements = [...newElements, ...FROM_330_TO_115_H5];
+
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
 
     if (from === "E-331") {
       let newElements = [];
-      if (activePump.includes("H-1")) {
-        // prettier-ignore
-        newElements = [...newElements, "v159", "331Б", "v160", "p89", "v220", "i82", "v221", "p122", "v226", "p132", "ЗМ-48", "p131", "v223", "i83", "v224", "p153", "v325", "i140", "v326", "i141", "v327", "i142", "v328", "p176", "v253", "i97", "v254", "4", "v254/2", "p203", "v242", "i93", "i94", "v243", "p228"];
-      }
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...FROM_331_TO_35_H1];
 
-      if (activePump.includes("H-2")) {
-        // prettier-ignore
-        newElements = [...newElements, "v159", "331Б", "v160", "p89", "v220", "i82", "v221", "p122", "v226", "p132", "ЗМ-48", "p131", "v223", "i83", "v224", "v225", "i84", "v312", "i133/2", "i134", "v313", "i135", "v314", "v315", "i136", "v316", "30", "v317", "p206", "v309", "29", "v308", "v307", "p186", "p185", "20", "p184", "p183", "19", "p182", "v256", "38", "v257", "i98", "i99", "v258", "p229"];
-      }
+      if (activePump.includes("H-2"))
+        newElements = [...newElements, ...FROM_331_TO_35_H2];
 
-      if (activePump.includes("H-3")) {
-        // prettier-ignore
-        newElements = [...newElements, "v159", "331Б", "v160", "p89", "v220", "i82", "v221", "p122", "v226", "p132", "ЗМ-48", "p131", "v223", "i83", "v224", "v225", "i84", "v312", "i133/2", "i134", "v313", "i135", "v314", "v315", "i136", "v316", "30", "v317", "p206", "v309", "29", "v308", "v307", "p186", "v293", "36", "v294", "i125", "i126", "i127", "v295", "i128", "v296", "p230"];
-      }
+      if (activePump.includes("H-3"))
+        newElements = [...newElements, ...FROM_331_TO_35_H3];
 
-      if (activePump.includes("H-4")) {
-        // prettier-ignore
-        newElements = [...newElements, "v159", "331Б", "v160", "p89", "v220", "i82", "v221", "p122", "v226", "p132", "ЗМ-48", "p131", "v223", "i83", "v224", "v225", "i84", "v312", "i133/2", "i134", "v313", "i135", "v314", "v315", "i136", "v316", "30", "v317", "v310", "i132", "i133", "v311", "p231"];
-      }
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...FROM_331_TO_35_H4];
 
-      if (activePump.includes("Н-1")) {
-        // prettier-ignore
-        newElements = [...newElements, "v159", "331Б", "v160", "p89", "v220", "i82", "v221", "p122", "v226", "p132", "ЗМ-48", "p131", "v222", "p124", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p253", "p252", "p251", "v384", "i173", "ЗМ-12", "Ф1", "p284", "vf1", "i175", "p295"];
-      }
+      if (activePump.includes("Н-1"))
+        newElements = [...newElements, ...FROM_331_TO_115_H1];
 
-      if (activePump.includes("Н-2")) {
-        // prettier-ignore
-        newElements = [...newElements, "v159", "331Б", "v160", "p89", "v220", "i82", "v221", "p122", "v226", "p132", "ЗМ-48", "p131", "v222", "p124", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p253", "p252", "v391", "i181", "ЗМ-18", "Ф2", "p300", "vf2", "i182/2", "p301"];
-      }
+      if (activePump.includes("Н-2"))
+        newElements = [...newElements, ...FROM_331_TO_115_H2];
 
-      if (activePump.includes("Н-3")) {
-        // prettier-ignore
-        newElements = [...newElements, "v159", "331Б", "v160", "p89", "v220", "i82", "v221", "p122", "v226", "p132", "ЗМ-48", "p131", "v222", "p124", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p253", "v398", "i188", "ЗМ-24", "Ф3", "p308", "vf3", "i193", "p309"];
-      }
+      if (activePump.includes("Н-3"))
+        newElements = [...newElements, ...FROM_331_TO_115_H3];
 
-      if (activePump.includes("Н-4")) {
-        // prettier-ignore
-        newElements = [...newElements, "v159", "331Б", "v160", "p89", "v220", "i82", "v221", "p122", "v226", "p132", "ЗМ-48", "p131", "v222", "p124", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p254", "v405", "i196", "ЗМ-30", "Ф4", "p314", "vf4", "i201", "p316"];
-      }
+      if (activePump.includes("Н-4"))
+        newElements = [...newElements, ...FROM_331_TO_115_H4];
 
-      if (activePump.includes("Н-5")) {
-        // prettier-ignore
-        newElements = [...newElements, "v159", "331Б", "v160", "p89", "v220", "i82", "v221", "p122", "v226", "p132", "ЗМ-48", "p131", "v222", "p124", "v218", "ЗМ-47", "v219", "p127", "v423", "i216", "p254", "p255", "v412", "i204", "ЗМ-36", "Ф5", "p322", "vf5", "i209", "p324"];
-      }
+      if (activePump.includes("Н-5"))
+        newElements = [...newElements, ...FROM_331_TO_115_H5];
 
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
@@ -496,51 +457,32 @@ function App() {
 
     if (from === "E-332") {
       let newElements = [];
-      if (activePump.includes("H-1")) {
-        // prettier-ignore
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...FROM_332_TO_35_H1];
 
-        newElements = [...newElements, "v161", "332Б", "v162", "i48", "v163", "p111", "v230", "i86", "v231", "p142", "108", "p141", "v229", "i85", "v321", "i133/3", "v322", "i138", "i139", "v323", "103", "v324", "p187", "p186", "p185", "20", "p184", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p147", "v206", "p154", "74", "p155", "v237", "i91", "v238", "i100", "v259", "i101", "v260", "v239", "i92", "v240", "3", "v241", "v242", "i93", "i94", "v243", "p228"];
-      }
-      if (activePump.includes("H-2")) {
-        // prettier-ignore
+      if (activePump.includes("H-2"))
+        newElements = [...newElements, ...FROM_332_TO_35_H2];
 
-        newElements = [...newElements, "v161", "332Б", "v162", "i48", "v163", "p111", "v230", "i86", "v231", "p142", "108", "p141", "v229", "i85", "v321", "i133/3", "v322", "i138", "i139", "v323", "103", "v324", "p187", "p186", "p185", "20", "p183", "p184", "19", "p182", "v256", "38", "v257", "i98", "i99", "v258", "p229"];
-      }
-      if (activePump.includes("H-3")) {
-        // prettier-ignore
+      if (activePump.includes("H-3"))
+        newElements = [...newElements, ...FROM_332_TO_35_H3];
 
-        newElements = [...newElements, "v161", "332Б", "v162", "i48", "v163", "p111", "v230", "i86", "v231", "p142", "108", "p141", "v229", "i85", "v321", "i133/3", "v322", "i138", "i139", "v323", "103", "v324", "p187", "p186", "v293", "36", "v294", "i125", "i126", "i127", "v295", "i128", "v296", "p230"];
-      }
-      if (activePump.includes("H-4")) {
-        // prettier-ignore
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...FROM_332_TO_35_H4];
 
-        newElements = [...newElements, "v161", "332Б", "v162", "i48", "v163", "p111", "v230", "i86", "v231", "p142", "108", "p141", "v229", "i85", "v321", "i133/3", "v322", "i138", "i139", "v323", "103", "v324", "p187", "v307", "v308", "29", "v309", "p206", "v310", "i132", "v311", "i133", "v311", "p231"];
-      }
-      if (activePump.includes("Н-1")) {
-        // prettier-ignore
+      if (activePump.includes("Н-1"))
+        newElements = [...newElements, ...FROM_332_TO_115_H1];
 
-        newElements = [...newElements, "v161", "332Б", "v162", "i48", "v163", "p111", "v230", "i86", "v231", "p142", "108", "p141", "v229", "i85", "v321", "i133/3", "v322", "i138", "i139", "v323", "103", "v324", "p187", "p186", "p185", "20", "p184", "v204", "i76", "v205", "p146", "p147", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p117", "ЗМ-45", "p118", "p119", "v196", "i70", "v197", "i71", "v198", "p256", "v385", "ЗМ-11", "i174", "p283", "p284", "vf1", "i175", "Ф1", "p295"];
-      }
       if (activePump.includes("Н-2")) {
-        // prettier-ignore
-
-        newElements = [...newElements, "v161", "332Б", "v162", "i48", "v163", "p111", "v230", "i86", "v231", "p142", "108", "p141", "v229", "i85", "v321", "i133/3", "v322", "i138", "i139", "v323", "103", "v324", "p187", "p186", "p185", "20", "p184", "v204", "i76", "v205", "p146", "p147", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p117", "ЗМ-45", "p118", "p119", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "v392", "i182", "ЗМ-17", "p299", "p300", "vf2", "Ф2", "i182/2", "p301"];
+        newElements = [...newElements, ...FROM_332_TO_115_H2];
       }
-      if (activePump.includes("Н-3")) {
-        // prettier-ignore
+      if (activePump.includes("Н-3"))
+        newElements = [...newElements, ...FROM_332_TO_115_H3];
 
-        newElements = [...newElements, "v161", "332Б", "v162", "i48", "v163", "p111", "v230", "i86", "v231", "p142", "108", "p141", "v229", "i85", "v321", "i133/3", "v322", "i138", "i139", "v323", "103", "v324", "p187", "p186", "p185", "20", "p184", "v204", "i76", "v205", "p146", "p147", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p117", "ЗМ-45", "p118", "p119", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "p258", "v399", "i189", "ЗМ-23", "p307", "p308", "vf3", "i193", "Ф3", "p309"];
-      }
-      if (activePump.includes("Н-4")) {
-        // prettier-ignore
+      if (activePump.includes("Н-4"))
+        newElements = [...newElements, ...FROM_332_TO_115_H4];
 
-        newElements = [...newElements, "v161", "332Б", "v162", "i48", "v163", "p111", "v230", "i86", "v231", "p142", "108", "p141", "v229", "i85", "v321", "i133/3", "v322", "i138", "i139", "v323", "103", "v324", "p187", "p186", "p185", "20", "p184", "v204", "i76", "v205", "p146", "p147", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p117", "ЗМ-45", "p118", "p119", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "p258", "p259", "v406", "i197", "i201", "ЗМ-29", "p313", "p314", "vf4", "Ф4", "p316"];
-      }
-      if (activePump.includes("Н-5")) {
-        // prettier-ignore
-
-        newElements = [...newElements, "v161", "332Б", "v162", "i48", "v163", "p111", "v230", "i86", "v231", "p142", "108", "p141", "v229", "i85", "v321", "i133/3", "v322", "i138", "i139", "v323", "103", "v324", "p187", "p186", "p185", "20", "p184", "v204", "i76", "v205", "p146", "p147", "73", "p148", "p149", "27", "p150", "v360", "i161", "v361", "i162", "v362", "i163", "v363", "i164", "v364", "i165", "v365", "p117", "ЗМ-45", "p118", "p119", "v196", "i70", "v197", "i71", "v198", "p256", "p257", "p258", "p259", "p260", "v413", "i205", "i209", "ЗМ-35", "p321", "p322", "vf5", "Ф5", "p324"];
-      }
+      if (activePump.includes("Н-5"))
+        newElements = [...newElements, ...FROM_332_TO_115_H5];
 
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
