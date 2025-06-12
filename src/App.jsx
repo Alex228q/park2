@@ -889,6 +889,15 @@ function App() {
     ) {
       setActivePump(["H-1"]);
     }
+
+    if (
+      from === "E-322" &&
+      to === "E-327" &&
+      activePumpStation.includes("910-35") &&
+      lineAorB.includes("А")
+    ) {
+      setActivePump(["H-2"]);
+    }
   }, [from, to, lineAorB, activePumpStation]);
 
   useEffect(() => {
@@ -1010,6 +1019,43 @@ function App() {
         // prettier-ignore
         newElements = [
       ...newElements, "v339", "i150", "i149", "v338", "p207", "v341", "28", "v340", "p202", "v342", "i151", "v343", "p214", "67", "p215", "v425", "ЗМ-43", "p235", "v427", "i218", "p171", "ЗМ-73", "p169", "p170", "v201", "v202", "v203", "i72", "i73", "i74", "i75", "v200", "v199", "p103", "v66", "326A", "v67"
+    ];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElementAfterPump(uniqueElements);
+    }
+
+    if (
+      from === "E-322" &&
+      to === "E-327" &&
+      activePumpStation.includes("910-35") &&
+      lineAorB.includes("А")
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        // prettier-ignore
+        newElements = [
+      ...newElements, "v252", "i96", "i95", "v251", "v250", "p189", "p188", "v246", "1", "v247","p212","v284","i121","v283/2","31","v283","p192","v285","37","v286","i122","i123","v287","p220","122","p219","v272","i113","i112","v271","i111","i110","i109","v270","v269","v268","v267","i108","i107","v266","v265","v264","i102","i103","i104","i105","i106","v261","v262","v263","p130","p129","v24/4","v24/3","p77","v44","v43","327A"
+    ];
+      }
+      if (activePump.includes("H-2")) {
+        // prettier-ignore
+        newElements = [
+      ...newElements,"v290","v289","i124", "p220","122","p219","v272","i113","i112","v271","i111","i110","i109","v270","v269","v268","v267","i108","i107","v266","v265","v264","i102","i103","i104","i105","i106","v261","v262","v263","p130","p129","v24/4","v24/3","p77","v44","v43","327A"
+    ];
+      }
+
+      if (activePump.includes("H-3")) {
+        // prettier-ignore
+        newElements = [
+      ...newElements,"v305","p227","123","p226","v273","v272","i113","i112","v271","i111","i110","i109","v270","v269","v268","v267","i108","i107","v266","v265","v264","i102","i103","i104","i105","i106","v261","v262","v263","p130","p129","v24/4","v24/3","p77","v44","v43","327A"
+    ];
+      }
+
+      if (activePump.includes("H-4")) {
+        // prettier-ignore
+        newElements = [
+      ...newElements, "v339","i150","i149","v338","v337","32","v336","p199","v344","p209","v306","p198","v302","35","v303","i130","i131","v304","26","p227","123","p226","v273","v272","i113","i112","v271","i111","i110","i109","v270","v269","v268","v267","i108","i107","v266","v265","v264","i102","i103","i104","i105","i106","v261","v262","v263","p130","p129","v24/4","v24/3","p77","v44","v43","327A"
     ];
       }
       const uniqueElements = [...new Set(newElements)];
