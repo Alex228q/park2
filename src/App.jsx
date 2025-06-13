@@ -21,7 +21,7 @@ import {
   FROM_322_TO_35_H4,
   MAZUT_TRANSFER_GPN,
   MAZUT_TRANSFER_PST,
-} from "./data/transferElements322";
+} from "./data/activeElements/transferElements322";
 import {
   FROM_323_TO_115_H1,
   FROM_323_TO_115_H2,
@@ -32,7 +32,7 @@ import {
   FROM_323_TO_35_H2,
   FROM_323_TO_35_H3,
   FROM_323_TO_35_H4,
-} from "./data/transferElements323";
+} from "./data/activeElements/transferElements323";
 import {
   FROM_324_TO_115_H1,
   FROM_324_TO_115_H2,
@@ -43,7 +43,7 @@ import {
   FROM_324_TO_35_H2,
   FROM_324_TO_35_H3,
   FROM_324_TO_35_H4,
-} from "./data/transferElements324";
+} from "./data/activeElements/transferElements324";
 import {
   FROM_325_TO_115_H1,
   FROM_325_TO_115_H2,
@@ -54,7 +54,7 @@ import {
   FROM_325_TO_35_H2,
   FROM_325_TO_35_H3,
   FROM_325_TO_35_H4,
-} from "./data/transferElements325";
+} from "./data/activeElements/transferElements325";
 import {
   FROM_326_TO_115_H1,
   FROM_326_TO_115_H2,
@@ -65,7 +65,7 @@ import {
   FROM_326_TO_35_H2,
   FROM_326_TO_35_H3,
   FROM_326_TO_35_H4,
-} from "./data/transferElements326";
+} from "./data/activeElements/transferElements326";
 import {
   FROM_327_TO_115_H1,
   FROM_327_TO_115_H2,
@@ -76,7 +76,7 @@ import {
   FROM_327_TO_35_H2,
   FROM_327_TO_35_H3,
   FROM_327_TO_35_H4,
-} from "./data/transferElements327";
+} from "./data/activeElements/transferElements327";
 import {
   FROM_328_TO_115_H1,
   FROM_328_TO_115_H2,
@@ -87,7 +87,7 @@ import {
   FROM_328_TO_35_H2,
   FROM_328_TO_35_H3,
   FROM_328_TO_35_H4,
-} from "./data/transferElements328";
+} from "./data/activeElements/transferElements328";
 import {
   FROM_329_TO_115_H1,
   FROM_329_TO_115_H2,
@@ -98,7 +98,7 @@ import {
   FROM_329_TO_35_H2,
   FROM_329_TO_35_H3,
   FROM_329_TO_35_H4,
-} from "./data/transferElements329";
+} from "./data/activeElements/transferElements329";
 import {
   FROM_330_TO_115_H1,
   FROM_330_TO_115_H2,
@@ -109,7 +109,7 @@ import {
   FROM_330_TO_35_H2,
   FROM_330_TO_35_H3,
   FROM_330_TO_35_H4,
-} from "./data/transferElements330";
+} from "./data/activeElements/transferElements330";
 import {
   FROM_331_TO_115_H1,
   FROM_331_TO_115_H2,
@@ -120,7 +120,7 @@ import {
   FROM_331_TO_35_H2,
   FROM_331_TO_35_H3,
   FROM_331_TO_35_H4,
-} from "./data/transferElements331";
+} from "./data/activeElements/transferElements331";
 import {
   FROM_332_TO_115_H1,
   FROM_332_TO_115_H2,
@@ -131,7 +131,7 @@ import {
   FROM_332_TO_35_H2,
   FROM_332_TO_35_H3,
   FROM_332_TO_35_H4,
-} from "./data/transferElements332";
+} from "./data/activeElements/transferElements332";
 
 const PST_TANK = [
   "E-322",
@@ -902,21 +902,21 @@ function App() {
       let newElements = [];
       if (activePump.includes("H-1")) {
         // prettier-ignore
-        newElements = [...newElements, "v252", "i96", "i95", "v251", "v250", "p189", "p188", "v246", "1", "v247", "p212", "p213", "p214", "67", "p215", "v425", "ЗМ-43", "p235", "v427", "i218", "p171", "ЗМ-73", "p169", "p170", "v201", "v202", "v203", "i72", "i73", "i74", "i75", "v200", "v199", "p102", "v165", "v65", "v62", "i14", "v61", "p76", "v54", "325A", "v55"];
+        newElements = [...newElements, "v252", "i96", "i95", "v251", "v250", "p189", "p188", "v246", "1", "v247", "p212", "p213", "p214", "67", "p215", "v425", "ЗМ-43", "p235", "v427", "i218", "p171", "ЗМ-73", "p169", "p170", "v201", "v202", "v203", "i72", "i73", "i74", "i75", "v200", "v199", "p102",  "v65", "v62", "i14", "v61", "p76", "v54", "325A", "v55"];
       }
       if (activePump.includes("H-2")) {
         // prettier-ignore
-        newElements = [...newElements, "v290", "i124", "v289", "v287", "i123", "i122", "v286", "37", "v285", "p192", "v283", "31", "v283/2", "i121", "v284", "p213", "p214", "67", "p215", "v425", "ЗМ-43", "p235", "v427", "i218", "p171", "ЗМ-73", "p169", "p170", "v201", "v202", "v203", "i72", "i73", "i74", "i75", "v200", "v199", "p102", "v165", "v65", "v65", "v62", "i14", "v61", "p76", "v54", "325A", "v55"];
+        newElements = [...newElements, "v290", "i124", "v289", "v287", "i123", "i122", "v286", "37", "v285", "p192", "v283", "31", "v283/2", "i121", "v284", "p213", "p214", "67", "p215", "v425", "ЗМ-43", "p235", "v427", "i218", "p171", "ЗМ-73", "p169", "p170", "v201", "v202", "v203", "i72", "i73", "i74", "i75", "v200", "v199", "p102",  "v65", "v65", "v62", "i14", "v61", "p76", "v54", "325A", "v55"];
       }
 
       if (activePump.includes("H-3")) {
         // prettier-ignore
-        newElements = [...newElements, "v305", "v304", "i131", "i130", "v303", "35", "v302", "p197", "v300", "24", "v301", "p205", "p204", "v292", "22", "v291", "p193", "p192", "v283", "31", "v283/2", "i121", "v284", "p213", "p214", "67", "p215", "v425", "ЗМ-43", "p235", "v427", "i218", "p171", "ЗМ-73", "p169", "p170", "v201", "v202", "v203", "i72", "i73", "i74", "i75", "v200", "v199", "p102", "v165", "v65", "v65", "v62", "i14", "v61", "p76", "v54", "325A", "v55"];
+        newElements = [...newElements, "v305", "v304", "i131", "i130", "v303", "35", "v302", "p197", "v300", "24", "v301", "p205", "p204", "v292", "22", "v291", "p193", "p192", "v283", "31", "v283/2", "i121", "v284", "p213", "p214", "67", "p215", "v425", "ЗМ-43", "p235", "v427", "i218", "p171", "ЗМ-73", "p169", "p170", "v201", "v202", "v203", "i72", "i73", "i74", "i75", "v200", "v199", "p102",  "v65", "v65", "v62", "i14", "v61", "p76", "v54", "325A", "v55"];
       }
 
       if (activePump.includes("H-4")) {
         // prettier-ignore
-        newElements = [...newElements, "v339", "i150", "i149", "v338", "p207", "v341", "28", "v340", "p202", "v342", "i151", "v343", "p214", "67", "p215", "v425", "ЗМ-43", "p235", "v427", "i218", "p171", "ЗМ-73", "p169", "p170", "v201", "v202", "v203", "i72", "i73", "i74", "i75", "v200", "v199", "p102", "v165", "v65", "v65", "v62", "i14", "v61", "p76", "v54", "325A", "v55"];
+        newElements = [...newElements, "v339", "i150", "i149", "v338", "p207", "v341", "28", "v340", "p202", "v342", "i151", "v343", "p214", "67", "p215", "v425", "ЗМ-43", "p235", "v427", "i218", "p171", "ЗМ-73", "p169", "p170", "v201", "v202", "v203", "i72", "i73", "i74", "i75", "v200", "v199", "p102",  "v65", "v65", "v62", "i14", "v61", "p76", "v54", "325A", "v55"];
       }
       const uniqueElements = [...new Set(newElements)];
       addActiveElementAfterPump(uniqueElements);
