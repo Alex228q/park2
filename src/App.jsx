@@ -705,156 +705,79 @@ function App() {
   useSwapConfiguration322(from, to, lineAorB, activePumpStation, setActivePump);
 
   useEffect(() => {
+    // Определяем конфигурацию для всех возможных маршрутов
+    const routeConfig = {
+      "E-322": {
+        "E-323": {
+          "H-1": SWAP_322_TO323_H1A,
+          "H-2": SWAP_322_TO323_H2A,
+          "H-3": SWAP_322_TO323_H3A,
+          "H-4": SWAP_322_TO323_H4A,
+        },
+        "E-324": {
+          "H-1": SWAP_322_TO324_H1A,
+          "H-2": SWAP_322_TO324_H2A,
+          "H-3": SWAP_322_TO324_H3A,
+          "H-4": SWAP_322_TO324_H4A,
+        },
+        "E-325": {
+          "H-1": SWAP_322_TO325_H1A,
+          "H-2": SWAP_322_TO325_H2A,
+          "H-3": SWAP_322_TO325_H3A,
+          "H-4": SWAP_322_TO325_H4A,
+        },
+        "E-326": {
+          "H-1": SWAP_322_TO326_H1A,
+          "H-2": SWAP_322_TO326_H2A,
+          "H-3": SWAP_322_TO326_H3A,
+          "H-4": SWAP_322_TO326_H4A,
+        },
+        "E-327": {
+          "H-1": SWAP_322_TO327_H1A,
+          "H-2": SWAP_322_TO327_H2A,
+          "H-3": SWAP_322_TO327_H3A,
+          "H-4": SWAP_322_TO327_H4A,
+        },
+        "E-328": {
+          "H-1": SWAP_322_TO328_H1A,
+          "H-2": SWAP_322_TO328_H2A,
+          "H-3": SWAP_322_TO328_H3A,
+          "H-4": SWAP_322_TO328_H4A,
+        },
+      },
+    };
+
+    // Проверяем базовые условия один раз
     if (
-      from === "E-322" &&
-      to === "E-323" &&
+      routeConfig[from] &&
+      routeConfig[from][to] &&
       activePumpStation.includes("910-35") &&
       lineAorB.includes("А")
     ) {
+      const pumpConfig = routeConfig[from][to];
       let newElements = [];
-      if (activePump.includes("H-1")) {
-        newElements = [...newElements, ...SWAP_322_TO323_H1A];
-      }
-      if (activePump.includes("H-2")) {
-        newElements = [...newElements, ...SWAP_322_TO323_H2A];
-      }
 
-      if (activePump.includes("H-3")) {
-        newElements = [...newElements, ...SWAP_322_TO323_H3A];
-      }
+      // Проходим по всем активным насосам и добавляем соответствующие элементы
+      activePump.forEach((pump) => {
+        if (pumpConfig[pump]) {
+          newElements = [...newElements, ...pumpConfig[pump]];
+        }
+      });
 
-      if (activePump.includes("H-4")) {
-        newElements = [...newElements, ...SWAP_322_TO323_H4A];
-      }
+      // Удаляем дубликаты и вызываем функцию
       const uniqueElements = [...new Set(newElements)];
-      addActiveElementAfterPump(uniqueElements);
+      if (uniqueElements.length > 0) {
+        addActiveElementAfterPump(uniqueElements);
+      }
     }
-
-    if (
-      from === "E-322" &&
-      to === "E-324" &&
-      activePumpStation.includes("910-35") &&
-      lineAorB.includes("А")
-    ) {
-      let newElements = [];
-      if (activePump.includes("H-1")) {
-        newElements = [...newElements, ...SWAP_322_TO324_H1A];
-      }
-      if (activePump.includes("H-2")) {
-        newElements = [...newElements, ...SWAP_322_TO324_H2A];
-      }
-
-      if (activePump.includes("H-3")) {
-        newElements = [...newElements, ...SWAP_322_TO324_H3A];
-      }
-
-      if (activePump.includes("H-4")) {
-        newElements = [...newElements, ...SWAP_322_TO324_H4A];
-      }
-      const uniqueElements = [...new Set(newElements)];
-      addActiveElementAfterPump(uniqueElements);
-    }
-
-    if (
-      from === "E-322" &&
-      to === "E-325" &&
-      activePumpStation.includes("910-35") &&
-      lineAorB.includes("А")
-    ) {
-      let newElements = [];
-      if (activePump.includes("H-1")) {
-        newElements = [...newElements, ...SWAP_322_TO325_H1A];
-      }
-      if (activePump.includes("H-2")) {
-        newElements = [...newElements, ...SWAP_322_TO325_H2A];
-      }
-
-      if (activePump.includes("H-3")) {
-        newElements = [...newElements, ...SWAP_322_TO325_H3A];
-      }
-
-      if (activePump.includes("H-4")) {
-        newElements = [...newElements, ...SWAP_322_TO325_H4A];
-      }
-      const uniqueElements = [...new Set(newElements)];
-      addActiveElementAfterPump(uniqueElements);
-    }
-
-    if (
-      from === "E-322" &&
-      to === "E-326" &&
-      activePumpStation.includes("910-35") &&
-      lineAorB.includes("А")
-    ) {
-      let newElements = [];
-      if (activePump.includes("H-1")) {
-        newElements = [...newElements, ...SWAP_322_TO326_H1A];
-      }
-      if (activePump.includes("H-2")) {
-        newElements = [...newElements, ...SWAP_322_TO326_H2A];
-      }
-
-      if (activePump.includes("H-3")) {
-        newElements = [...newElements, ...SWAP_322_TO326_H3A];
-      }
-
-      if (activePump.includes("H-4")) {
-        newElements = [...newElements, ...SWAP_322_TO326_H4A];
-      }
-      const uniqueElements = [...new Set(newElements)];
-      addActiveElementAfterPump(uniqueElements);
-    }
-
-    if (
-      from === "E-322" &&
-      to === "E-327" &&
-      activePumpStation.includes("910-35") &&
-      lineAorB.includes("А")
-    ) {
-      let newElements = [];
-      if (activePump.includes("H-1")) {
-        newElements = [...newElements, ...SWAP_322_TO327_H1A];
-      }
-      if (activePump.includes("H-2")) {
-        newElements = [...newElements, ...SWAP_322_TO327_H2A];
-      }
-
-      if (activePump.includes("H-3")) {
-        newElements = [...newElements, ...SWAP_322_TO327_H3A];
-      }
-
-      if (activePump.includes("H-4")) {
-        newElements = [...newElements, ...SWAP_322_TO327_H4A];
-      }
-      const uniqueElements = [...new Set(newElements)];
-      addActiveElementAfterPump(uniqueElements);
-    }
-
-    if (
-      from === "E-322" &&
-      to === "E-328" &&
-      activePumpStation.includes("910-35") &&
-      lineAorB.includes("А")
-    ) {
-      let newElements = [];
-      if (activePump.includes("H-1")) {
-        newElements = [...newElements, ...SWAP_322_TO328_H1A];
-      }
-      if (activePump.includes("H-2")) {
-        newElements = [...newElements, ...SWAP_322_TO328_H2A];
-      }
-
-      if (activePump.includes("H-3")) {
-        newElements = [...newElements, ...SWAP_322_TO328_H3A];
-      }
-
-      if (activePump.includes("H-4")) {
-        newElements = [...newElements, ...SWAP_322_TO328_H4A];
-      }
-      const uniqueElements = [...new Set(newElements)];
-      addActiveElementAfterPump(uniqueElements);
-    }
-  }, [activePump]);
+  }, [
+    activePump,
+    from,
+    to,
+    activePumpStation,
+    lineAorB,
+    addActiveElementAfterPump,
+  ]);
 
   // Обработчики для drag-scroll
   const handleMouseDown = (e) => {
