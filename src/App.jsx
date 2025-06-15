@@ -207,6 +207,30 @@ import {
   SWAP_322_TO328_H2A,
   SWAP_322_TO328_H3A,
   SWAP_322_TO328_H4A,
+  SWAP_322_TO329_H1A,
+  SWAP_322_TO329_H2A,
+  SWAP_322_TO329_H3A,
+  SWAP_322_TO329_H4A,
+  SWAP_322_TO330_H1A,
+  SWAP_322_TO330_H2A,
+  SWAP_322_TO330_H3A,
+  SWAP_322_TO330_H4A,
+  SWAP_322_TO331_H1A,
+  SWAP_322_TO331_H2A,
+  SWAP_322_TO331_H3A,
+  SWAP_322_TO331_H4A,
+  SWAP_322_TO332_H1A,
+  SWAP_322_TO332_H2A,
+  SWAP_322_TO332_H3A,
+  SWAP_322_TO332_H4A,
+  SWAP_322_TO333_H1A,
+  SWAP_322_TO333_H2A,
+  SWAP_322_TO333_H3A,
+  SWAP_322_TO333_H4A,
+  SWAP_322_TO334_H1A,
+  SWAP_322_TO334_H2A,
+  SWAP_322_TO334_H3A,
+  SWAP_322_TO334_H4A,
   useSwapConfiguration322,
 } from "./data/swap/pumpSwapConfiguration322";
 
@@ -704,6 +728,7 @@ function App() {
 
   useSwapConfiguration322(from, to, lineAorB, activePumpStation, setActivePump);
 
+  //322swap35
   useEffect(() => {
     if (
       from === "E-322" &&
@@ -850,6 +875,156 @@ function App() {
 
       if (activePump.includes("H-4")) {
         newElements = [...newElements, ...SWAP_322_TO328_H4A];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElementAfterPump(uniqueElements);
+    }
+
+    if (
+      from === "E-322" &&
+      to === "E-329" &&
+      activePumpStation.includes("910-35") &&
+      lineAorB.includes("А")
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [...newElements, ...SWAP_322_TO329_H1A];
+      }
+      if (activePump.includes("H-2")) {
+        newElements = [...newElements, ...SWAP_322_TO329_H2A];
+      }
+
+      if (activePump.includes("H-3")) {
+        newElements = [...newElements, ...SWAP_322_TO329_H3A];
+      }
+
+      if (activePump.includes("H-4")) {
+        newElements = [...newElements, ...SWAP_322_TO329_H4A];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElementAfterPump(uniqueElements);
+    }
+
+    if (
+      from === "E-322" &&
+      to === "E-330" &&
+      activePumpStation.includes("910-35") &&
+      lineAorB.includes("А")
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [...newElements, ...SWAP_322_TO330_H1A];
+      }
+      if (activePump.includes("H-2")) {
+        newElements = [...newElements, ...SWAP_322_TO330_H2A];
+      }
+
+      if (activePump.includes("H-3")) {
+        newElements = [...newElements, ...SWAP_322_TO330_H3A];
+      }
+
+      if (activePump.includes("H-4")) {
+        newElements = [...newElements, ...SWAP_322_TO330_H4A];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElementAfterPump(uniqueElements);
+    }
+
+    if (
+      from === "E-322" &&
+      to === "E-331" &&
+      activePumpStation.includes("910-35") &&
+      lineAorB.includes("А")
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [...newElements, ...SWAP_322_TO331_H1A];
+      }
+      if (activePump.includes("H-2")) {
+        newElements = [...newElements, ...SWAP_322_TO331_H2A];
+      }
+
+      if (activePump.includes("H-3")) {
+        newElements = [...newElements, ...SWAP_322_TO331_H3A];
+      }
+
+      if (activePump.includes("H-4")) {
+        newElements = [...newElements, ...SWAP_322_TO331_H4A];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElementAfterPump(uniqueElements);
+    }
+
+    if (
+      from === "E-322" &&
+      to === "E-332" &&
+      activePumpStation.includes("910-35") &&
+      lineAorB.includes("А")
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [...newElements, ...SWAP_322_TO332_H1A];
+      }
+      if (activePump.includes("H-2")) {
+        newElements = [...newElements, ...SWAP_322_TO332_H2A];
+      }
+
+      if (activePump.includes("H-3")) {
+        newElements = [...newElements, ...SWAP_322_TO332_H3A];
+      }
+
+      if (activePump.includes("H-4")) {
+        newElements = [...newElements, ...SWAP_322_TO332_H4A];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElementAfterPump(uniqueElements);
+    }
+
+    if (
+      from === "E-322" &&
+      to === "E-333" &&
+      activePumpStation.includes("910-35") &&
+      lineAorB.includes("А")
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [...newElements, ...SWAP_322_TO333_H1A];
+      }
+      if (activePump.includes("H-2")) {
+        newElements = [...newElements, ...SWAP_322_TO333_H2A];
+      }
+
+      if (activePump.includes("H-3")) {
+        newElements = [...newElements, ...SWAP_322_TO333_H3A];
+      }
+
+      if (activePump.includes("H-4")) {
+        newElements = [...newElements, ...SWAP_322_TO333_H4A];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElementAfterPump(uniqueElements);
+    }
+
+    if (
+      from === "E-322" &&
+      to === "E-334" &&
+      activePumpStation.includes("910-35") &&
+      lineAorB.includes("А")
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [...newElements, ...SWAP_322_TO334_H1A];
+      }
+      if (activePump.includes("H-2")) {
+        newElements = [...newElements, ...SWAP_322_TO334_H2A];
+      }
+
+      if (activePump.includes("H-3")) {
+        newElements = [...newElements, ...SWAP_322_TO334_H3A];
+      }
+
+      if (activePump.includes("H-4")) {
+        newElements = [...newElements, ...SWAP_322_TO334_H4A];
       }
       const uniqueElements = [...new Set(newElements)];
       addActiveElementAfterPump(uniqueElements);
