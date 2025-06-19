@@ -81,6 +81,7 @@ const parkStore = create((set) => ({
 
   setActivePump: (newActivePump) =>
     set(() => ({
+      activeElementsAfterPump: [],
       activePump: newActivePump,
     })),
 }));

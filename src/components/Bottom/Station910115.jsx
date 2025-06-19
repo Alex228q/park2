@@ -493,9 +493,10 @@ const Station910115 = () => {
 
       <Pipe top={1964} left={2367} length={67} title="vf5" />
       <Filter top={2030} left={2358} title="Ф5" />
-      <Pipe top={2054} left={2367} length={135} title="vf5" />
+      <Pipe top={2054} left={2367} length={73} title="vf5" />
+      <Pipe top={2120} left={2367} length={66} title="vf5/2" />
       <Intersection top={2188} left={2363} title="i209" />
-      <Pipe top={2202} left={2367} length={120} title="vf5" />
+      <Pipe top={2202} left={2367} length={120} title="vf5/2" />
 
       <Pipe top={1615} left={2250} length={30} title="v417" />
       <Intersection top={1646} left={2246} title="i210" />
@@ -537,9 +538,10 @@ const Station910115 = () => {
 
       <Pipe top={1964} left={2250} length={20} title="v419" />
       <Intersection top={1986} left={2246} title="i212" />
-      <Pipe top={2000} left={2250} length={190} title="v419" />
-      <Intersection top={2188} left={2246} title="i212" />
-      <Pipe top={2202} left={2250} length={120} title="v419" />
+      <Pipe top={2000} left={2250} length={127} title="v419" />
+      <Pipe top={2120} left={2250} length={67} title="v419/2" />
+      <Intersection top={2188} left={2246} title="i212/2" />
+      <Pipe top={2202} left={2250} length={120} title="v419/2" />
 
       <Pipe top={1777} left={1165} length={94} title="v420" />
       <Intersection top={1870} left={1161} title="i213" />
@@ -598,6 +600,65 @@ const Station910115 = () => {
       <Intersection top={1773} left={2547} title="i218" />
       <Pipe top={1787} left={2551} length={32} title="v427" />
 
+      <Pipe top={2120} left={1368} length={47} title="OM-1" isHorizontal />
+      <Valve
+        top={2110}
+        left={1415}
+        title="OM-1"
+        isUp
+        textLeft={1411}
+        textTop={2097}
+      />
+
+      <Pipe top={2120} left={1434} length={37} title="OM-1" isHorizontal />
+
+      <Pipe top={2120} left={1593} length={47} title="OM-2" isHorizontal />
+      <Valve
+        top={2110}
+        left={1640}
+        title="OM-2"
+        isUp
+        textLeft={1635}
+        textTop={2098}
+      />
+
+      <Pipe top={2120} left={1659} length={37} title="OM-2" isHorizontal />
+
+      <Pipe top={2120} left={1805} length={47} title="OM-3" isHorizontal />
+      <Valve
+        top={2110}
+        left={1852}
+        title="OM-3"
+        isUp
+        textLeft={1848}
+        textTop={2098}
+      />
+
+      <Pipe top={2120} left={1871} length={40} title="OM-3" isHorizontal />
+
+      <Pipe top={2120} left={2021} length={47} title="OM-4" isHorizontal />
+      <Valve
+        top={2110}
+        left={2068}
+        title="OM-4"
+        isUp
+        textLeft={2064}
+        textTop={2098}
+      />
+
+      <Pipe top={2120} left={2087} length={42} title="OM-4" isHorizontal />
+
+      <Pipe top={2120} left={2250} length={53} title="OM-5" isHorizontal />
+      <Valve
+        top={2110}
+        left={2303}
+        title="OM-5"
+        isUp
+        textLeft={2298}
+        textTop={2098}
+      />
+
+      <Pipe top={2120} left={2322} length={47} title="OM-5" isHorizontal />
 
       <Pump title="Н-1" top={2296} left={1399} />
       <Pump title="Н-2" top={2296} left={1624} />

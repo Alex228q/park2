@@ -1,10 +1,16 @@
 import parkStore from "../store/parkStore";
 
 const Filter = ({ top = 0, left = 0, title = "" }) => {
-  const { activeElements } = parkStore();
+  const { activeElements, activeElementsAfterPump } = parkStore();
 
+  let color = "gray";
   const isActive = activeElements.includes(title);
-
+  if (isActive) {
+    color = "green";
+  }
+  if (activeElementsAfterPump.includes(title)) {
+    color = "blue";
+  }
   return (
     <div
       style={{
@@ -16,7 +22,7 @@ const Filter = ({ top = 0, left = 0, title = "" }) => {
         justifyContent: "center",
         width: "26px",
         height: "26px",
-        border: `2px solid ${isActive ? "green" : "gray"}`,
+        border: `2px solid ${color}`,
         borderRadius: "100%",
         fontWeight: "500",
         color: isActive ? "green" : "#474747",
