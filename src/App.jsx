@@ -15,6 +15,8 @@ import {
   FROM_322_TO_115_H3,
   FROM_322_TO_115_H4,
   FROM_322_TO_115_H5,
+  FROM_322_TO_325H1B,
+  FROM_322_TO_325H4B,
   FROM_322_TO_35_H1,
   FROM_322_TO_35_H2,
   FROM_322_TO_35_H3,
@@ -250,6 +252,19 @@ function App() {
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
+
+    if (from === "E-322" && to === "E-325" && lineAorB === "Б") {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [...newElements, ...FROM_322_TO_325H1B];
+      }
+      if (activePump.includes("H-4")) {
+        newElements = [...newElements, ...FROM_322_TO_325H4B];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
     if (from === "E-323") {
       let newElements = [];
 

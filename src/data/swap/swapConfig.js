@@ -20,9 +20,7 @@ import {
   SWAP_322_TO325_H1A,
   SWAP_322_TO325_H1B,
   SWAP_322_TO325_H2A,
-  SWAP_322_TO325_H2B,
   SWAP_322_TO325_H3A,
-  SWAP_322_TO325_H3B,
   SWAP_322_TO325_H4A,
   SWAP_322_TO325_H4B,
   SWAP_322_TO326_H1A,
@@ -124,8 +122,6 @@ const pumpConfigurations = {
           pumps: ["H-1"],
           routes: {
             "H-1": SWAP_322_TO325_H1B,
-            "H-2": SWAP_322_TO325_H2B,
-            "H-3": SWAP_322_TO325_H3B,
             "H-4": SWAP_322_TO325_H4B,
           },
         },

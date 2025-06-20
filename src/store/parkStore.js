@@ -60,28 +60,37 @@ const parkStore = create((set) => ({
   setTo: (title) =>
     set((state) => {
       const newTo = state.to === title ? null : title;
+      const shouldClearElements =
+        newTo === null || state.activePump.length === 0;
+
       return {
         to: newTo,
         lineAorB: [],
-
-        activePump: [],
-        activeElementsAfterPump: [],
-        activeElements: newTo === null ? [] : state.activeElements,
+        activePump: shouldClearElements ? [] : state.activePump,
+        activeElementsAfterPump: shouldClearElements
+          ? []
+          : state.activeElementsAfterPump,
+        activeElements: shouldClearElements ? [] : state.activeElements,
       };
     }),
 
   addActiveElement: (titles) =>
-    set(() => ({
-      activeElements: [...titles],
+    set((state) => ({
+      activeElements:
+        state.to === null || state.activePump.length === 0 ? [] : [...titles],
     })),
+
   addActiveElementAfterPump: (titles) =>
-    set(() => ({
-      activeElementsAfterPump: [...titles],
+    set((state) => ({
+      activeElementsAfterPump:
+        state.to === null || state.activePump.length === 0 ? [] : [...titles],
     })),
 
   setActivePump: (newActivePump) =>
-    set(() => ({
-      activeElementsAfterPump: [],
+    set((state) => ({
+      activeElementsAfterPump:
+        newActivePump.length === 0 || state.to === null ? [] : [],
+      activeElements: newActivePump.length === 0 || state.to === null ? [] : [],
       activePump: newActivePump,
     })),
 }));

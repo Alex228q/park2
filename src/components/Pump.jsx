@@ -1,7 +1,7 @@
 import parkStore from "../store/parkStore";
 
 const Pump = ({ top = 0, left = 0, title = "" }) => {
-  const { activePump, setActivePump } = parkStore();
+  const { activePump, setActivePump, from, to, lineAorB } = parkStore();
   const isActive = activePump.includes(title);
   let colorActivePump =
     "linear-gradient(90deg, green,green,green, #1e22e0,#1e22e0,#1e22e0)";
@@ -11,6 +11,15 @@ const Pump = ({ top = 0, left = 0, title = "" }) => {
   }
 
   const handleClick = () => {
+    if (
+      (from === "E-322" &&
+        to === "E-325" &&
+        lineAorB.includes("Б") &&
+        title === "H-3") ||
+      title === "H-2"
+    ) {
+      return;
+    }
     if (isActive) {
       setActivePump(activePump.filter((pump) => pump !== title));
     } else {

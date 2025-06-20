@@ -90,6 +90,7 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
     margin: "4px 0",
     width: "100%",
     textAlign: "center",
+    fontWeight: "700",
     ":hover": {
       backgroundColor: "#e0e3e7",
       transform: "translateY(-1px)",
