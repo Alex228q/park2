@@ -101,7 +101,7 @@ const TanksLevel = () => {
 
       {/* ******************************************************** */}
       <Pipe top={525} left={662} length={151} title="v133" />
-      <Pipe top={676} left={662} length={35} title="v134" />
+      <Pipe top={669} left={662} length={42} title="v134" />
       <Pipe top={676} left={1038} length={23} title="v135" />
 
       <Intersection top={700} left={1034} title="i42" />
