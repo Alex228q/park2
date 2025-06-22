@@ -16,6 +16,7 @@ const Pipe = ({
   left = 0,
   top = 0,
   title = "",
+  colorDef = "#E1E7EC",
 }) => {
   const {
     activeElements,
@@ -23,7 +24,7 @@ const Pipe = ({
     activeElementsGpn,
     activeElementsPst,
   } = parkStore();
-  let color = activeElements.includes(title) ? "green" : "#E1E7EC";
+  let color = activeElements.includes(title) ? "green" : colorDef;
   let z =
     activeElements.includes(title) || activeElementsAfterPump.includes(title)
       ? 30
@@ -41,6 +42,9 @@ const Pipe = ({
   if (activeElementsPst.includes(title)) {
     color = "#6F4B07";
     z = 30;
+  }
+  if (title === "plug") {
+    z = 200;
   }
 
   return (

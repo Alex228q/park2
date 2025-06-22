@@ -15,8 +15,8 @@ import {
   FROM_322_TO_115_H3,
   FROM_322_TO_115_H4,
   FROM_322_TO_115_H5,
-  FROM_322_TO_325H1B,
-  FROM_322_TO_325H4B,
+  FROM_322_TO_324AND325H1B_910_35,
+  FROM_322_TO_324AND325H4B_910_35,
   FROM_322_TO_35_H1,
   FROM_322_TO_35_H2,
   FROM_322_TO_35_H3,
@@ -186,6 +186,7 @@ import {
 } from "./data/activeElementsAfterPump/transferAfterPump";
 
 import { useSwapConfiguration } from "./data/swap/swapConfig";
+import Plugs from "./components/Plugs";
 
 const PST_TANK = [
   "E-322",
@@ -197,6 +198,8 @@ const PST_TANK = [
   "E-333",
   "E-334",
 ];
+
+export const SWAP_FROM_322_TO_B_LINE_PROBLEM = ["E-324", "E-325", "E-326"];
 
 const ZGP_TANK = ["E-327", "E-328", "E-329", "E-330", "E-331"];
 
@@ -253,13 +256,17 @@ function App() {
       addActiveElement(uniqueElements);
     }
 
-    if (from === "E-322" && to === "E-325" && lineAorB === "Б") {
+    if (
+      from === "E-322" &&
+      lineAorB === "Б" &&
+      SWAP_FROM_322_TO_B_LINE_PROBLEM.includes(to)
+    ) {
       let newElements = [];
       if (activePump.includes("H-1")) {
-        newElements = [...newElements, ...FROM_322_TO_325H1B];
+        newElements = [...newElements, ...FROM_322_TO_324AND325H1B_910_35];
       }
       if (activePump.includes("H-4")) {
-        newElements = [...newElements, ...FROM_322_TO_325H4B];
+        newElements = [...newElements, ...FROM_322_TO_324AND325H4B_910_35];
       }
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
@@ -765,6 +772,7 @@ function App() {
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
       >
+        <Plugs />
         <Switcher top={47} left={3045} title="pst" activeColor="#6F4B07" />
         <SimpleText left={3087} top={49} title="МАЗУТ С ПСТ" />
 
@@ -784,6 +792,8 @@ function App() {
 
   return (
     <>
+      <Plugs />
+
       <Switcher top={47} left={3045} title="pst" activeColor="#6F4B07" />
       <SimpleText left={3087} top={49} title="МАЗУТ С ПСТ" />
 

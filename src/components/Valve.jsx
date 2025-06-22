@@ -1,5 +1,8 @@
 import parkStore from "../store/parkStore";
 import valveImage from "../assets/images/valve.png";
+
+const DEFAULT_CLOSE_VALVE = ["83", "34"];
+
 const Valve = ({
   textTop = 0,
   textLeft = 0,
@@ -27,6 +30,10 @@ const Valve = ({
 
   if (activeElementsPst.includes(title)) {
     color = "#6F4B07";
+  }
+
+  if (DEFAULT_CLOSE_VALVE.includes(title)) {
+    color = "red";
   }
 
   if (isRotate) {

@@ -20,6 +20,8 @@ const parkStore = create((set) => ({
 
   setLine: (newLine) =>
     set(() => ({
+      activeElementsAfterPump: [],
+      activePump: [],
       lineAorB: newLine,
     })),
 
@@ -66,10 +68,8 @@ const parkStore = create((set) => ({
       return {
         to: newTo,
         lineAorB: [],
-        activePump: shouldClearElements ? [] : state.activePump,
-        activeElementsAfterPump: shouldClearElements
-          ? []
-          : state.activeElementsAfterPump,
+        activePump: [],
+        activeElementsAfterPump: [],
         activeElements: shouldClearElements ? [] : state.activeElements,
       };
     }),

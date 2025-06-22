@@ -50,9 +50,7 @@ const Intersection = ({
     zIndex: z,
   };
 
-  return <div style={halfCircleStyle}>
-    {/* {title} */}
-    </div>;
+  return <div style={halfCircleStyle}>{/* {title} */}</div>;
 };
 
 export default Intersection;

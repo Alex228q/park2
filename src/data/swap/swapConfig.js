@@ -12,9 +12,7 @@ import {
   SWAP_322_TO324_H1A,
   SWAP_322_TO324_H1B,
   SWAP_322_TO324_H2A,
-  SWAP_322_TO324_H2B,
   SWAP_322_TO324_H3A,
-  SWAP_322_TO324_H3B,
   SWAP_322_TO324_H4A,
   SWAP_322_TO324_H4B,
   SWAP_322_TO325_H1A,
@@ -24,9 +22,11 @@ import {
   SWAP_322_TO325_H4A,
   SWAP_322_TO325_H4B,
   SWAP_322_TO326_H1A,
+  SWAP_322_TO326_H1B,
   SWAP_322_TO326_H2A,
   SWAP_322_TO326_H3A,
   SWAP_322_TO326_H4A,
+  SWAP_322_TO326_H4B,
   SWAP_322_TO327_H1A,
   SWAP_322_TO327_H2A,
   SWAP_322_TO327_H3A,
@@ -59,7 +59,7 @@ import {
   SWAP_322_TO334_H2A,
   SWAP_322_TO334_H3A,
   SWAP_322_TO334_H4A,
-} from "./pumpSwapConfiguration322";
+} from "./fromPump/pumpSwapConfiguration322";
 
 const pumpConfigurations = {
   "E-322": {
@@ -100,8 +100,6 @@ const pumpConfigurations = {
           pumps: ["H-1"],
           routes: {
             "H-1": SWAP_322_TO324_H1B,
-            "H-2": SWAP_322_TO324_H2B,
-            "H-3": SWAP_322_TO324_H3B,
             "H-4": SWAP_322_TO324_H4B,
           },
         },
@@ -136,6 +134,13 @@ const pumpConfigurations = {
             "H-2": SWAP_322_TO326_H2A,
             "H-3": SWAP_322_TO326_H3A,
             "H-4": SWAP_322_TO326_H4A,
+          },
+        },
+        Б: {
+          pumps: ["H-1"],
+          routes: {
+            "H-1": SWAP_322_TO326_H1B,
+            "H-4": SWAP_322_TO326_H4B,
           },
         },
       },
