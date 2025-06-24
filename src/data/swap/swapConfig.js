@@ -17,18 +17,24 @@ import {
   SWAP_322_TO324_H3A,
   SWAP_322_TO324_H4A,
   SWAP_322_TO324_H4B,
+  SWAP_322_TO324_N3A,
+  SWAP_322_TO324_N3B,
   SWAP_322_TO325_H1A,
   SWAP_322_TO325_H1B,
   SWAP_322_TO325_H2A,
   SWAP_322_TO325_H3A,
   SWAP_322_TO325_H4A,
   SWAP_322_TO325_H4B,
+  SWAP_322_TO325_N3A,
+  SWAP_322_TO325_N3B,
   SWAP_322_TO326_H1A,
   SWAP_322_TO326_H1B,
   SWAP_322_TO326_H2A,
   SWAP_322_TO326_H3A,
   SWAP_322_TO326_H4A,
   SWAP_322_TO326_H4B,
+  SWAP_322_TO326_N3A,
+  SWAP_322_TO326_N3B,
   SWAP_322_TO327_H1A,
   SWAP_322_TO327_H1B,
   SWAP_322_TO327_H2A,
@@ -136,6 +142,20 @@ const pumpConfigurations = {
           },
         },
       },
+      "910-115": {
+        А: {
+          pumps: ["Н-3"],
+          routes: {
+            "Н-3": SWAP_322_TO324_N3A,
+          },
+        },
+        Б: {
+          pumps: ["Н-3"],
+          routes: {
+            "Н-3": SWAP_322_TO324_N3B,
+          },
+        },
+      },
     },
     "E-325": {
       "910-35": {
@@ -156,6 +176,20 @@ const pumpConfigurations = {
           },
         },
       },
+      "910-115": {
+        А: {
+          pumps: ["Н-3"],
+          routes: {
+            "Н-3": SWAP_322_TO325_N3A,
+          },
+        },
+        Б: {
+          pumps: ["Н-3"],
+          routes: {
+            "Н-3": SWAP_322_TO325_N3B,
+          },
+        },
+      },
     },
     "E-326": {
       "910-35": {
@@ -173,6 +207,20 @@ const pumpConfigurations = {
           routes: {
             "H-1": SWAP_322_TO326_H1B,
             "H-4": SWAP_322_TO326_H4B,
+          },
+        },
+      },
+      "910-115": {
+        А: {
+          pumps: ["Н-3"],
+          routes: {
+            "Н-3": SWAP_322_TO326_N3A,
+          },
+        },
+        Б: {
+          pumps: ["Н-3"],
+          routes: {
+            "Н-3": SWAP_322_TO326_N3B,
           },
         },
       },

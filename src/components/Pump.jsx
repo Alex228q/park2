@@ -52,7 +52,8 @@ const Pump = ({ top = 0, left = 0, title = "" }) => {
 
     if (
       SWAP_FROM_322_TO_B_LINE_PROBLEM.includes(to) &&
-      (title === "H-2" || title === "H-3")
+      (title === "H-2" || title === "H-3") &&
+      lineAorB.includes("Б")
     ) {
       return;
     }

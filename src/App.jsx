@@ -259,7 +259,8 @@ function App() {
     if (
       from === "E-322" &&
       lineAorB === "Б" &&
-      SWAP_FROM_322_TO_B_LINE_PROBLEM.includes(to)
+      SWAP_FROM_322_TO_B_LINE_PROBLEM.includes(to) &&
+      activePumpStation === "910-35"
     ) {
       let newElements = [];
       if (activePump.includes("H-1")) {
