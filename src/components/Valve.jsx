@@ -1,5 +1,4 @@
 import parkStore from "../store/parkStore";
-import valveImage from "../assets/images/valve.png";
 
 const DEFAULT_CLOSE_VALVE = ["83", "34"];
 
@@ -68,7 +67,7 @@ const Valve = ({
               filter: `drop-shadow(0px 1000px 0 ${color})`,
               transform: "translateY(-1000px)",
             }}
-            src={valveImage}
+            src="./valve.png"
             alt="valve"
             width={19}
             height={19}
@@ -108,7 +107,7 @@ const Valve = ({
             filter: `drop-shadow(0px 1000px 0 ${color})`,
             transform: "translateY(-1000px)",
           }}
-          src={valveImage}
+          src="./valve.png"
           alt="valve"
           width={19}
           height={19}
@@ -147,7 +146,7 @@ const Valve = ({
             filter: `drop-shadow(0px 1000px 0 ${color})`,
             transform: "translateY(-1000px)",
           }}
-          src={valveImage}
+          src="./valve.png"
           alt="valve"
           width={19}
           height={19}
