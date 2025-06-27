@@ -9,3 +9,7 @@
 body {
   overscroll-behavior-y: contain;
 }
+
+.wrapper {
+  padding-top: 120px;
+}

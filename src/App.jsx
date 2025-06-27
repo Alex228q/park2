@@ -792,24 +792,26 @@ function App() {
   }
 
   return (
-    <>
-      <Plugs />
+    <div className="wrapper">
+      <div style={{ position: "relative" }}>
+        <Plugs />
 
-      <Switcher top={47} left={3045} title="pst" activeColor="#6F4B07" />
-      <SimpleText left={3087} top={49} title="МАЗУТ С ПСТ" />
+        <Switcher top={47} left={3045} title="pst" activeColor="#6F4B07" />
+        <SimpleText left={3087} top={49} title="МАЗУТ С ПСТ" />
 
-      <Switcher top={53} left={2426} title="gpn" activeColor="#7D0F9B" />
-      <SimpleText left={2470} top={74} title="МАЗУТ С КГПН" />
+        <Switcher top={53} left={2426} title="gpn" activeColor="#7D0F9B" />
+        <SimpleText left={2470} top={74} title="МАЗУТ С КГПН" />
 
-      <TopLevel />
-      <TanksLevel />
-      <InterparkCommunication />
-      <Station91035 />
-      <Station910115 />
-      <Reck title="910-40(1)" top={2331} left={3658} />
-      <Reck title="910-10(2)" top={2550} left={3658} />
-      <Reck title="910-100(3)" top={2550} left={800} />
-    </>
+        <TopLevel />
+        <TanksLevel />
+        <InterparkCommunication />
+        <Station91035 />
+        <Station910115 />
+        <Reck title="910-40(1)" top={2331} left={3658} />
+        <Reck title="910-10(2)" top={2550} left={3658} />
+        <Reck title="910-100(3)" top={2550} left={800} />
+      </div>
+    </div>
   );
 }
 
