@@ -46,7 +46,7 @@ const Intersection = ({
     borderLeftColor: color,
     borderBottomWidth: "0",
     borderBottomStyle: "solid",
-    rotate: "340deg",
+    rotate: "90deg",
     zIndex: z,
   };
 
