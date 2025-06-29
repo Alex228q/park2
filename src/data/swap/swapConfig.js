@@ -4,8 +4,15 @@ import {
   SWAP_322_TO_323_35_A2,
   SWAP_322_TO_323_35_A3,
   SWAP_322_TO_323_35_A4,
-} from "./322/to323/35/A/fromPump";
-import { SWAP_322_TO_323_35_B1 } from "./322/to323/35/B/fromPump";
+} from "./322/to323/35/fromPumpA";
+import {
+  SWAP_322_TO_323_35_B1,
+  SWAP_322_TO_323_35_B2,
+  SWAP_322_TO_323_35_B3,
+  SWAP_322_TO_323_35_B4,
+} from "./322/to323/35/fromPumpB";
+import { SWAP_322_TO_323_115_A } from "./322/to323/115/fromPumpA";
+import { SWAP_322_TO_323_115_B } from "./322/to323/115/fromPumpB";
 
 const pumpConfigurations = {
   "E-322": {
@@ -24,9 +31,9 @@ const pumpConfigurations = {
           pumps: ["H-1"],
           routes: {
             "H-1": SWAP_322_TO_323_35_B1,
-            "H-2": "",
-            "H-3": "",
-            "H-4": "",
+            "H-2": SWAP_322_TO_323_35_B2,
+            "H-3": SWAP_322_TO_323_35_B3,
+            "H-4": SWAP_322_TO_323_35_B4,
           },
         },
       },
@@ -34,13 +41,13 @@ const pumpConfigurations = {
         А: {
           pumps: ["Н-3"],
           routes: {
-            "Н-3": "",
+            "Н-3": SWAP_322_TO_323_115_A,
           },
         },
         Б: {
           pumps: ["Н-3"],
           routes: {
-            "Н-3": "",
+            "Н-3": SWAP_322_TO_323_115_B,
           },
         },
       },
