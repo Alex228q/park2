@@ -172,14 +172,14 @@ const InterparkCommunication = () => {
       <Pipe top={1602} left={1038} length={141} title="v198" />
       <Pipe top={958} left={1314} length={93} title="v199" />
       <Intersection top={1052} left={1310} title="i72" />
-      <Intersection top={1081} left={1310} title="i73" />
-      <Pipe top={1066} left={1314} length={16} title="v200" />
-      <Pipe top={1096} left={1314} length={261} title="v201" />
-      <Intersection top={1358} left={1310} title="i74" />
-      <Pipe top={1372} left={1314} length={161} title="v202" />
+      <Intersection top={1081} left={1310} title="i72" />
+      <Pipe top={1066} left={1314} length={16} title="v199" />
+      <Pipe top={1096} left={1314} length={261} title="v199" />
+      <Intersection top={1358} left={1310} title="i72" />
+      <Pipe top={1372} left={1314} length={161} title="v199" />
 
-      <Intersection top={1531} left={1310} title="i75" />
-      <Pipe top={1545} left={1314} length={77} title="v203" />
+      <Intersection top={1531} left={1310} title="i72" />
+      <Pipe top={1545} left={1314} length={77} title="v199" />
       <Pipe top={1056} left={1360} length={302} title="v204" />
 
       <Intersection top={1358} left={1356} title="i76" />
