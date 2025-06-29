@@ -62,10 +62,10 @@ const Pipe = ({
         left,
         top,
         zIndex: z,
-        color: "red",
+        color: "black",
       }}
     >
-      {/* {title} */}
+      {title}
     </div>
   );
 };
