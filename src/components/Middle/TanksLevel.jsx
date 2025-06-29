@@ -20,7 +20,7 @@ const TanksLevel = () => {
       <Tank left={851} top={485} title="E-324" />
       <Pipe isHorizontal top={577} left={992} length={23} title="p68" />
       <Valve isUp top={567} left={1015} title="324A" />
-      <Pipe isHorizontal top={577} left={1034} length={46} title="p69" />
+      <Pipe isHorizontal top={577} left={1034} length={46} title="p68" />
       <Pipe isHorizontal top={577} left={1080} length={23} title="p70" />
       <Pipe isHorizontal top={577} left={1126} length={23} title="p71" />
       <Pipe isHorizontal top={577} left={1304} length={58} title="p72" />
