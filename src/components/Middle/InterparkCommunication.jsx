@@ -103,19 +103,19 @@ const InterparkCommunication = () => {
       <Valve isUp top={2792} left={4023} title="62." />
       <Pipe isHorizontal top={2802} left={4042} length={30} title="p243" />
 
-      <Pipe top={805} left={1097} length={246} title="v171" />
+      <Pipe top={805} left={1097} length={246} title="v138" />
 
-      <Intersection top={1052} left={1093} title="i51" />
-      <Pipe top={1066} left={1097} length={17} title="v172" />
+      <Intersection top={1052} left={1093} title="i44" />
+      <Pipe top={1066} left={1097} length={17} title="v138" />
 
-      <Intersection top={1081} left={1093} title="i52" />
-      <Pipe top={1095} left={1097} length={435} title="v173" />
+      <Intersection top={1081} left={1093} title="i44" />
+      <Pipe top={1095} left={1097} length={435} title="v138" />
 
-      <Intersection top={1531} left={1093} title="i53" />
-      <Pipe top={1546} left={1097} length={41} title="v174" />
+      <Intersection top={1531} left={1093} title="i44" />
+      <Pipe top={1546} left={1097} length={41} title="v138" />
 
-      <Intersection top={1588} left={1093} title="i54" />
-      <Pipe top={1602} left={1097} length={109} title="v175" />
+      <Intersection top={1588} left={1093} title="i44" />
+      <Pipe top={1602} left={1097} length={109} title="v138" />
 
       <Pipe top={805} left={1126} length={246} title="v126" />
 

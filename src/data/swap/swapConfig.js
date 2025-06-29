@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
-import { SWAP_322_TO_323_35_A1 } from "./322/35/fromPump";
+import {
+  SWAP_322_TO_323_35_A1,
+  SWAP_322_TO_323_35_A2,
+  SWAP_322_TO_323_35_A3,
+  SWAP_322_TO_323_35_A4,
+} from "./322/to323/35/A/fromPump";
+import { SWAP_322_TO_323_35_B1 } from "./322/to323/35/B/fromPump";
 
 const pumpConfigurations = {
   "E-322": {
@@ -9,15 +15,15 @@ const pumpConfigurations = {
           pumps: ["H-1"],
           routes: {
             "H-1": SWAP_322_TO_323_35_A1,
-            "H-2": "",
-            "H-3": "",
-            "H-4": "",
+            "H-2": SWAP_322_TO_323_35_A2,
+            "H-3": SWAP_322_TO_323_35_A3,
+            "H-4": SWAP_322_TO_323_35_A4,
           },
         },
         Б: {
           pumps: ["H-1"],
           routes: {
-            "H-1": "",
+            "H-1": SWAP_322_TO_323_35_B1,
             "H-2": "",
             "H-3": "",
             "H-4": "",

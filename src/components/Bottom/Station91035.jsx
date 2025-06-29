@@ -110,7 +110,7 @@ const Station91035 = () => {
       <Pipe top={2283} left={2569} length={86} title="v242" />
       <Pipe top={2100} left={2543} length={71} title="v244" />
       <Valve top={2169} left={2539} title="2" />
-      <Pipe top={2190} left={2543} length={67} title="v245" />
+      <Pipe top={2190} left={2543} length={67} title="v244" />
       <Pipe top={2100} left={2520} length={71} title="v246" />
       <Valve top={2169} left={2516} title="1" />
       <Pipe top={2190} left={2520} length={90} title="v246" />
