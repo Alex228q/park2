@@ -1,26 +1,6 @@
-import { SWAP_FROM_322_TO_B_LINE_PROBLEM } from "../App";
 import parkStore from "../store/parkStore";
-const SWAP_FROM_322_TO_GPN_B = [
-  "E-327",
-  "E-328",
-  "E-329",
-  "E-330",
-  "E-331",
-  "E-332",
-  "E-333",
-  "E-334",
-];
-
-const SWAP_115_NOT_INCLUDE = [
-  "Н-1",
-  "Н-2",
-  "Н-4",
-  "Н-5",
-  "H-1",
-  "H-2",
-  "H-3",
-  "H-4",
-];
+const BLOCK_PUMP_FROM_322_TO_324_LINE_B = ["H-2", "H-3"];
+const BLOCK_PUMPS_IN_115_STATION = ["Н-1", "Н-2", "Н-4", "Н-5"];
 const Pump = ({ top = 0, left = 0, title = "" }) => {
   const { activePump, setActivePump, from, to, lineAorB, activePumpStation } =
     parkStore();
@@ -35,28 +15,41 @@ const Pump = ({ top = 0, left = 0, title = "" }) => {
   const handleClick = () => {
     if (
       from === "E-322" &&
-      SWAP_FROM_322_TO_GPN_B.includes(to) &&
+      to === "E-324" &&
       lineAorB === "Б" &&
-      (title === "H-3" || title === "H-4")
+      activePumpStation === "910-35" &&
+      BLOCK_PUMP_FROM_322_TO_324_LINE_B.includes(title)
     ) {
       return;
     }
 
     if (
-      lineAorB.length === 1 &&
-      SWAP_115_NOT_INCLUDE.includes(title) &&
-      activePumpStation === "910-115"
+      from === "E-322" &&
+      to === "E-325" &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-35" &&
+      BLOCK_PUMP_FROM_322_TO_324_LINE_B.includes(title)
     ) {
       return;
     }
 
     if (
-      SWAP_FROM_322_TO_B_LINE_PROBLEM.includes(to) &&
-      (title === "H-2" || title === "H-3") &&
-      lineAorB.includes("Б")
+      from === "E-322" &&
+      to === "E-326" &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-35" &&
+      BLOCK_PUMP_FROM_322_TO_324_LINE_B.includes(title)
     ) {
       return;
     }
+
+    if (
+      activePumpStation === "910-115" &&
+      BLOCK_PUMPS_IN_115_STATION.includes(title)
+    ) {
+      return;
+    }
+
     if (isActive) {
       setActivePump(activePump.filter((pump) => pump !== title));
     } else {

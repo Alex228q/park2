@@ -36,6 +36,8 @@ export const SWAP_322_TO_323_35_A1 = [
 
 export const SWAP_322_TO_323_35_A2 = [
   "v285",
+  "i122/2",
+  "v285/2",
   "i122",
   "37",
   "p192",

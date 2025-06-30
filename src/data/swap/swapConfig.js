@@ -49,6 +49,20 @@ import {
 } from "./322/to326/35/fromPumpB";
 import { SWAP_322_TO_326_115_A } from "./322/to326/115/fromPumpA";
 import { SWAP_322_TO_326_115_B } from "./322/to326/115/fromPumpB";
+import {
+  SWAP_322_TO_327_35_A1,
+  SWAP_322_TO_327_35_A2,
+  SWAP_322_TO_327_35_A3,
+  SWAP_322_TO_327_35_A4,
+} from "./322/to327/35/fromPumpA";
+import {
+  SWAP_322_TO_327_35_B1,
+  SWAP_322_TO_327_35_B2,
+  SWAP_322_TO_327_35_B3,
+  SWAP_322_TO_327_35_B4,
+} from "./322/to327/35/fromPumpB";
+import { SWAP_322_TO_327_115_A } from "./322/to327/115/fromPumpA";
+import { SWAP_322_TO_327_115_B } from "./322/to327/115/fromPumpB";
 
 const pumpConfigurations = {
   "E-322": {
@@ -190,41 +204,43 @@ const pumpConfigurations = {
         },
       },
     },
-    // "E-327": {
-    //   "910-35": {
-    //     А: {
-    //       pumps: ["H-2"],
-    //       routes: {
-    //         "H-1": SWAP_322_TO327_H1A,
-    //         "H-2": SWAP_322_TO327_H2A,
-    //         "H-3": SWAP_322_TO327_H3A,
-    //         "H-4": SWAP_322_TO327_H4A,
-    //       },
-    //     },
-    //     Б: {
-    //       pumps: ["H-1"],
-    //       routes: {
-    //         "H-1": SWAP_322_TO327_H1B,
-    //         "H-2": SWAP_322_TO327_H2B,
-    //       },
-    //     },
-    //   },
+    "E-327": {
+      "910-35": {
+        А: {
+          pumps: ["H-2"],
+          routes: {
+            "H-1": SWAP_322_TO_327_35_A1,
+            "H-2": SWAP_322_TO_327_35_A2,
+            "H-3": SWAP_322_TO_327_35_A3,
+            "H-4": SWAP_322_TO_327_35_A4,
+          },
+        },
+        Б: {
+          pumps: ["H-1"],
+          routes: {
+            "H-1": SWAP_322_TO_327_35_B1,
+            "H-2": SWAP_322_TO_327_35_B2,
+            "H-3": SWAP_322_TO_327_35_B3,
+            "H-4": SWAP_322_TO_327_35_B4,
+          },
+        },
+      },
 
-    //   "910-115": {
-    //     А: {
-    //       pumps: ["Н-3"],
-    //       routes: {
-    //         "Н-3": SWAP_322_TO327_N3A,
-    //       },
-    //     },
-    //     Б: {
-    //       pumps: ["Н-3"],
-    //       routes: {
-    //         "Н-3": SWAP_322_TO327_N3B,
-    //       },
-    //     },
-    //   },
-    // },
+      "910-115": {
+        А: {
+          pumps: ["Н-3"],
+          routes: {
+            "Н-3": SWAP_322_TO_327_115_A,
+          },
+        },
+        Б: {
+          pumps: ["Н-3"],
+          routes: {
+            "Н-3": SWAP_322_TO_327_115_B,
+          },
+        },
+      },
+    },
     // "E-328": {
     //   "910-35": {
     //     А: {

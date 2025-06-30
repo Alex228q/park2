@@ -199,8 +199,6 @@ const PST_TANK = [
   "E-334",
 ];
 
-export const SWAP_FROM_322_TO_B_LINE_PROBLEM = ["E-324", "E-325", "E-326"];
-
 const ZGP_TANK = ["E-327", "E-328", "E-329", "E-330", "E-331"];
 
 function App() {
@@ -258,8 +256,42 @@ function App() {
 
     if (
       from === "E-322" &&
+      to === "E-324" &&
       lineAorB === "Б" &&
-      SWAP_FROM_322_TO_B_LINE_PROBLEM.includes(to) &&
+      activePumpStation === "910-35"
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [...newElements, ...FROM_322_TO_324AND325H1B_910_35];
+      }
+      if (activePump.includes("H-4")) {
+        newElements = [...newElements, ...FROM_322_TO_324AND325H4B_910_35];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-322" &&
+      to === "E-325" &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-35"
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [...newElements, ...FROM_322_TO_324AND325H1B_910_35];
+      }
+      if (activePump.includes("H-4")) {
+        newElements = [...newElements, ...FROM_322_TO_324AND325H4B_910_35];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-322" &&
+      to === "E-326" &&
+      lineAorB === "Б" &&
       activePumpStation === "910-35"
     ) {
       let newElements = [];
