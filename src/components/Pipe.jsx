@@ -53,7 +53,7 @@ const Pipe = ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        fontSize: "9px",
+        fontSize: "12px",
         fontWeight: "bold",
         width: isHorizontal ? `${length}px` : `${thickness}px`,
         height: isHorizontal ? `${thickness}px` : `${length}px`,
