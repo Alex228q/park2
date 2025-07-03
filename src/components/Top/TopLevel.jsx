@@ -73,7 +73,7 @@ const TopLevel = () => {
       {/* *************************************** */}
       <Pipe isHorizontal top={317} left={1395} length={232} title="p30" />
       <Valve isUp top={307} left={1627} title="51" />
-      <Pipe isHorizontal top={317} left={1646} length={104} title="p31" />
+      <Pipe isHorizontal top={317} left={1646} length={104} title="p30" />
       <Pipe isHorizontal top={317} left={1750} length={118} title="p32" />
       <Valve isUp top={307} left={1868} title="52" />
       <Pipe isHorizontal top={317} left={1887} length={92} title="p33" />
@@ -236,7 +236,7 @@ const TopLevel = () => {
 
       <Pipe top={910} left={3032} length={15} title="v48" />
       <Valve top={923} left={3028} title="332A" isLeft />
-      <Pipe top={944} left={3032} length={36} title="v49" />
+      <Pipe top={944} left={3032} length={36} title="v48" />
 
       <Pipe top={910} left={3562} length={15} title="v50" />
       <Valve top={923} left={3558} title="334A" isLeft />
@@ -256,7 +256,7 @@ const TopLevel = () => {
       <Pipe top={479} left={1355} length={8} title="v58" />
       <Pipe top={487} left={1355} length={13} title="v58/2" />
       <Valve top={458} left={1351} title="50" />
-      <Pipe top={423} left={1388} length={69} title="v59" />
+      <Pipe top={423} left={1388} length={69} title="v60" />
 
       <Intersection top={411} left={1384} title="i13" />
       <Pipe top={317} left={1388} length={95} title="v60" />
