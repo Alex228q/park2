@@ -83,7 +83,7 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
     border: "none",
     backgroundColor: "#f0f2f5",
     color: "#333",
-    fontSize: "16px",
+    fontSize: "20px",
     fontWeight: "500",
     cursor: "pointer",
     transition: "all 0.2s ease",
@@ -101,14 +101,14 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
     },
   };
 
-  const activeButtonStyle = {
-    ...buttonStyle,
-    backgroundColor: "#3b82f6",
-    color: "white",
-    ":hover": {
-      backgroundColor: "#2563eb",
-    },
-  };
+  // const activeButtonStyle = {
+  //   ...buttonStyle,
+  //   backgroundColor: "#3b82f6",
+  //   color: "white",
+  //   ":hover": {
+  //     backgroundColor: "#2563eb",
+  //   },
+  // };
 
   const popupContainerStyle = {
     position: "absolute",
@@ -125,11 +125,12 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
   };
 
   const popupTitleStyle = {
-    fontSize: "18px",
+    fontSize: "24px",
     fontWeight: "600",
     marginBottom: "12px",
     color: "#333",
     textAlign: "center",
+    textTransform: "uppercase",
   };
 
   return (
@@ -168,7 +169,7 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
             : "white",
           color: isFromSelected || isToSelected ? "white" : "black",
           cursor: "pointer",
-          transition: "all 0.2s ease",
+          transition: "all 0.1s ease",
           ":hover": {
             boxShadow: "0 0 15px rgba(0, 0, 0, 0.1)",
           },
@@ -181,8 +182,14 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
       {/* Направления */}
       {showFromPopup && (
         <div ref={popupRef} style={popupContainerStyle}>
-          <div style={popupTitleStyle}>Выберите направление</div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+          <div style={popupTitleStyle}>Куда</div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "8px",
+            }}
+          >
             {["910-40(1)", "910-10(2)", "910-100(3)"].map((option) => (
               <button
                 key={option}
@@ -202,7 +209,7 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
       {/* Насосные станции */}
       {shouldShowToPopup && showToPopup && (
         <div ref={popupRef} style={popupContainerStyle}>
-          <div style={popupTitleStyle}>Выберите насосную</div>
+          <div style={popupTitleStyle}>насосная</div>
           <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
             {["910-35", "910-115"].map((option) => (
               <button
@@ -223,7 +230,7 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
       {/* Линии */}
       {showSecondPopup && (
         <div ref={popupRef} style={popupContainerStyle}>
-          <div style={popupTitleStyle}>Выберите линию</div>
+          <div style={popupTitleStyle}>линия</div>
           <div style={{ display: "flex", gap: "8px" }}>
             {["А", "Б"].map((option) => (
               <button
