@@ -226,6 +226,15 @@ function App() {
   const startPos = useRef({ x: 0, y: 0 });
   const scrollLeft = useRef(0);
   const scrollTop = useRef(0);
+  const targetRef = useRef(null);
+
+  useEffect(() => {
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }, []);
 
   useEffect(() => {
     if (from === "E-322") {
@@ -805,6 +814,10 @@ function App() {
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
       >
+        <p
+          style={{ position: "absolute", top: 500, left: 3500 }}
+          ref={targetRef}
+        ></p>
         <Plugs />
         <Switcher top={47} left={3045} title="pst" activeColor="#6F4B07" />
         <SimpleText left={3087} top={49} title="МАЗУТ С ПСТ" />
@@ -827,7 +840,10 @@ function App() {
     <div className="wrapper">
       <div style={{ position: "relative" }}>
         <Plugs />
-
+        <p
+          style={{ position: "absolute", top: 500, left: 1500 }}
+          ref={targetRef}
+        ></p>
         <Switcher top={47} left={3045} title="pst" activeColor="#6F4B07" />
         <SimpleText left={3087} top={49} title="МАЗУТ С ПСТ" />
 
