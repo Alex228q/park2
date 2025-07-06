@@ -8,7 +8,7 @@ const InterparkCommunication = () => {
     <div>
       <Valve isUp top={1046} left={1264} title="ЗМ-45" isLeft />
       <Pipe isHorizontal top={1056} left={1038} length={226} title="p117" />
-      <Pipe isHorizontal top={1056} left={1283} length={62} title="p118" />
+      <Pipe isHorizontal top={1056} left={1283} length={62} title="p117" />
       <Pipe isHorizontal top={1056} left={1338} length={29} title="p119" />
       <Pipe isHorizontal top={1085} left={1068} length={58} title="p120" />
       <Pipe isHorizontal top={1085} left={1126} length={219} title="p120/2" />

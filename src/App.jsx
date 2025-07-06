@@ -31,10 +31,13 @@ import {
   FROM_323_TO_115_H4,
   FROM_323_TO_115_H5,
   FROM_323_TO_322_910_115B,
+  FROM_323_TO_324AND325H1B_910_35,
+  FROM_323_TO_324AND325H4B_910_35,
   FROM_323_TO_35_H1,
   FROM_323_TO_35_H2,
   FROM_323_TO_35_H3,
   FROM_323_TO_35_H4,
+  SWAP_FROM_323_TO_324_115,
 } from "./data/activeElements/transferElements323";
 import {
   FROM_324_TO_115_H1,
@@ -350,6 +353,37 @@ function App() {
     ) {
       let newElements = [];
       newElements = [...newElements, ...FROM_323_TO_322_910_115B];
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-323" &&
+      to === "E-324" &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-35"
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [...newElements, ...FROM_323_TO_324AND325H1B_910_35];
+      }
+      if (activePump.includes("H-4")) {
+        newElements = [...newElements, ...FROM_323_TO_324AND325H4B_910_35];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-323" &&
+      to === "E-324" &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-115"
+    ) {
+      let newElements = [];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_323_TO_324_115];
+      }
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
