@@ -30,14 +30,14 @@ import {
   FROM_323_TO_115_H3,
   FROM_323_TO_115_H4,
   FROM_323_TO_115_H5,
-  FROM_323_TO_322_910_115B,
-  FROM_323_TO_324AND325H1B_910_35,
-  FROM_323_TO_324AND325H4B_910_35,
   FROM_323_TO_35_H1,
   FROM_323_TO_35_H2,
   FROM_323_TO_35_H3,
   FROM_323_TO_35_H4,
+  SWAP_FROM_323_TO_322_115,
   SWAP_FROM_323_TO_324_115,
+  SWAP_FROM_323_TO_324_35B1,
+  SWAP_FROM_323_TO_324_35B4,
 } from "./data/activeElements/transferElements323";
 import {
   FROM_324_TO_115_H1,
@@ -352,7 +352,10 @@ function App() {
       activePumpStation === "910-115"
     ) {
       let newElements = [];
-      newElements = [...newElements, ...FROM_323_TO_322_910_115B];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_323_TO_322_115];
+      }
+
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
@@ -365,10 +368,10 @@ function App() {
     ) {
       let newElements = [];
       if (activePump.includes("H-1")) {
-        newElements = [...newElements, ...FROM_323_TO_324AND325H1B_910_35];
+        newElements = [...newElements, ...SWAP_FROM_323_TO_324_35B1];
       }
       if (activePump.includes("H-4")) {
-        newElements = [...newElements, ...FROM_323_TO_324AND325H4B_910_35];
+        newElements = [...newElements, ...SWAP_FROM_323_TO_324_35B4];
       }
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
