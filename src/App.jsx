@@ -362,7 +362,7 @@ function App() {
 
     if (
       from === "E-323" &&
-      to === "E-324" &&
+      (to === "E-324" || to === "E-325") &&
       lineAorB === "Б" &&
       activePumpStation === "910-35"
     ) {
@@ -379,7 +379,7 @@ function App() {
 
     if (
       from === "E-323" &&
-      to === "E-324" &&
+      (to === "E-324" || to === "E-325") &&
       lineAorB === "Б" &&
       activePumpStation === "910-115"
     ) {
