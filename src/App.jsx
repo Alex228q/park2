@@ -49,6 +49,7 @@ import {
   FROM_324_TO_35_H2,
   FROM_324_TO_35_H3,
   FROM_324_TO_35_H4,
+  SWAP_FROM_324_TO_322_115B,
 } from "./data/activeElements/transferElements324";
 import {
   FROM_325_TO_115_H1,
@@ -417,6 +418,21 @@ function App() {
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
+
+    if (
+      from === "E-324" &&
+      to === "E-322" &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-115"
+    ) {
+      let newElements = [];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_324_TO_322_115B];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
     if (from === "E-325") {
       let newElements = [];
 
