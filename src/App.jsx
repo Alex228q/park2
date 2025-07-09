@@ -50,6 +50,8 @@ import {
   FROM_324_TO_35_H3,
   FROM_324_TO_35_H4,
   SWAP_FROM_324_TO_322_115B,
+  SWAP_FROM_324_TO_325_35B1,
+  SWAP_FROM_324_TO_325_35B4,
 } from "./data/activeElements/transferElements324";
 import {
   FROM_325_TO_115_H1,
@@ -421,13 +423,30 @@ function App() {
 
     if (
       from === "E-324" &&
-      to === "E-322" &&
+      (to === "E-322" || to === "E-325" || to === "E-326") &&
       lineAorB === "Б" &&
       activePumpStation === "910-115"
     ) {
       let newElements = [];
       if (activePump.includes("Н-3")) {
         newElements = [...newElements, ...SWAP_FROM_324_TO_322_115B];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-324" &&
+      (to === "E-325" || to === "E-326") &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-35"
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1")) {
+        newElements = [...newElements, ...SWAP_FROM_324_TO_325_35B1];
+      }
+      if (activePump.includes("H-4")) {
+        newElements = [...newElements, ...SWAP_FROM_324_TO_325_35B4];
       }
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
