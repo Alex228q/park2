@@ -1639,7 +1639,7 @@ const pumpConfigurations = {
         Б: {
           pumps: ["Н-3"],
           routes: {
-            "Н-3": SWAP_323_TO_326_115_B,
+            "Н-3": [],
           },
         },
       },
