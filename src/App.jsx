@@ -607,6 +607,18 @@ function App() {
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
+
+    if (
+      from === "E-327" &&
+      to === "E-328" &&
+      lineAorB === "Б" &&
+      (activePumpStation === "910-35" || activePumpStation === "910-115")
+    ) {
+      let newElements = [];
+
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
     if (from === "E-328") {
       let newElements = [];
 
