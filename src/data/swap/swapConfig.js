@@ -248,6 +248,11 @@ import {
   SWAP_327_TO_326_35_B4,
 } from "./327/to326/35/fromPumpB";
 import { SWAP_327_TO_326_115_B } from "./327/to326/115/fromPumpB";
+import {
+  SWAP_327_TO_329_35_B1,
+  SWAP_327_TO_329_35_B2,
+} from "./327/to329/35/fromPumpB";
+import { SWAP_327_TO_329_115_B } from "./327/to329/115/fromPumpB";
 
 const pumpConfigurations = {
   "E-322": {
@@ -2643,10 +2648,8 @@ const pumpConfigurations = {
         Б: {
           pumps: ["H-1"],
           routes: {
-            "H-1": SWAP_322_TO_329_35_B1,
-            "H-2": SWAP_322_TO_329_35_B2,
-            "H-3": SWAP_322_TO_329_35_B3,
-            "H-4": SWAP_322_TO_329_35_B4,
+            "H-1": SWAP_327_TO_329_35_B1,
+            "H-2": SWAP_327_TO_329_35_B2,
           },
         },
       },
@@ -2660,7 +2663,7 @@ const pumpConfigurations = {
         Б: {
           pumps: ["Н-3"],
           routes: {
-            "Н-3": SWAP_322_TO_329_115_B,
+            "Н-3": SWAP_327_TO_329_115_B,
           },
         },
       },
