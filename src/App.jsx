@@ -89,6 +89,8 @@ import {
   FROM_327_TO_35_H4,
   SWAP_FROM_327_TO_329_35B1,
   SWAP_FROM_327_TO_329_35B2,
+  SWAP_FROM_327_TO_332_35B1,
+  SWAP_FROM_327_TO_332_35B2,
 } from "./data/activeElements/transferElements327";
 import {
   FROM_328_TO_115_H1,
@@ -624,7 +626,7 @@ function App() {
 
     if (
       from === "E-327" &&
-      to === "E-329" &&
+      (to === "E-329" || to === "E-330" || to === "E-331") &&
       lineAorB === "Б" &&
       activePumpStation === "910-35"
     ) {
@@ -633,6 +635,23 @@ function App() {
         newElements = [...newElements, ...SWAP_FROM_327_TO_329_35B1];
       if (activePump.includes("H-2"))
         newElements = [...newElements, ...SWAP_FROM_327_TO_329_35B2];
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-327" &&
+      to === "E-332" &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-35"
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...SWAP_FROM_327_TO_332_35B1];
+      if (activePump.includes("H-2"))
+        newElements = [...newElements, ...SWAP_FROM_327_TO_332_35B2];
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...FROM_327_TO_35_H4];
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
