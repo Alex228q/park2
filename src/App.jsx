@@ -641,7 +641,7 @@ function App() {
 
     if (
       from === "E-327" &&
-      to === "E-332" &&
+      (to === "E-332" || to === "E-333" || to === "E-334") &&
       lineAorB === "Б" &&
       activePumpStation === "910-35"
     ) {

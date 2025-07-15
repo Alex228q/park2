@@ -276,6 +276,18 @@ import {
   SWAP_327_TO_332_35_B4,
 } from "./327/to332/35/fromPumpB";
 import { SWAP_327_TO_332_115_B } from "./327/to332/115/fromPumpB";
+import {
+  SWAP_327_TO_333_35_B1,
+  SWAP_327_TO_333_35_B2,
+  SWAP_327_TO_333_35_B4,
+} from "./327/to333/35/fromPumpB";
+import { SWAP_327_TO_333_115_B } from "./327/to333/115/fromPumpB";
+import {
+  SWAP_327_TO_334_35_B1,
+  SWAP_327_TO_334_35_B2,
+  SWAP_327_TO_334_35_B4,
+} from "./327/to334/35/fromPumpB";
+import { SWAP_327_TO_334_115_B } from "./327/to334/115/fromPumpB";
 
 const pumpConfigurations = {
   "E-322": {
@@ -2808,10 +2820,9 @@ const pumpConfigurations = {
         Б: {
           pumps: ["H-1"],
           routes: {
-            "H-1": SWAP_322_TO_333_35_B1,
-            "H-2": SWAP_322_TO_333_35_B2,
-            "H-3": SWAP_322_TO_333_35_B3,
-            "H-4": SWAP_322_TO_333_35_B4,
+            "H-1": SWAP_327_TO_333_35_B1,
+            "H-2": SWAP_327_TO_333_35_B2,
+            "H-4": SWAP_327_TO_333_35_B4,
           },
         },
       },
@@ -2825,7 +2836,7 @@ const pumpConfigurations = {
         Б: {
           pumps: ["Н-3"],
           routes: {
-            "Н-3": SWAP_322_TO_333_115_B,
+            "Н-3": SWAP_327_TO_333_115_B,
           },
         },
       },
@@ -2844,10 +2855,9 @@ const pumpConfigurations = {
         Б: {
           pumps: ["H-1"],
           routes: {
-            "H-1": SWAP_322_TO_334_35_B1,
-            "H-2": SWAP_322_TO_334_35_B2,
-            "H-3": SWAP_322_TO_334_35_B3,
-            "H-4": SWAP_322_TO_334_35_B4,
+            "H-1": SWAP_327_TO_334_35_B1,
+            "H-2": SWAP_327_TO_334_35_B2,
+            "H-4": SWAP_327_TO_334_35_B4,
           },
         },
       },
@@ -2861,7 +2871,7 @@ const pumpConfigurations = {
         Б: {
           pumps: ["Н-3"],
           routes: {
-            "Н-3": SWAP_322_TO_334_115_B,
+            "Н-3": SWAP_327_TO_334_115_B,
           },
         },
       },
