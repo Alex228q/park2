@@ -65,7 +65,7 @@ const Pipe = ({
         color: "red",
       }}
     >
-      {/* {title} */}
+      {title}
     </div>
   );
 };

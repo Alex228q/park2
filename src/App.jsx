@@ -102,6 +102,8 @@ import {
   FROM_328_TO_35_H2,
   FROM_328_TO_35_H3,
   FROM_328_TO_35_H4,
+  SWAP_FROM_328_TO_329_35B1,
+  SWAP_FROM_328_TO_329_35B2,
 } from "./data/activeElements/transferElements328";
 import {
   FROM_329_TO_115_H1,
@@ -682,6 +684,22 @@ function App() {
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
+
+    if (
+      from === "E-328" &&
+      (to === "E-329" || to === "E-330" || to === "E-331") &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-35"
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...SWAP_FROM_328_TO_329_35B1];
+      if (activePump.includes("H-2"))
+        newElements = [...newElements, ...SWAP_FROM_328_TO_329_35B2];
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
     if (from === "E-329") {
       let newElements = [];
 

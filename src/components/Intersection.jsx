@@ -51,7 +51,7 @@ const Intersection = ({
   };
 
   return <div style={halfCircleStyle}>
-    {/* {title} */}
+    {title}
     </div>;
 };
 
