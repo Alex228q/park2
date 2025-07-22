@@ -115,6 +115,9 @@ import {
   FROM_329_TO_35_H2,
   FROM_329_TO_35_H3,
   FROM_329_TO_35_H4,
+  SWAP_FROM_329_TO_327_115B,
+  SWAP_FROM_329_TO_331_35B1,
+  SWAP_FROM_329_TO_331_35B4,
 } from "./data/activeElements/transferElements329";
 import {
   FROM_330_TO_115_H1,
@@ -126,6 +129,9 @@ import {
   FROM_330_TO_35_H2,
   FROM_330_TO_35_H3,
   FROM_330_TO_35_H4,
+  SWAP_FROM_330_TO_327_115B,
+  SWAP_FROM_330_TO_331_35B1,
+  SWAP_FROM_330_TO_331_35B4,
 } from "./data/activeElements/transferElements330";
 import {
   FROM_331_TO_115_H1,
@@ -726,6 +732,36 @@ function App() {
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
+
+    if (
+      from === "E-329" &&
+      (to === "E-331" || to === "E-332" || to === "E-333" || to === "E-334") &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-35"
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...SWAP_FROM_329_TO_331_35B1];
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...SWAP_FROM_329_TO_331_35B4];
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-329" &&
+      (to === "E-327" || to === "E-328") &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-115"
+    ) {
+      let newElements = [];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_329_TO_327_115B];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
     if (from === "E-330") {
       let newElements = [];
 
@@ -752,6 +788,36 @@ function App() {
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
+
+    if (
+      from === "E-330" &&
+      (to === "E-327" || to === "E-328") &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-115"
+    ) {
+      let newElements = [];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_330_TO_327_115B];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-330" &&
+      (to === "E-331" || to === "E-332" || to === "E-333" || to === "E-334") &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-35"
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...SWAP_FROM_330_TO_331_35B1];
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...SWAP_FROM_330_TO_331_35B4];
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
     if (from === "E-331") {
       let newElements = [];
       if (activePump.includes("H-1"))
