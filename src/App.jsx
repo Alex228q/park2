@@ -143,6 +143,12 @@ import {
   FROM_331_TO_35_H2,
   FROM_331_TO_35_H3,
   FROM_331_TO_35_H4,
+  SWAP_FROM_331_TO_327_115B,
+  SWAP_FROM_331_TO_329_115B,
+  SWAP_FROM_331_TO_329_B_H1,
+  SWAP_FROM_331_TO_329_B_H2,
+  SWAP_FROM_331_TO_329_B_H3,
+  SWAP_FROM_331_TO_329_B_H4,
 } from "./data/activeElements/transferElements331";
 import {
   FROM_332_TO_115_H1,
@@ -850,6 +856,54 @@ function App() {
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
+
+    if (
+      from === "E-331" &&
+      (to === "E-327" || to === "E-328") &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-115"
+    ) {
+      let newElements = [];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_331_TO_327_115B];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-331" &&
+      (to === "E-329" || to === "E-330") &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-115"
+    ) {
+      let newElements = [];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_331_TO_329_115B];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-331" &&
+      (to === "E-329" || to === "E-330") &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-35"
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...SWAP_FROM_331_TO_329_B_H1];
+      if (activePump.includes("H-2"))
+        newElements = [...newElements, ...SWAP_FROM_331_TO_329_B_H2];
+      if (activePump.includes("H-3"))
+        newElements = [...newElements, ...SWAP_FROM_331_TO_329_B_H3];
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...SWAP_FROM_331_TO_329_B_H4];
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
     if (from === "E-332") {
       let newElements = [];
       if (activePump.includes("H-1"))
