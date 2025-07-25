@@ -904,6 +904,21 @@ function App() {
       addActiveElement(uniqueElements);
     }
 
+    if (
+      from === "E-331" &&
+      (to === "E-332" || to === "E-333" || to === "E-334") &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-35"
+    ) {
+      let newElements = [];
+      if (activePump.includes("H-1"))
+        newElements = [...newElements, ...FROM_331_TO_35_H1];
+      if (activePump.includes("H-4"))
+        newElements = [...newElements, ...FROM_331_TO_35_H4];
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
     if (from === "E-332") {
       let newElements = [];
       if (activePump.includes("H-1"))
@@ -936,6 +951,7 @@ function App() {
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
+
     if (from === "E-333") {
       let newElements = [];
 
