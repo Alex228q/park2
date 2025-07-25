@@ -160,6 +160,8 @@ import {
   FROM_332_TO_35_H2,
   FROM_332_TO_35_H3,
   FROM_332_TO_35_H4,
+  SWAP_FROM_332_TO_322_115_H3A,
+  SWAP_FROM_332_TO_322_115_H3B,
 } from "./data/activeElements/transferElements332";
 import {
   FROM_333_TO_115_H1,
@@ -948,6 +950,34 @@ function App() {
       if (activePump.includes("Н-5"))
         newElements = [...newElements, ...FROM_332_TO_115_H5];
 
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-332" &&
+      to === "E-322" &&
+      lineAorB === "А" &&
+      activePumpStation === "910-115"
+    ) {
+      let newElements = [];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_332_TO_322_115_H3A];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-332" &&
+      to === "E-322" &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-115"
+    ) {
+      let newElements = [];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_332_TO_322_115_H3B];
+      }
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
