@@ -162,6 +162,7 @@ import {
   FROM_332_TO_35_H4,
   SWAP_FROM_332_TO_322_115_H3A,
   SWAP_FROM_332_TO_322_115_H3B,
+  SWAP_FROM_332_TO_327_115B,
 } from "./data/activeElements/transferElements332";
 import {
   FROM_333_TO_115_H1,
@@ -956,7 +957,18 @@ function App() {
 
     if (
       from === "E-332" &&
-      to === "E-322" &&
+      (to === "E-322" ||
+        to === "E-323" ||
+        to === "E-324" ||
+        to === "E-325" ||
+        to === "E-326" ||
+        to === "E-327" ||
+        to === "E-328" ||
+        to === "E-329" ||
+        to === "E-330" ||
+        to === "E-331" ||
+        to === "E-333" ||
+        to === "E-334") &&
       lineAorB === "А" &&
       activePumpStation === "910-115"
     ) {
@@ -970,13 +982,41 @@ function App() {
 
     if (
       from === "E-332" &&
-      to === "E-322" &&
+      (to === "E-322" || to === "E-324" || to === "E-326") &&
       lineAorB === "Б" &&
       activePumpStation === "910-115"
     ) {
       let newElements = [];
       if (activePump.includes("Н-3")) {
         newElements = [...newElements, ...SWAP_FROM_332_TO_322_115_H3B];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-332" &&
+      (to === "E-325" || to === "E-323") &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-115"
+    ) {
+      let newElements = [];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_332_TO_322_115_H3B];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-332" &&
+      (to === "E-327" || to === "E-328") &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-115"
+    ) {
+      let newElements = [];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_332_TO_327_115B];
       }
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
