@@ -174,6 +174,7 @@ import {
   FROM_333_TO_35_H2,
   FROM_333_TO_35_H3,
   FROM_333_TO_35_H4,
+  SWAP_FROM_333_TO_322_115_H3A,
 } from "./data/activeElements/transferElements333";
 import {
   FROM_334_TO_115_H1,
@@ -1048,6 +1049,47 @@ function App() {
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
+
+    if (
+      from === "E-333" &&
+      (to === "E-322" ||
+        to === "E-323" ||
+        to === "E-324" ||
+        to === "E-325" ||
+        to === "E-326" ||
+        to === "E-327"||
+        to === "E-328"||
+        to === "E-329"||
+        to === "E-330") &&
+      lineAorB === "А" &&
+      activePumpStation === "910-115"
+    ) {
+      let newElements = [];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_333_TO_322_115_H3A];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-333" &&
+      (to === "E-322" ||
+        to === "E-323" ||
+        to === "E-324" ||
+        to === "E-325" ||
+        to === "E-326") &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-115"
+    ) {
+      let newElements = [];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_333_TO_322_115_H3A];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
     if (from === "E-334") {
       let newElements = [];
 
