@@ -186,6 +186,7 @@ import {
   FROM_334_TO_35_H2,
   FROM_334_TO_35_H3,
   FROM_334_TO_35_H4,
+  SWAP_FROM_334_TO_322_115_H3A,
 } from "./data/activeElements/transferElements334";
 import {
   PST_TO_910_100_N1,
@@ -1116,6 +1117,49 @@ function App() {
       if (activePump.includes("Н-5"))
         newElements = [...newElements, ...FROM_334_TO_115_H5];
 
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-334" &&
+      (to === "E-322" ||
+        to === "E-323" ||
+        to === "E-324" ||
+        to === "E-325" ||
+        to === "E-326" ||
+        to === "E-327" ||
+        to === "E-328" ||
+        to === "E-329" ||
+        to === "E-330" ||
+        to === "E-331" ||
+        to === "E-332" ||
+        to === "E-333") &&
+      lineAorB === "А" &&
+      activePumpStation === "910-115"
+    ) {
+      let newElements = [];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_334_TO_322_115_H3A];
+      }
+      const uniqueElements = [...new Set(newElements)];
+      addActiveElement(uniqueElements);
+    }
+
+    if (
+      from === "E-334" &&
+      (to === "E-322" ||
+        to === "E-323" ||
+        to === "E-324" ||
+        to === "E-325" ||
+        to === "E-326") &&
+      lineAorB === "Б" &&
+      activePumpStation === "910-115"
+    ) {
+      let newElements = [];
+      if (activePump.includes("Н-3")) {
+        newElements = [...newElements, ...SWAP_FROM_334_TO_322_115_H3A];
+      }
       const uniqueElements = [...new Set(newElements)];
       addActiveElement(uniqueElements);
     }
