@@ -101,15 +101,6 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
     },
   };
 
-  // const activeButtonStyle = {
-  //   ...buttonStyle,
-  //   backgroundColor: "#3b82f6",
-  //   color: "white",
-  //   ":hover": {
-  //     backgroundColor: "#2563eb",
-  //   },
-  // };
-
   const popupContainerStyle = {
     position: "absolute",
     top: "calc(100% - 210px)",
@@ -203,6 +194,7 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
               </button>
             ))}
           </div>
+        
         </div>
       )}
 
