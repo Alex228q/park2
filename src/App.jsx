@@ -1350,6 +1350,8 @@ function App() {
         <Reck title="910-40(1)" top={2331} left={3658} />
         <Reck title="910-10(2)" top={2550} left={3658} />
         <Reck title="910-100(3)" top={2550} left={800} />
+
+        <SimpleText left={113} top={225} title="31 линия (с установок)" />
       </div>
     );
   }
@@ -1376,6 +1378,8 @@ function App() {
         <Reck title="910-40(1)" top={2331} left={3658} />
         <Reck title="910-10(2)" top={2550} left={3658} />
         <Reck title="910-100(3)" top={2550} left={800} />
+
+        <SimpleText left={113} top={225} title="31 линия (с установок)" />
       </div>
     </div>
   );
