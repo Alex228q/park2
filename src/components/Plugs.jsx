@@ -3,7 +3,7 @@ import Pipe from "./Pipe";
 const Plugs = () => {
   return (
     <>
-      <Pipe
+      {/* <Pipe
         thickness={2}
         isHorizontal
         top={648}
@@ -11,7 +11,7 @@ const Plugs = () => {
         length={11}
         colorDef="red"
         title="plug"
-      />
+      /> */}
 
       <Pipe
         thickness={2}
