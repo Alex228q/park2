@@ -27,9 +27,27 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
     "E-334",
   ];
 
+  // Резервуары с подписью "кгпн"
+  const kgpnTanks = ["E-327", "E-328", "E-329", "E-330", "E-331"];
+
+  // Остальные резервуары с подписью "пст"
+  const pstTanks = toTankPump.filter((tank) => !kgpnTanks.includes(tank));
+
   const isFromSelected = from === title;
   const isToSelected = to === title;
   const shouldShowToPopup = isToSelected && toTankPump.includes(title);
+
+  // Определяем, какая подпись должна быть под текущим резервуаром
+  const getTankLabel = () => {
+    if (kgpnTanks.includes(title)) {
+      return "кгпн";
+    } else if (pstTanks.includes(title)) {
+      return "пст";
+    }
+    return ""; // Если резервуар не в списке toTankPump
+  };
+
+  const tankLabel = getTankLabel();
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -161,6 +179,7 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
           color: isFromSelected || isToSelected ? "white" : "black",
           cursor: "pointer",
           transition: "all 0.1s ease",
+          position: "relative",
           ":hover": {
             boxShadow: "0 0 15px rgba(0, 0, 0, 0.1)",
           },
@@ -168,6 +187,30 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
         onClick={handleTankClick}
       >
         {title}
+
+        {/* Подпись под резервуаром */}
+        {tankLabel && (
+          <div
+            style={{
+              position: "absolute",
+              bottom: "18px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              fontSize: "20px",
+              fontWeight: "600",
+              color: tankLabel === "кгпн" ? "#7D0F9B" : "#6F4B07",
+              whiteSpace: "nowrap",
+              textTransform: "uppercase",
+              fontFamily: "Arial, sans-serif",
+              letterSpacing: "0.5px",
+              backgroundColor: "white",
+              padding: "4px",
+              borderRadius: "20px",
+            }}
+          >
+            {tankLabel}
+          </div>
+        )}
       </div>
 
       {/* Направления */}
@@ -194,7 +237,6 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
               </button>
             ))}
           </div>
-        
         </div>
       )}
 
@@ -230,9 +272,9 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
                 style={{
                   ...buttonStyle,
                   flex: 1,
-                  backgroundColor: option === "А" ? "#f0f2f5" : "#f0f2f5",
+                  backgroundColor: "#f0f2f5",
                   ":hover": {
-                    backgroundColor: option === "А" ? "#e0e3e7" : "#e0e3e7",
+                    backgroundColor: "#e0e3e7",
                   },
                 }}
                 onClick={(e) => {
