@@ -219,6 +219,7 @@ import {
 
 import { useSwapConfiguration } from "./data/swap/swapConfig";
 import Plugs from "./components/Plugs";
+import LinesTitle from "./components/LinesTitle";
 
 const PST_TANK = [
   "E-322",
@@ -1352,6 +1353,8 @@ function App() {
         <Reck title="910-100(3)" top={2550} left={800} />
 
         <SimpleText left={93} top={225} title="31 линия (с установок)" />
+
+        <LinesTitle />
       </div>
     );
   }
@@ -1380,6 +1383,8 @@ function App() {
         <Reck title="910-100(3)" top={2550} left={800} />
 
         <SimpleText left={93} top={225} title="31 линия (с установок)" />
+
+        <LinesTitle />
       </div>
     </div>
   );
