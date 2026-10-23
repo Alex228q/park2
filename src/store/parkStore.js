@@ -5,6 +5,8 @@ const parkStore = create((set) => ({
   isMazutTransferVisiblePst: false,
   from: null,
   to: null,
+  reverse: false, // true, если источник — эстакада (обратная откачка)
+  pipelineVariant: null, // "61,64" | "62,63"
   activeElements: [],
   activeElementsGpn: [],
   activeElementsPst: [],
@@ -23,6 +25,11 @@ const parkStore = create((set) => ({
       activeElementsAfterPump: [],
       activePump: [],
       lineAorB: newLine,
+    })),
+
+  setPipelineVariant: (variant) =>
+    set(() => ({
+      pipelineVariant: variant,
     })),
 
   toggleMazutTransferVisibilityKgpn: () =>
@@ -45,13 +52,15 @@ const parkStore = create((set) => ({
       activeElementsPst: [...titles],
     })),
 
-  setFrom: (title) =>
+  setFrom: (title, reverse = false) =>
     set((state) => {
       const newFrom = state.from === title ? null : title;
       return {
         lineAorB: [],
         activePumpStation: [],
         from: newFrom,
+        reverse: newFrom === null ? false : reverse,
+        pipelineVariant: null,
         activePump: [],
         activeElements: [],
         activeElementsAfterPump: [],
@@ -68,6 +77,8 @@ const parkStore = create((set) => ({
       return {
         to: newTo,
         lineAorB: [],
+        // в обратном режиме трубопровод выбирается раньше резервуара, поэтому сохраняем его
+        pipelineVariant: state.reverse ? state.pipelineVariant : null,
         activePump: [],
         activeElementsAfterPump: [],
         activeElements: shouldClearElements ? [] : state.activeElements,
@@ -79,6 +90,7 @@ const parkStore = create((set) => ({
       activeElements:
         state.to === null || state.activePump.length === 0 ? [] : [...titles],
     })),
+
 
   addActiveElementAfterPump: (titles) =>
     set((state) => ({

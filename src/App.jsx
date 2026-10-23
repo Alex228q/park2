@@ -220,6 +220,7 @@ import {
 import { useSwapConfiguration } from "./data/swap/swapConfig";
 import Plugs from "./components/Plugs";
 import LinesTitle from "./components/LinesTitle";
+import {REVERSE_91010_326_61, REVERSE_91010_326_62, REVERSE_91010_326_62_AFTER_PUMP, REVERSE_91010_330_61, REVERSE_91010_330_62, REVERSE_91040_326_63, REVERSE_91040_326_64, REVERSE_91040_330_62, REVERSE_91040_330_62_AFTER_PUMP, REVERSE_91040_330_64,  } from "./data/swap/reverseSwap/reverse";
 
 const PST_TANK = [
   "E-322",
@@ -252,6 +253,7 @@ function App() {
     isMazutTransferVisiblePst,
     activePumpStation,
     lineAorB,
+    pipelineVariant,
   } = parkStore();
 
   const containerRef = useRef(null);
@@ -268,6 +270,65 @@ function App() {
       });
     }
   }, []);
+
+
+  useEffect(() => {
+    if(from === "910-40(1)" && to === "E-326" && pipelineVariant === "62,63" ){
+      setActivePump("Н-4")
+      addActiveElement(REVERSE_91040_326_63)
+      addActiveElementAfterPump(REVERSE_91010_326_62_AFTER_PUMP)
+    }
+
+     if(from === "910-40(1)" && to === "E-330" && pipelineVariant === "62,63" ){
+      setActivePump("Н-4")
+      addActiveElement(REVERSE_91040_330_62)
+      addActiveElementAfterPump(REVERSE_91040_330_62_AFTER_PUMP)
+    }
+
+
+    if(from === "910-10(2)" && to === "E-326" && pipelineVariant === "62,63" ){
+      setActivePump("Н-4")
+      addActiveElement(REVERSE_91010_326_62)
+      addActiveElementAfterPump(REVERSE_91010_326_62_AFTER_PUMP)
+    }
+
+     if(from === "910-10(2)" && to === "E-330" && pipelineVariant === "62,63" ){
+      setActivePump("Н-4")
+      addActiveElement(REVERSE_91010_330_62)
+      addActiveElementAfterPump(REVERSE_91040_330_62_AFTER_PUMP)
+    }
+    //************************ */
+
+    if(from === "910-40(1)" && to === "E-326" && pipelineVariant === "61,64" ){
+      setActivePump("Н-4")
+      addActiveElement(REVERSE_91040_326_64)
+      addActiveElementAfterPump(REVERSE_91010_326_62_AFTER_PUMP)
+    }
+
+    if(from === "910-40(1)" && to === "E-330" && pipelineVariant === "61,64" ){
+      setActivePump("Н-4")
+      addActiveElement(REVERSE_91040_330_64)
+      addActiveElementAfterPump(REVERSE_91040_330_62_AFTER_PUMP)
+    }
+
+     if(from === "910-10(2)" && to === "E-326" && pipelineVariant === "61,64" ){
+      setActivePump("Н-4")
+      addActiveElement(REVERSE_91010_326_61)
+      addActiveElementAfterPump(REVERSE_91010_326_62_AFTER_PUMP)
+    }
+
+    if(from === "910-10(2)" && to === "E-330" && pipelineVariant === "61,64" ){
+      setActivePump("Н-4")
+      addActiveElement(REVERSE_91010_330_61)
+      addActiveElementAfterPump(REVERSE_91040_330_62_AFTER_PUMP)
+    }
+
+  
+
+  }, [from, to]);
+
+
+
 
   useEffect(() => {
     if (from === "E-322") {

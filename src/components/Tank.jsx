@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import parkStore from "../store/parkStore";
 
 const Tank = ({ top = 0, left = 0, title = "" }) => {
-  const { from, to, setFrom, setTo, setLine, setActivePumpStation } =
+  const { from, to, reverse, setFrom, setTo, setLine, setActivePumpStation } =
     parkStore();
   const [showFromPopup, setShowFromPopup] = useState(false);
   const [showToPopup, setShowToPopup] = useState(false);
@@ -65,6 +65,9 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
   const handleTankClick = (e) => {
     e.stopPropagation();
 
+    // Обратный режим: резервуар выбирается только через попап эстакады
+    if (reverse) return;
+
     if (!from) {
       setFrom(title);
       setShowFromPopup(true);
@@ -102,21 +105,12 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
     backgroundColor: "#f0f2f5",
     color: "#333",
     fontSize: "20px",
-    fontWeight: "500",
     cursor: "pointer",
     transition: "all 0.2s ease",
     margin: "4px 0",
     width: "100%",
     textAlign: "center",
     fontWeight: "700",
-    ":hover": {
-      backgroundColor: "#e0e3e7",
-      transform: "translateY(-1px)",
-    },
-    ":active": {
-      backgroundColor: "#d1d5db",
-      transform: "translateY(0)",
-    },
   };
 
   const popupContainerStyle = {
@@ -177,12 +171,9 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
             ? "#1e22e0"
             : "white",
           color: isFromSelected || isToSelected ? "white" : "black",
-          cursor: "pointer",
+          cursor: reverse ? "default" : "pointer",
           transition: "all 0.1s ease",
           position: "relative",
-          ":hover": {
-            boxShadow: "0 0 15px rgba(0, 0, 0, 0.1)",
-          },
         }}
         onClick={handleTankClick}
       >
@@ -272,10 +263,6 @@ const Tank = ({ top = 0, left = 0, title = "" }) => {
                 style={{
                   ...buttonStyle,
                   flex: 1,
-                  backgroundColor: "#f0f2f5",
-                  ":hover": {
-                    backgroundColor: "#e0e3e7",
-                  },
                 }}
                 onClick={(e) => {
                   e.stopPropagation();

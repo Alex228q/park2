@@ -70,7 +70,7 @@ const Station91035 = () => {
       <Pipe isHorizontal top={2273} left={3233} length={53} title="p214" />
       <Valve title="67" top={2263} left={3286} isUp />
       <Pipe isHorizontal top={2273} left={3305} length={61} title="p214" />
-      <Pipe isHorizontal top={2273} left={3354} length={74} title="p216" />
+      <Pipe isHorizontal top={2273} left={3359} length={74} title="p216" />
       <Pipe isHorizontal top={2273} left={3428} length={12} title="p217" />
       <Valve title="63" top={2263} left={3440} isUp />
       <Pipe isHorizontal top={2273} left={3459} length={276} title="p218" />
@@ -80,7 +80,7 @@ const Station91035 = () => {
       <Pipe isHorizontal top={2308} left={3276} length={10} title="p221" />
       <Valve title="66" top={2298} left={3286} isUp />
       <Pipe isHorizontal top={2308} left={3305} length={15} title="p221" />
-      <Pipe isHorizontal top={2308} left={3315} length={80} title="p223" />
+      <Pipe isHorizontal top={2308} left={3318} length={80} title="p223" />
       <Pipe isHorizontal top={2308} left={3395} length={45} title="p224" />
       <Valve title="64" top={2298} left={3440} isUp />
       <Pipe isHorizontal top={2308} left={3459} length={242} title="p225" />

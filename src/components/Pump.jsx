@@ -2,7 +2,7 @@ import parkStore from "../store/parkStore";
 const BLOCK_PUMP_FROM_322_TO_324_LINE_B = ["H-2", "H-3"];
 const BLOCK_PUMPS_IN_115_STATION = ["Н-1", "Н-2", "Н-4", "Н-5"];
 const Pump = ({ top = 0, left = 0, title = "" }) => {
-  const { activePump, setActivePump, from, to, lineAorB, activePumpStation } =
+  const { activePump, setActivePump, from, to, lineAorB, activePumpStation} =
     parkStore();
   const isActive = activePump.includes(title);
   let colorActivePump =

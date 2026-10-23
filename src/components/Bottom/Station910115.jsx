@@ -335,15 +335,19 @@ const Station910115 = () => {
       <Intersection top={1986} left={1905} title="i193" />
       <Pipe top={2000} left={1909} length={32} title="vf3" />
       <Filter top={2030} left={1899} title="Ф3" />
-      <Pipe top={2054} left={1909} length={135} title="vf3" />
-      <Intersection top={2188} left={1905} title="i193" />
-      <Pipe top={2202} left={1909} length={120} title="vf3" />
+      <Pipe top={2054} left={1909} length={73} title="vf3" />
+      <Intersection top={2188} left={1905} title="i193/2" />
+
+      <Pipe top={2121} left={1909} length={67} title="vf3/2" />
+      <Pipe top={2202} left={1909} length={120} title="vf3/3" />
 
       <Pipe top={1964} left={1805} length={20} title="v403" />
+     
       <Intersection top={1986} left={1801} title="i194" />
-      <Pipe top={2000} left={1805} length={190} title="v403" />
-      <Intersection top={2188} left={1801} title="i194" />
-      <Pipe top={2202} left={1805} length={120} title="v403" />
+      <Pipe top={2000} left={1805} length={127} title="v403" />
+      <Pipe top={2121} left={1805} length={67} title="v403/2" />
+      <Intersection top={2188} left={1801} title="i194/2" />
+      <Pipe top={2202} left={1805} length={120} title="v403/3" />
 
       <Pipe top={1679} left={2128} length={29} title="v404" />
       <Intersection top={1707} left={2124} title="i195" />
