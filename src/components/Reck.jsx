@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import parkStore from "../store/parkStore";
 
 // Резервуары, в которые возможна обратная откачка
@@ -12,30 +12,89 @@ const pipelineOptionsByReck = {
   "910-100(3)": ["88", "89", "90"],
 };
 
+// Стили не зависят от пропсов и состояния, поэтому создаются один раз
+const buttonStyle = {
+  padding: "12px 20px",
+  borderRadius: "8px",
+  border: "none",
+  backgroundColor: "#f0f2f5",
+  color: "#333",
+  fontSize: "20px",
+  fontWeight: "700",
+  cursor: "pointer",
+  margin: "4px 0",
+  width: "100%",
+  textAlign: "center",
+};
+
+const popupStyle = {
+  position: "absolute",
+  top: "-120%",
+  left: "-4%",
+  transform: "translateX(-50%)",
+  backgroundColor: "white",
+  borderRadius: "12px",
+  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.15)",
+  padding: "16px",
+  zIndex: 1001,
+  minWidth: "220px",
+};
+
+const popupTitleStyle = {
+  fontSize: "24px",
+  fontWeight: "600",
+  marginBottom: "12px",
+  color: "#333",
+  textAlign: "center",
+  textTransform: "uppercase",
+};
+
+const boxBaseStyle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "473px",
+  height: "104px",
+  border: "3px solid black",
+  fontWeight: "bold",
+  fontSize: "36px",
+  fontFamily: "monospace",
+  cursor: "pointer",
+};
+
 const Reck = ({ top = 0, left = 0, title = "" }) => {
-  const { from, to, reverse, setFrom, setTo, setPipelineVariant } =
-    parkStore();
+  // Подписка только на то, что реально влияет на вид этой эстакады
+  const isFromSelected = parkStore((s) => s.from === title);
+  const isToSelected = parkStore((s) => s.to === title);
+  const isReverseSource = parkStore((s) => s.from === title && s.reverse);
+
+  // Действия стабильны и не вызывают перерисовок
+  const setFrom = parkStore((s) => s.setFrom);
+  const setTo = parkStore((s) => s.setTo);
+  const setPipelineVariant = parkStore((s) => s.setPipelineVariant);
 
   const [showTankPopup, setShowTankPopup] = useState(false);
   const [showPipePopup, setShowPipePopup] = useState(false);
   const popupRef = useRef(null);
 
-  const isFromSelected = from === title;
-  const isToSelected = to === title;
+  const isPopupOpen = showTankPopup || showPipePopup;
 
   // Варианты линий для текущей эстакады
-  const pipelineOptions = pipelineOptionsByReck[title] ?? defaultPipelineOptions;
+  const pipelineOptions =
+    pipelineOptionsByReck[title] ?? defaultPipelineOptions;
 
-  // Закрываем попапы, если эстакада перестала быть источником
+  // Закрываем попапы, если эстакада перестала быть источником обратной откачки
   useEffect(() => {
-    if (!(from === title && reverse)) {
+    if (!isReverseSource) {
       setShowTankPopup(false);
       setShowPipePopup(false);
     }
-  }, [from, reverse, title]);
+  }, [isReverseSource]);
 
-  // Клик вне попапа
+  // Клик вне попапа: слушатель висит на document только пока попап открыт
   useEffect(() => {
+    if (!isPopupOpen) return;
+
     const handleClickOutside = (e) => {
       if (popupRef.current && !popupRef.current.contains(e.target)) {
         setShowTankPopup(false);
@@ -44,11 +103,14 @@ const Reck = ({ top = 0, left = 0, title = "" }) => {
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [isPopupOpen]);
 
   const handleClick = () => {
+    // Актуальные значения читаем в момент клика, подписка для этого не нужна
+    const { from, reverse } = parkStore.getState();
+
     // Повторный клик по эстакаде-источнику — отмена маршрута
-    if (isFromSelected && reverse) {
+    if (from === title && reverse) {
       setFrom(title);
       return;
     }
@@ -77,46 +139,10 @@ const Reck = ({ top = 0, left = 0, title = "" }) => {
   // 2-й шаг: выбор резервуара -> конец цепочки
   const handleTankOption = (tank) => {
     // setTo переключает значение, поэтому не вызываем его повторно для того же резервуара
-    if (to !== tank) {
+    if (parkStore.getState().to !== tank) {
       setTo(tank);
     }
     setShowTankPopup(false);
-  };
-
-  const buttonStyle = {
-    padding: "12px 20px",
-    borderRadius: "8px",
-    border: "none",
-    backgroundColor: "#f0f2f5",
-    color: "#333",
-    fontSize: "20px",
-    fontWeight: "700",
-    cursor: "pointer",
-    margin: "4px 0",
-    width: "100%",
-    textAlign: "center",
-  };
-
-  const popupStyle = {
-    position: "absolute",
-    top: "-120%",
-    left: "-4%",
-    transform: "translateX(-50%)",
-    backgroundColor: "white",
-    borderRadius: "12px",
-    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.15)",
-    padding: "16px",
-    zIndex: 1001,
-    minWidth: "220px",
-  };
-
-  const popupTitleStyle = {
-    fontSize: "24px",
-    fontWeight: "600",
-    marginBottom: "12px",
-    color: "#333",
-    textAlign: "center",
-    textTransform: "uppercase",
   };
 
   let color = isFromSelected ? "green" : "white";
@@ -129,20 +155,7 @@ const Reck = ({ top = 0, left = 0, title = "" }) => {
     <div style={{ position: "absolute", top, left, zIndex: 1000 }}>
       <div
         onClick={handleClick}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "473px",
-          height: "104px",
-          border: "3px solid black",
-          fontWeight: "bold",
-          fontSize: "36px",
-          fontFamily: "monospace",
-          color: fontColor,
-          backgroundColor: color,
-          cursor: "pointer",
-        }}
+        style={{ ...boxBaseStyle, color: fontColor, backgroundColor: color }}
       >
         {title}
       </div>
@@ -188,4 +201,4 @@ const Reck = ({ top = 0, left = 0, title = "" }) => {
   );
 };
 
-export default Reck;
+export default memo(Reck);

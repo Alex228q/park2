@@ -1,6 +1,77 @@
+import { memo } from "react";
 import parkStore from "../store/parkStore";
+import { STATUS, useElementStatus } from "../hooks/useElementStatus";
 
-const DEFAULT_CLOSE_VALVE = ["83", "34"];
+const DEFAULT_CLOSE_VALVE = new Set(["83", "34"]);
+
+// Клапан, который закрыт только при маршруте 910-100(3) -> E-326
+const SPECIAL_VALVE = "ЗМ-6";
+
+// Цвет по статусу (индекс = STATUS.*)
+const COLOR_BY_STATUS = [];
+COLOR_BY_STATUS[STATUS.NONE] = "#474747";
+COLOR_BY_STATUS[STATUS.ACTIVE] = "green";
+COLOR_BY_STATUS[STATUS.AFTER_PUMP] = "#1e22e0";
+COLOR_BY_STATUS[STATUS.GPN] = "#7D0F9B";
+COLOR_BY_STATUS[STATUS.PST] = "#6F4B07";
+
+// Неизменяемые части стилей создаются один раз
+const LABEL_BASE = {
+  width: "42px",
+  display: "flex",
+  position: "absolute",
+  fontSize: "12px",
+  fontWeight: "bold",
+};
+
+const ICON_WRAPPER_BASE = {
+  position: "absolute",
+  overflow: "hidden",
+};
+
+const ICON_TRANSFORM = "translateY(-1000px)";
+
+// Стиль подписи: три варианта из исходного компонента в одном месте
+const getLabelStyle = ({
+  isRotate,
+  isUp,
+  isLeft,
+  top,
+  left,
+  textTop,
+  textLeft,
+  title,
+  color,
+}) => {
+  if (isRotate) {
+    return {
+      ...LABEL_BASE,
+      rotate: "270deg",
+      top: top - 22,
+      left: left - 3,
+      color,
+    };
+  }
+
+  if (isUp) {
+    return {
+      ...LABEL_BASE,
+      justifyContent: title.length < 4 && isLeft ? "center" : undefined,
+      top: textTop ? textTop : isLeft ? top - 5 : top - 6,
+      left: textLeft ? textLeft : isLeft ? left - 34 : left + 16,
+      color,
+    };
+  }
+
+  return {
+    ...LABEL_BASE,
+    justifyContent: isLeft ? "center" : undefined,
+    rotate: "0deg",
+    top: isLeft ? top - 8 : top - 7,
+    left: isLeft ? left - 34 : left + 14,
+    color,
+  };
+};
 
 const Valve = ({
   textTop = 0,
@@ -12,149 +83,55 @@ const Valve = ({
   isLeft = false,
   isRotate = false,
 }) => {
-  const {
-    activeElements,
-    activeElementsAfterPump,
-    activeElementsGpn,
-    activeElementsPst,
-    from,
-    to 
-  } = parkStore();
-  let color = activeElements.includes(title) ? "green" : "#474747";
+  // Подписка только на статус этого клапана
+  const status = useElementStatus(title);
 
-  
+  // Для всех клапанов, кроме ЗМ-6, селектор всегда возвращает false,
+  // поэтому смена from/to их не перерисовывает.
+  const isSpecialClosed = parkStore(
+    (s) =>
+      title === SPECIAL_VALVE &&
+      s.from === "910-100(3)" &&
+      s.to === "E-326"
+  );
 
-  if (activeElementsAfterPump.includes(title)) {
-    color = "#1e22e0";
-  }
-
-  if (activeElementsGpn.includes(title)) {
-    color = "#7D0F9B";
-  }
-
-  if (activeElementsPst.includes(title)) {
-    color = "#6F4B07";
-  }
-
-  if (DEFAULT_CLOSE_VALVE.includes(title)) {
+  let color = COLOR_BY_STATUS[status];
+  if (DEFAULT_CLOSE_VALVE.has(title) || isSpecialClosed) {
     color = "red";
   }
 
+  // Иконка повёрнута у вращаемых клапанов и у клапанов "не вверх"
+  const isIconRotated = isRotate || !isUp;
 
-  if(title === "ЗМ-6" && from === "910-100(3)" && to === "E-326"){
-    color = "red";
-  }
-
-  if (isRotate) {
-    return (
-      <div>
-        <p
-          style={{
-            width: "42px",
-            display: "flex",
-            rotate: "270deg",
-            position: "absolute",
-            top: top - 22,
-            left: left - 3,
-            fontSize: "12px",
-            fontWeight: "bold",
-            color,
-          }}
-        >
-          {title}
-        </p>
-        <div
-          style={{
-            position: "absolute",
-            top,
-            left,
-            overflow: "hidden",
-            rotate: "90deg",
-          }}
-        >
-          <img
-            style={{
-              filter: `drop-shadow(0px 1000px 0 ${color})`,
-              transform: "translateY(-1000px)",
-            }}
-            src="./valve.png"
-            alt="valve"
-            width={19}
-            height={19}
-          />
-        </div>
-      </div>
-    );
-  }
-
-  return isUp ? (
+  return (
     <div>
       <p
-        style={{
-          width: "42px",
-          display: "flex",
-          justifyContent: title.length < 4 && isLeft ? "center" : "",
-          position: "absolute",
-          top: textTop ? textTop : isLeft ? top - 5 : top - 6,
-          left: textLeft ? textLeft : isLeft ? left - 34 : left + 16,
-          fontSize: "12px",
-          fontWeight: "bold",
+        style={getLabelStyle({
+          isRotate,
+          isUp,
+          isLeft,
+          top,
+          left,
+          textTop,
+          textLeft,
+          title,
           color,
-        }}
+        })}
       >
         {title}
       </p>
       <div
         style={{
-          position: "absolute",
+          ...ICON_WRAPPER_BASE,
           top,
           left,
-          overflow: "hidden",
+          rotate: isIconRotated ? "90deg" : undefined,
         }}
       >
         <img
           style={{
             filter: `drop-shadow(0px 1000px 0 ${color})`,
-            transform: "translateY(-1000px)",
-          }}
-          src="./valve.png"
-          alt="valve"
-          width={19}
-          height={19}
-        />
-      </div>
-    </div>
-  ) : (
-    <div>
-      <p
-        style={{
-          width: "42px",
-          display: "flex",
-          justifyContent: isLeft ? "center" : null,
-          rotate: isRotate ? "270deg" : "0deg",
-          position: "absolute",
-          top: isLeft ? top - 8 : top - 7,
-          left: isLeft ? left - 34 : left + 14,
-          fontSize: "12px",
-          fontWeight: "bold",
-          color,
-        }}
-      >
-        {title}
-      </p>
-      <div
-        style={{
-          position: "absolute",
-          top,
-          left,
-          overflow: "hidden",
-          rotate: "90deg",
-        }}
-      >
-        <img
-          style={{
-            filter: `drop-shadow(0px 1000px 0 ${color})`,
-            transform: "translateY(-1000px)",
+            transform: ICON_TRANSFORM,
           }}
           src="./valve.png"
           alt="valve"
@@ -166,4 +143,4 @@ const Valve = ({
   );
 };
 
-export default Valve;
+export default memo(Valve);
