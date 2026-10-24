@@ -17,8 +17,13 @@ const Valve = ({
     activeElementsAfterPump,
     activeElementsGpn,
     activeElementsPst,
+    from,
+    to 
   } = parkStore();
   let color = activeElements.includes(title) ? "green" : "#474747";
+
+  
+
   if (activeElementsAfterPump.includes(title)) {
     color = "#1e22e0";
   }
@@ -32,6 +37,11 @@ const Valve = ({
   }
 
   if (DEFAULT_CLOSE_VALVE.includes(title)) {
+    color = "red";
+  }
+
+
+  if(title === "ЗМ-6" && from === "910-100(3)" && to === "E-326"){
     color = "red";
   }
 

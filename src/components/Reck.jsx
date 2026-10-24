@@ -9,7 +9,7 @@ const defaultPipelineOptions = ["61,64", "62,63"];
 
 // Варианты трубопроводов для отдельных эстакад
 const pipelineOptionsByReck = {
-  "910-100(3)": ["90", "89", "88"],
+  "910-100(3)": ["88", "89", "90"],
 };
 
 const Reck = ({ top = 0, left = 0, title = "" }) => {
